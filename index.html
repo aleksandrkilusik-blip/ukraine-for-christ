@@ -117,6 +117,27 @@
 .m-preview img{width:100%;height:100%;object-fit:cover}
 @media (hover:none),(max-width:1023px){.m-preview{display:none}}
 @media (prefers-reduced-motion:reduce){.m-row{opacity:1;transform:none;transition:none}.m-row::before,.m-row>*{transition:none}}
+/* Події: картки-календарики */
+.ev-card{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:#fff;border:1px solid #e5e2e1;color:#001c17;text-decoration:none;opacity:0;transform:translateY(24px);transition:opacity .6s ease var(--d),transform .6s ease var(--d),box-shadow .35s ease,border-color .35s ease}
+.ev-card.is-in{opacity:1;transform:none}
+.ev-card.is-in:hover,.ev-card.is-in:focus-visible{transform:translateY(-6px);box-shadow:0 24px 44px -16px rgba(0,28,23,.35);border-color:#e9c349;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.ev-date{position:relative;display:block;padding:26px 28px;background:#00332b;color:#fff;overflow:hidden}
+.ev-date::after{content:"";position:absolute;right:-40px;bottom:-60px;width:160px;height:160px;border-radius:50%;background:rgba(233,195,73,.12);transition:transform .5s ease}
+.ev-card:hover .ev-date::after{transform:scale(1.6)}
+.ev-day{display:block;white-space:nowrap;font-size:clamp(40px,3.8vw,52px);line-height:1;font-weight:800;letter-spacing:-.03em;color:#e9c349}
+.ev-month{display:block;margin-top:6px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.ev-left{position:absolute;top:24px;right:24px;z-index:1;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);font-size:12px;font-weight:600;white-space:nowrap}
+@media (min-width:768px) and (max-width:1100px){.ev-left{position:relative;top:auto;right:auto;display:inline-block;margin-top:14px}}
+.ev-body{display:flex;flex-direction:column;gap:12px;flex-grow:1;padding:26px 28px 28px}
+.ev-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13px;color:#404846}
+.ev-type{padding:4px 10px;border-radius:999px;background:#ffe088;color:#574500;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.ev-loc{display:inline-flex;align-items:center;gap:4px}.ev-loc .material-symbols-outlined{font-size:18px;color:#735c00}
+.ev-title{font-size:22px;line-height:1.3;font-weight:600}
+.ev-desc{font-size:15px;line-height:1.6;color:#404846;flex-grow:1}
+.ev-cta{margin-top:8px;display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.ev-cta .material-symbols-outlined{font-size:20px;transition:transform .3s ease}
+.ev-card:hover .ev-cta .material-symbols-outlined{transform:translateX(6px)}
+@media (prefers-reduced-motion:reduce){.ev-card,.ev-card.is-in:hover{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
@@ -255,11 +276,47 @@
 </div>
 </section>
 <!-- Events Section -->
-<section class="py-section-v-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="calendar"><div class="max-w-container-max mx-auto"><div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"><div><span class="text-label-caps font-label-caps tracking-widest text-tertiary uppercase block mb-4">— ПОДІЇ</span><h2 class="text-headline-md font-headline-md text-primary">Найближчі події <span class="udh-todo">події-приклади, уточнити</span></h2><p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl">Приєднуйтесь до наших конференцій, навчальних курсів, семінарів та зустрічей спільноти.</p></div><a class="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-primary text-primary rounded-full font-body-md text-body-md font-medium hover:bg-primary hover:text-on-primary transition-all duration-300" href="podiyi.html"><span class="">Відкрити повний календар →</span></a></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="bg-surface rounded-xl p-8 border border-transparent hover:border-surface-variant hover:shadow-lg transition-all duration-300 flex flex-col justify-between"><div class="space-y-4"><div class="flex items-center justify-between"><span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-label-caps font-bold">15–17 ЖОВТНЯ</span><span class="text-label-caps font-medium text-tertiary uppercase">Конференція</span></div><h3 class="text-headline-sm font-headline-sm text-primary">Студентська Конференція «Новий Старт»</h3><p class="text-body-md font-body-md text-on-surface-variant">Триденне занурення для студентів: лідерство, духовні практики та побудова міцної християнської спільноти в кампусах.</p><div class="flex items-center gap-2 text-on-surface-variant text-body-md pt-2"><span class="material-symbols-outlined text-tertiary">location_on</span><span class="">Київ, Україна</span></div></div><div class="mt-8 pt-6 border-t border-outline-variant"><a class="inline-flex items-center justify-center w-full py-3 bg-primary text-on-primary rounded-full font-body-md text-body-md font-medium hover:bg-primary-container transition-colors duration-200" href="campus.html#join">Реєстрація</a></div></div><div class="bg-surface rounded-xl p-8 border border-transparent hover:border-surface-variant hover:shadow-lg transition-all duration-300 flex flex-col justify-between"><div class="space-y-4"><div class="flex items-center justify-between"><span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-caps font-bold">24–26 ЛИСТОПАДА</span><span class="text-label-caps font-medium text-tertiary uppercase">Ретрит</span></div><h3 class="text-headline-sm font-headline-sm text-primary">Сімейний вікенд «Міцні основи»</h3><p class="text-body-md font-body-md text-on-surface-variant">Практичний семінар та відновлювальний вікенд для подружніх пар, зосереджений на підтримці, спілкуванні та подоланні викликів.</p><div class="flex items-center gap-2 text-on-surface-variant text-body-md pt-2"><span class="material-symbols-outlined text-tertiary">location_on</span><span class="">Львівська обл., Україна</span></div></div><div class="mt-8 pt-6 border-t border-outline-variant"><a class="inline-flex items-center justify-center w-full py-3 bg-primary text-on-primary rounded-full font-body-md text-body-md font-medium hover:bg-primary-container transition-colors duration-200" href="simeyne-zhyttya.html#contact">Реєстрація</a></div></div><div class="bg-surface rounded-xl p-8 border border-transparent hover:border-surface-variant hover:shadow-lg transition-all duration-300 flex flex-col justify-between"><div class="space-y-4"><div class="flex items-center justify-between"><span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-label-caps font-bold">5–7 ГРУДНЯ</span><span class="text-label-caps font-medium text-tertiary uppercase">Тренінг</span></div><h3 class="text-headline-sm font-headline-sm text-primary">Лідерська школа капеланів та волонтерів</h3><p class="text-body-md font-body-md text-on-surface-variant">Інтенсивний вишкіл для тих, хто надає духовну та емоційну опіку військовим, родинам загиблих та переселенцям.</p><div class="flex items-center gap-2 text-on-surface-variant text-body-md pt-2"><span class="material-symbols-outlined text-tertiary">location_on</span><span class="">Дніпро, Україна</span></div></div><div class="mt-8 pt-6 border-t border-outline-variant"><a class="inline-flex items-center justify-center w-full py-3 bg-primary text-on-primary rounded-full font-body-md text-body-md font-medium hover:bg-primary-container transition-colors duration-200" href="viyskove.html">Реєстрація</a></div></div></div></div></section>
+<section class="py-section-v-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="calendar"><div class="max-w-container-max mx-auto"><div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"><div><span class="text-label-caps font-label-caps tracking-widest text-tertiary uppercase block mb-4">— ПОДІЇ</span><h2 class="text-headline-md font-headline-md text-primary">Найближчі події <span class="udh-todo">події-приклади, уточнити</span></h2><p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl">Приєднуйтесь до наших конференцій, навчальних курсів, семінарів та зустрічей спільноти.</p></div><a class="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-primary text-primary rounded-full font-body-md text-body-md font-medium hover:bg-primary hover:text-on-primary transition-all duration-300" href="podiyi.html"><span class="">Відкрити повний календар →</span></a></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<a class="ev-card" href="campus.html#join" data-date="2026-10-15" style="--d:0ms">
+<div class="ev-date"><div><span class="ev-day">15–17</span><span class="ev-month">жовтня</span></div><span class="ev-left" hidden></span></div>
+<div class="ev-body"><div class="ev-meta"><span class="ev-type">Конференція</span><span class="ev-loc"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>Київ, Україна</span></div>
+<h3 class="ev-title">Студентська Конференція «Новий Старт»</h3><p class="ev-desc">Триденне занурення для студентів: лідерство, духовні практики та побудова міцної християнської спільноти в кампусах.</p>
+<span class="ev-cta">Реєстрація<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
+</a>
+<a class="ev-card" href="simeyne-zhyttya.html#contact" data-date="2026-11-24" style="--d:120ms">
+<div class="ev-date"><div><span class="ev-day">24–26</span><span class="ev-month">листопада</span></div><span class="ev-left" hidden></span></div>
+<div class="ev-body"><div class="ev-meta"><span class="ev-type">Ретрит</span><span class="ev-loc"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>Львівська обл., Україна</span></div>
+<h3 class="ev-title">Сімейний вікенд «Міцні основи»</h3><p class="ev-desc">Практичний семінар та відновлювальний вікенд для подружніх пар, зосереджений на підтримці, спілкуванні та подоланні викликів.</p>
+<span class="ev-cta">Реєстрація<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
+</a>
+<a class="ev-card" href="viyskove.html" data-date="2026-12-05" style="--d:240ms">
+<div class="ev-date"><div><span class="ev-day">5–7</span><span class="ev-month">грудня</span></div><span class="ev-left" hidden></span></div>
+<div class="ev-body"><div class="ev-meta"><span class="ev-type">Тренінг</span><span class="ev-loc"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>Дніпро, Україна</span></div>
+<h3 class="ev-title">Лідерська школа капеланів та волонтерів</h3><p class="ev-desc">Інтенсивний вишкіл для тих, хто надає духовну та емоційну опіку військовим, родинам загиблих та переселенцям.</p>
+<span class="ev-cta">Реєстрація<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
+</a>
+</div></div></section>
 <section class="py-section-v-padding px-margin-mobile md:px-margin-desktop bg-primary text-on-primary" id="join">
 <div class="max-w-container-max mx-auto text-center"><h2 class="text-display-lg-mobile md:text-headline-md font-display-lg-mobile md:font-headline-md mb-6 max-w-3xl mx-auto">Готові долучитися до місії, що змінює життя?</h2><p class="text-body-lg font-body-lg text-inverse-on-surface opacity-90 max-w-2xl mx-auto mb-10">Ваша підтримка та участь допомагають поширювати надію та дієву допомогу тим, хто цього найбільше потребує по всій Україні.</p><a class="inline-flex items-center justify-center px-10 py-4 bg-on-primary text-primary rounded-full font-body-lg text-body-lg font-medium hover:bg-inverse-primary transition-colors duration-300" href="doluchytys.html">Долучитися до нас</a></div>
 </section>
 </main>
+<script>
+// Події: поява карток і «через N днів»
+(function () {
+  var cards = document.querySelectorAll('.ev-card'), today = new Date(); today.setHours(0, 0, 0, 0);
+  function plural(n) { var a = n % 10, b = n % 100; return a === 1 && b !== 11 ? 'день' : a >= 2 && a <= 4 && (b < 12 || b > 14) ? 'дні' : 'днів'; }
+  cards.forEach(function (c) {
+    var d = new Date(c.dataset.date + 'T00:00:00'), n = Math.round((d - today) / 864e5), el = c.querySelector('.ev-left');
+    if (n > 0 && n <= 120) { el.textContent = 'через ' + n + ' ' + plural(n); el.hidden = false; }
+    else if (n === 0) { el.textContent = 'сьогодні'; el.hidden = false; }
+  });
+  if (!('IntersectionObserver' in window)) { cards.forEach(function (c) { c.classList.add('is-in'); }); return; }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  cards.forEach(function (c) { io.observe(c); });
+})();
+</script>
 <script>
 // Напрямки: поява рядків і фото-прев'ю, що рухається за курсором
 (function () {
