@@ -28,7 +28,7 @@
   var page = location.pathname.split('/').pop() || 'index.html';
   var links = function (list) {
     return list.map(function (l) {
-      var active = l[0].split('#')[0] === page ? ' class="is-active"' : '';
+      var active = l[0].indexOf('#') < 0 && l[0] === page ? ' class="is-active"' : '';
       return '<a href="' + l[0] + '"' + active + '>' + l[1] + '</a>';
     }).join('');
   };
