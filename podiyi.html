@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="uk" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Події — Україна для Христа</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "brand-primary": "#001c17",
+                        "brand-dark": "#121b19",
+                        "brand-terracotta": "#e05a33",
+                        "brand-terracotta-hover": "#c94b26",
+                        "surface-light": "#fcf9f8",
+                        "surface-low": "#f6f3f2",
+                        "surface-card": "#ffffff",
+                        "card-border": "#e5e0dc",
+                        "muted-gray": "#58605f"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+        }
+        .event-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .event-card:hover {
+            border-color: #c8c0bb;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px -10px rgba(0, 28, 23, 0.08);
+        }
+        .filter-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23001c17' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1rem;
+        }
+</style>
+</head>
+<body class="bg-[#fcf9f8] text-[#1c1b1b] antialiased min-h-screen flex flex-col relative overflow-x-hidden selection:bg-[#e05a33] selection:text-white">
+
+<main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-12 py-10 md:py-16">
+<div class="mb-10 md:mb-14">
+<div class="flex items-center gap-3 mb-3">
+<span class="h-2 w-2 rounded-full bg-[#e05a33] animate-pulse"></span>
+<span class="text-xs uppercase font-bold tracking-widest text-[#e05a33]">Актуальні події та зустрічі</span>
+</div>
+<h1 class="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#001c17] mb-4">
+            Календар подій
+        </h1>
+<p class="text-[#58605f] text-base md:text-lg max-w-3xl leading-relaxed">
+            Приєднуйтесь до конференцій, ретрітів, духовних семінарів та регулярних зустрічей служіння «Україна для Христа» по всій країні та онлайн. <span class="udh-todo">події-приклади, уточнити</span>
+        </p>
+</div>
+<section aria-label="Фільтрація подій" class="mb-12">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-4xl">
+<div class="relative">
+<select aria-label="Тип події" class="filter-select w-full bg-white hover:bg-[#f6f3f2] text-[#001c17] text-xs md:text-sm font-extrabold uppercase tracking-wider py-4 pl-5 pr-12 rounded border border-[#d6d0cb] focus:border-[#e05a33] focus:ring-1 focus:ring-[#e05a33] cursor-pointer transition-colors shadow-sm">
+<option selected="">УСІ ПОДІЇ</option>
+<option>Конференції</option>
+<option>Семінари та Навчання</option>
+<option>Молитовні вечори</option>
+<option>Ретріти</option>
+</select>
+</div>
+<div class="relative">
+<select aria-label="Місто або локація" class="filter-select w-full bg-white hover:bg-[#f6f3f2] text-[#001c17] text-xs md:text-sm font-extrabold uppercase tracking-wider py-4 pl-5 pr-12 rounded border border-[#d6d0cb] focus:border-[#e05a33] focus:ring-1 focus:ring-[#e05a33] cursor-pointer transition-colors shadow-sm">
+<option selected="">УСІ РЕГІОНИ</option>
+<option>Київ</option>
+<option>Львів</option>
+<option>Одеса</option>
+<option>Дніпро</option>
+<option>Онлайн (Online)</option>
+</select>
+</div>
+<div class="relative">
+<select aria-label="Служіння" class="filter-select w-full bg-white hover:bg-[#f6f3f2] text-[#001c17] text-xs md:text-sm font-extrabold uppercase tracking-wider py-4 pl-5 pr-12 rounded border border-[#d6d0cb] focus:border-[#e05a33] focus:ring-1 focus:ring-[#e05a33] cursor-pointer transition-colors shadow-sm">
+<option selected="">УСІ СЛУЖІННЯ</option>
+<option>Студентське служіння</option>
+<option>LeaderImpact</option>
+<option>Сімейне життя</option>
+<option>Військове служіння</option>
+<option>Crescendo (Музиканти)</option>
+<option>Athletes in Action</option>
+</select>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2 mt-4 text-xs">
+<span class="text-[#58605f] mr-2 font-semibold">Швидкий вибір:</span>
+<button data-soon="Фільтри ще готуються" class="bg-[#e05a33] text-white px-3.5 py-1.5 rounded-full font-bold shadow-sm hover:bg-[#c94b26] transition-colors">Найближчі</button>
+<button data-soon="Фільтри ще готуються" class="bg-white text-[#404846] border border-[#d6d0cb] px-3.5 py-1.5 rounded-full font-medium hover:border-[#001c17] hover:text-[#001c17] transition-colors">Київ</button>
+<button data-soon="Фільтри ще готуються" class="bg-white text-[#404846] border border-[#d6d0cb] px-3.5 py-1.5 rounded-full font-medium hover:border-[#001c17] hover:text-[#001c17] transition-colors">Студенти</button>
+<button data-soon="Фільтри ще готуються" class="bg-white text-[#404846] border border-[#d6d0cb] px-3.5 py-1.5 rounded-full font-medium hover:border-[#001c17] hover:text-[#001c17] transition-colors">Online</button>
+</div>
+</section>
+<section aria-label="Список подій" class="space-y-4 md:space-y-5">
+<article class="event-card bg-white border border-[#e5e0dc] rounded-sm p-6 md:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6 shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-10 flex-grow">
+<div class="flex-shrink-0 w-32 md:w-36">
+<div class="text-3xl md:text-4xl font-black tracking-tighter text-[#001c17] leading-none">
+                        12-19
+                    </div>
+<div class="text-base md:text-lg font-black tracking-widest text-[#717976] uppercase mt-1">
+                        ВЕР ЧЕР
+                    </div>
+</div>
+<div class="space-y-1.5 max-w-2xl">
+<h2 class="text-lg md:text-xl font-black uppercase tracking-wide text-[#001c17] leading-tight">
+                        СТУДЕНТСЬКА КОНФЕРЕНЦІЯ 2024: НАДІЯ ДЛЯ МІСТА
+                    </h2>
+<p class="text-sm md:text-base text-[#58605f] font-normal leading-relaxed">
+                        9-місячна програма та щорічний з'їзд для розкриття потенціалу, духовного зростання та лідерства в університетах.
+                    </p>
+<div class="flex items-center gap-3 pt-1 text-xs text-[#58605f]">
+<span class="flex items-center gap-1 text-[#735c00] font-semibold"><span class="material-symbols-outlined text-sm">location_on</span> Київ • вул. Хрещатик</span>
+<span class="">•</span>
+<span class="">Студентське служіння</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between lg:justify-end gap-6 md:gap-10 pt-4 lg:pt-0 border-t lg:border-t-0 border-[#eee9e6] flex-shrink-0">
+<div class="flex items-center gap-2.5 text-right">
+<span class="material-symbols-outlined text-2xl text-[#001c17]">school</span>
+<div class="text-left">
+<div class="text-[11px] font-black uppercase tracking-widest leading-none text-[#001c17]">STUDENT</div>
+<div class="text-[9px] font-semibold tracking-wider text-[#717976] uppercase">MINISTRY</div>
+</div>
+</div>
+<button data-soon="Додавання в календар ще готується" class="border-2 border-[#e05a33] text-[#e05a33] hover:bg-[#e05a33] hover:text-white transition-colors duration-200 font-extrabold text-xs md:text-[13px] uppercase tracking-wider px-5 md:px-7 py-3 rounded-none whitespace-nowrap">
+                    ДОДАТИ В КАЛЕНДАР
+                </button>
+</div>
+</article>
+<article class="event-card bg-white border border-[#e5e0dc] rounded-sm p-6 md:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6 shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-10 flex-grow">
+<div class="flex-shrink-0 w-32 md:w-36">
+<div class="text-3xl md:text-4xl font-black tracking-tighter text-[#001c17] leading-none">
+                        17
+                    </div>
+<div class="text-base md:text-lg font-black tracking-widest text-[#717976] uppercase mt-1">
+                        ВЕР
+                    </div>
+</div>
+<div class="space-y-1.5 max-w-2xl">
+<h2 class="text-lg md:text-xl font-black uppercase tracking-wide text-[#001c17] leading-tight">
+                        HUB INSPIRE: ВЕЧІР ХВАЛИ ТА ПОКЛОНІННЯ В КИЄВІ
+                    </h2>
+<p class="text-sm md:text-base text-[#58605f] font-normal leading-relaxed">
+                        "Добре життя" — хто ним володіє та як його знайти? Відкрита зустріч, жива музика та спільне поклоніння.
+                    </p>
+<div class="flex items-center gap-3 pt-1 text-xs text-[#58605f]">
+<span class="flex items-center gap-1 text-[#735c00] font-semibold"><span class="material-symbols-outlined text-sm">wifi</span> Online + Наживо (Київ)</span>
+<span class="">•</span>
+<span class="">Crescendo Music</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between lg:justify-end gap-6 md:gap-10 pt-4 lg:pt-0 border-t lg:border-t-0 border-[#eee9e6] flex-shrink-0">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-2xl text-[#001c17]">graphic_eq</span>
+<div class="text-left">
+<div class="text-[11px] font-black uppercase tracking-widest leading-none text-[#001c17]">CRESCENDO</div>
+<div class="text-[9px] font-semibold tracking-wider text-[#717976] uppercase">MORE THAN MUSIC</div>
+</div>
+</div>
+<button data-soon="Додавання в календар ще готується" class="border-2 border-[#e05a33] text-[#e05a33] hover:bg-[#e05a33] hover:text-white transition-colors duration-200 font-extrabold text-xs md:text-[13px] uppercase tracking-wider px-5 md:px-7 py-3 rounded-none whitespace-nowrap">
+                    ДОДАТИ В КАЛЕНДАР
+                </button>
+</div>
+</article>
+<article class="event-card bg-white border border-[#e5e0dc] rounded-sm p-6 md:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6 shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-10 flex-grow">
+<div class="flex-shrink-0 w-32 md:w-36">
+<div class="text-3xl md:text-4xl font-black tracking-tighter text-[#001c17] leading-none">
+                        19-12
+                    </div>
+<div class="text-base md:text-lg font-black tracking-widest text-[#717976] uppercase mt-1">
+                        ВЕР ЧЕР
+                    </div>
+</div>
+<div class="space-y-1.5 max-w-2xl">
+<h2 class="text-lg md:text-xl font-black uppercase tracking-wide text-[#001c17] leading-tight">
+                        LEADERIMPACT: ФОРУМ ЦІЛІСНОГО ЛІДЕРСТВА
+                    </h2>
+<p class="text-sm md:text-base text-[#58605f] font-normal leading-relaxed">
+                        Практичні інструменти, сесії зі спікерами-підприємцями та духовні цінності для ділових лідерів і професіоналів.
+                    </p>
+<div class="flex items-center gap-3 pt-1 text-xs text-[#58605f]">
+<span class="flex items-center gap-1 text-[#735c00] font-semibold"><span class="material-symbols-outlined text-sm">location_on</span> Львів • Готель «Дністер»</span>
+<span class="">•</span>
+<span class="">LeaderImpact</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between lg:justify-end gap-6 md:gap-10 pt-4 lg:pt-0 border-t lg:border-t-0 border-[#eee9e6] flex-shrink-0">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-2xl text-[#001c17]">workspace_premium</span>
+<div class="text-left">
+<div class="text-[11px] font-black uppercase tracking-widest leading-none text-[#001c17]">LEADER</div>
+<div class="text-[9px] font-semibold tracking-wider text-[#717976] uppercase">IMPACT</div>
+</div>
+</div>
+<button data-soon="Додавання в календар ще готується" class="border-2 border-[#e05a33] text-[#e05a33] hover:bg-[#e05a33] hover:text-white transition-colors duration-200 font-extrabold text-xs md:text-[13px] uppercase tracking-wider px-5 md:px-7 py-3 rounded-none whitespace-nowrap">
+                    ДОДАТИ В КАЛЕНДАР
+                </button>
+</div>
+</article>
+<article class="event-card bg-white border border-[#e5e0dc] rounded-sm p-6 md:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6 shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-10 flex-grow">
+<div class="flex-shrink-0 w-32 md:w-36">
+<div class="text-3xl md:text-4xl font-black tracking-tighter text-[#001c17] leading-none">
+                        19-19
+                    </div>
+<div class="text-base md:text-lg font-black tracking-widest text-[#717976] uppercase mt-1">
+                        ВЕР ЧЕР
+                    </div>
+</div>
+<div class="space-y-1.5 max-w-2xl">
+<h2 class="text-lg md:text-xl font-black uppercase tracking-wide text-[#001c17] leading-tight">
+                        СІМЕЙНИЙ ВІК-ЕНД: ФУНДАМЕНТ МІЦНИХ ВЗАЄМИН
+                    </h2>
+<p class="text-sm md:text-base text-[#58605f] font-normal leading-relaxed">
+                        Спеціалізований модуль для подружніх пар: відновлення довіри, гармонія у спілкуванні та подолання викликів війни.
+                    </p>
+<div class="flex items-center gap-3 pt-1 text-xs text-[#58605f]">
+<span class="flex items-center gap-1 text-[#735c00] font-semibold"><span class="material-symbols-outlined text-sm">location_on</span> Одеса • Конференц-центр</span>
+<span class="">•</span>
+<span class="">Сімейне Життя</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between lg:justify-end gap-6 md:gap-10 pt-4 lg:pt-0 border-t lg:border-t-0 border-[#eee9e6] flex-shrink-0">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-2xl text-[#001c17]">diversity_1</span>
+<div class="text-left">
+<div class="text-[11px] font-black uppercase tracking-widest leading-none text-[#001c17]">FAMILY</div>
+<div class="text-[9px] font-semibold tracking-wider text-[#717976] uppercase">LIFE UA</div>
+</div>
+</div>
+<button data-soon="Додавання в календар ще готується" class="border-2 border-[#e05a33] text-[#e05a33] hover:bg-[#e05a33] hover:text-white transition-colors duration-200 font-extrabold text-xs md:text-[13px] uppercase tracking-wider px-5 md:px-7 py-3 rounded-none whitespace-nowrap">
+                    ДОДАТИ В КАЛЕНДАР
+                </button>
+</div>
+</article>
+<article class="event-card bg-white border border-[#e5e0dc] rounded-sm p-6 md:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6 shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-10 flex-grow">
+<div class="flex-shrink-0 w-32 md:w-36">
+<div class="text-3xl md:text-4xl font-black tracking-tighter text-[#001c17] leading-none">
+                        28
+                    </div>
+<div class="text-base md:text-lg font-black tracking-widest text-[#717976] uppercase mt-1">
+                        ЖОВ
+                    </div>
+</div>
+<div class="space-y-1.5 max-w-2xl">
+<h2 class="text-lg md:text-xl font-black uppercase tracking-wide text-[#001c17] leading-tight">
+                        ВІЙСЬКОВЕ КАПЕЛАНСТВО ТА ПІДТРИМКА РОДИН ЗАХИСНИКІВ
+                    </h2>
+<p class="text-sm md:text-base text-[#58605f] font-normal leading-relaxed">
+                        Круглий стіл та тренінг з надання духовної та психологічної підтримки військовослужбовцям, ветеранам та їхнім родинам.
+                    </p>
+<div class="flex items-center gap-3 pt-1 text-xs text-[#58605f]">
+<span class="flex items-center gap-1 text-[#735c00] font-semibold"><span class="material-symbols-outlined text-sm">location_on</span> Київ • Наживо</span>
+<span class="">•</span>
+<span class="">Військове служіння</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between lg:justify-end gap-6 md:gap-10 pt-4 lg:pt-0 border-t lg:border-t-0 border-[#eee9e6] flex-shrink-0">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-2xl text-[#001c17]">shield</span>
+<div class="text-left">
+<div class="text-[11px] font-black uppercase tracking-widest leading-none text-[#001c17]">MILITARY</div>
+<div class="text-[9px] font-semibold tracking-wider text-[#717976] uppercase">MINISTRY</div>
+</div>
+</div>
+<button data-soon="Додавання в календар ще готується" class="border-2 border-[#e05a33] text-[#e05a33] hover:bg-[#e05a33] hover:text-white transition-colors duration-200 font-extrabold text-xs md:text-[13px] uppercase tracking-wider px-5 md:px-7 py-3 rounded-none whitespace-nowrap">
+                    ДОДАТИ В КАЛЕНДАР
+                </button>
+</div>
+</article>
+</section>
+<section aria-label="Регулярні зустрічі" class="mt-16 pt-12 border-t border-[#e2dedc]">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<div class="md:col-span-4 space-y-3">
+<span class="text-xs uppercase font-bold tracking-widest text-[#e05a33]">Щотижневий розклад</span>
+<h2 class="text-2xl md:text-3xl font-extrabold uppercase text-[#001c17]">Регулярні Зустрічі</h2>
+<p class="text-[#58605f] text-sm leading-relaxed">
+                    Долучайтесь до наших регулярних клубів та онлайн-груп для підтримки, вивчення Слова та духовного зростання.
+                </p>
+</div>
+<div class="md:col-span-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-white border border-[#e5e0dc] p-6 rounded shadow-sm flex items-start gap-4">
+<div class="p-3 bg-[#e05a33]/10 rounded text-[#e05a33] flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-[#001c17] uppercase tracking-wide">Молодіжний Клуб</h3>
+<p class="text-[#717976] text-xs font-semibold mt-1">Щоп'ятниці о 18:30 • Київ</p>
+<p class="text-[#58605f] text-xs mt-2">Спілкування, настільні ігри, обговорення актуальних життєвих тем.</p>
+</div>
+</div>
+<div class="bg-white border border-[#e5e0dc] p-6 rounded shadow-sm flex items-start gap-4">
+<div class="p-3 bg-[#e05a33]/10 rounded text-[#e05a33] flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-[#001c17] uppercase tracking-wide">Вивчення Біблії онлайн</h3>
+<p class="text-[#717976] text-xs font-semibold mt-1">Щосереди о 19:00 • Zoom / Online</p>
+<p class="text-[#58605f] text-xs mt-2">Інтерактивний розбір текстів Писання з відкритим простором для запитань.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script src="assets/site.js"></script>
+</body></html>
