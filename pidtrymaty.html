@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="uk"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Підтримати — Україна для Христа</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#224e45",
+                        "secondary": "#58605f",
+                        "surface-tint": "#3b665d",
+                        "secondary-fixed-dim": "#c0c8c6",
+                        "on-surface": "#1c1b1b",
+                        "tertiary": "#735c00",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-tertiary-container": "#4e3d00",
+                        "surface-variant": "#e5e2e1",
+                        "on-surface-variant": "#404846",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-container": "#709c91",
+                        "primary-container": "#00332b",
+                        "surface": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-primary": "#a2d0c4",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#5c6463",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "tertiary-container": "#cba72f",
+                        "outline": "#717976",
+                        "surface-bright": "#fcf9f8",
+                        "background": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#404847",
+                        "on-background": "#1c1b1b",
+                        "primary-fixed-dim": "#a2d0c4",
+                        "on-secondary-fixed": "#151d1c",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container": "#f0eded",
+                        "tertiary-fixed": "#ffe088",
+                        "on-primary-fixed": "#00201b",
+                        "primary-fixed": "#bdece0",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "outline-variant": "#c0c8c5",
+                        "secondary-fixed": "#dce4e2",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#d9e1df",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary": "#001c17",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "margin-desktop": "80px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "section-v-padding": "100px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-sm": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "display-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(232, 240, 238, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .form-input {
+            border: 1px solid var(--tw-colors-outline-variant);
+            background: transparent;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--tw-colors-primary);
+            box-shadow: 0 2px 0 0 var(--tw-colors-primary);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<header class="py-section-v-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7"><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed-dim/20 text-tertiary text-label-caps font-label-caps mb-stack-sm"><span class="material-symbols-outlined text-[16px]">volunteer_activism</span> ВНЕСОК У МАЙБУТНЄ</div><h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-surface mb-stack-md">Підтримати місію «Україна для Христа»</h1><p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">Ваша фінансова та ресурсна підтримка допомагає нам нести надію, розвивати студентські та сімейні рухи, підтримувати захисників і трансформувати суспільство.</p><div class="flex flex-wrap items-center gap-4 mt-stack-md"><div class="flex items-center gap-2 text-on-surface-variant text-body-md"><span class="material-symbols-outlined text-primary text-[20px]">verified</span> 100% цільове призначення</div><div class="flex items-center gap-2 text-on-surface-variant text-body-md"><span class="material-symbols-outlined text-primary text-[20px]">shield</span> Прозора звітність Cru Global</div></div></div>
+<div class="md:col-span-5 mt-stack-lg md:mt-0">
+<img alt="Community Hands" class="w-full h-auto rounded-lg object-cover shadow-sm aspect-square md:aspect-[4/5]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHZsObusbpXyL5tWuYtpxTYpRz8mZx8FwncxfM4TMxoqLeApeq1SnFDub_qmKQIxX18GoHsjFYT9jFS-DKrsF78bo6CbVelGsHfGzF7LfL091GV9Ybj2hDcPO9ZSjiLiE83A18jWEkp9vjJ6t2w8V4P3Z6M9aTJClu9swQTH8iczruwdKv7U_Fad6-zRG8ZUuW0RF-yuMW76U8mhAU7DCJbhHISh2H7y4YETaD7Q4fxvcnf-AQVJBjVg">
+</div>
+</div></header>
+<main class="py-section-v-padding bg-surface-container-low px-margin-mobile md:px-margin-desktop"><div class="max-w-container-max mx-auto space-y-stack-lg"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start"><div class="md:col-span-7 bg-surface p-8 rounded-xl border border-surface-variant shadow-sm"><div class="flex items-center justify-between pb-6 border-b border-surface-variant mb-6"><div><h2 class="text-headline-sm font-headline-sm text-on-surface">Онлайн-пожертва</h2><p class="text-body-md font-body-md text-on-surface-variant text-[14px]">Оберіть зручний спосіб швидкої та безпечної підтримки</p></div><div class="flex items-center bg-surface-container-low p-1 rounded-lg border border-surface-variant text-[13px] font-medium"><button class="px-3 py-1.5 rounded bg-primary text-on-primary" type="button">Разово</button><button class="px-3 py-1.5 rounded text-on-surface-variant hover:text-primary transition-colors" type="button">Щомісяця</button></div></div><div class="space-y-6"><div class="space-y-2"><label class="text-label-caps font-label-caps text-on-surface-variant block">1. НАПРЯМОК ПІДТРИМКИ</label><select class="form-input w-full p-3 text-body-md font-body-md bg-surface rounded-lg text-on-surface"><option selected="" value="general">Загальний фонд місії (найбільша потреба)</option><option value="campus">Студентське служіння (Campus)</option><option value="chaplaincy">Військове капеланство та підтримка родин воїнів</option><option value="family">Сімейне життя (FamilyLife)</option><option value="humanitarian">Гуманітарна допомога та ВПО</option></select></div><div class="space-y-2"><label class="text-label-caps font-label-caps text-on-surface-variant block">2. СУМА ВНЕСКУ (UAH)</label><div class="grid grid-cols-2 sm:grid-cols-4 gap-2"><button class="py-3 px-4 rounded-lg border border-surface-variant hover:border-primary hover:bg-primary/10 text-on-surface font-medium transition-colors text-center text-body-md" type="button">300 ₴</button><button class="py-3 px-4 rounded-lg bg-primary text-on-primary font-medium transition-colors text-center text-body-md" type="button">500 ₴</button><button class="py-3 px-4 rounded-lg border border-surface-variant hover:border-primary hover:bg-primary/10 text-on-surface font-medium transition-colors text-center text-body-md" type="button">1000 ₴</button><button class="py-3 px-4 rounded-lg border border-surface-variant hover:border-primary hover:bg-primary/10 text-on-surface font-medium transition-colors text-center text-body-md" type="button">2000 ₴</button></div><div class="relative mt-2"><input class="form-input w-full p-3 pr-12 text-body-md font-body-md bg-surface rounded-lg" min="50" placeholder="Інша сума внеску, ₴" type="number"><span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant text-[20px]">payments</span></div></div><div class="space-y-2"><label class="text-label-caps font-label-caps text-on-surface-variant block">3. ПЛАТІЖНИЙ МЕТОД</label><div class="grid grid-cols-1 sm:grid-cols-2 gap-3"><button data-soon="Онлайн-оплата ще підключається" class="w-full bg-[#001c17] text-[#ffffff] hover:bg-on-primary-fixed-variant py-3 px-4 rounded-lg flex items-center justify-center gap-2 font-medium transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">credit_card</span> Банківська картка / LiqPay</button><button data-soon="Онлайн-оплата ще підключається" class="w-full bg-[#001c17] text-[#ffffff] hover:bg-on-primary-fixed-variant py-3 px-4 rounded-lg flex items-center justify-center gap-2 font-medium transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span> Apple Pay / Google Pay</button></div></div><div class="p-4 bg-surface-container-low rounded-lg border border-surface-variant text-[13px] text-on-surface-variant leading-relaxed flex items-start gap-3"><span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">lock</span><div class="">Платежі захищено банківським шифруванням. Ваша пожертва є добровільним безповоротним внеском на статутну неприбуткову діяльність ГО «Україна для Христа».</div></div></div></div><div class="md:col-span-5 space-y-6"><div class="bg-[#E8F0EE] p-8 rounded-xl border border-surface-variant shadow-sm space-y-4"><div class="flex items-center gap-3"><div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">account_balance</span></div><h3 class="text-headline-sm font-headline-sm text-on-surface">Офіційні банківські реквізити</h3></div><p class="text-body-md text-on-surface-variant text-[14px]">Для юридичних осіб, ФОП та прямих банківських переказів через IBAN.</p><div class="space-y-3 bg-surface p-4 rounded-lg border border-surface-variant text-body-md"><div class="flex justify-between items-center text-[13px]"><span class="text-on-surface-variant">Отримувач:</span><span class="font-medium text-on-surface text-right">ГО «Україна для Христа»</span></div><div class="flex justify-between items-center text-[13px]"><span class="text-on-surface-variant">Код ЄДРПОУ:</span><span class="udh-todo">уточнюється</span></div><div class="space-y-1"><div class="text-[12px] text-on-surface-variant">IBAN (UA):</div><div class="flex items-center justify-between bg-surface-container-low p-2 rounded border border-surface-variant text-[13px] font-mono"><span class="udh-todo">уточнюється</span></div></div><div class="text-[12px] text-on-surface-variant"><span class="font-medium">Призначення платежу:</span> Безповоротна добровільна пожертва на статутну діяльність.</div></div></div><div class="bg-surface p-6 rounded-xl border border-surface-variant space-y-3"><div class="flex items-center gap-2 text-primary font-medium text-body-md"><span class="material-symbols-outlined text-[20px]">verified_user</span> Фінансова прозорість та довіра</div><p class="text-body-md text-on-surface-variant text-[14px]">Ми підзвітні незалежному аудиту та є частиною міжнародного альянсу Cru Global з 70-річною історією бездоганної репутації. Щороку публікуємо відкритий звіт для партнерів.</p></div></div></div><div class="bg-surface p-8 rounded-lg border border-surface-variant"><div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-6 border-b border-surface-variant mb-6"><div><span class="text-tertiary bg-tertiary-fixed-dim/20 px-4 py-1 rounded-full text-label-caps font-label-caps inline-block mb-2">КОНТАКТИ</span><h3 class="text-headline-sm font-headline-sm text-on-surface">Наші контакти</h3><p class="text-body-md font-body-md text-on-surface-variant">Зв'яжіться з відділом розвитку або завітайте до нашого офісу</p></div><div class="flex gap-4"><a class="w-10 h-10 bg-[#E8F0EE] hover:bg-primary hover:text-on-primary rounded-full flex items-center justify-center transition-colors text-primary font-medium text-[14px]" href="pidtrymaty.html" data-soon="Посилання уточнюється">FB</a><a class="w-10 h-10 bg-[#E8F0EE] hover:bg-primary hover:text-on-primary rounded-full flex items-center justify-center transition-colors text-primary font-medium text-[14px]" href="pidtrymaty.html" data-soon="Посилання уточнюється">IG</a><a class="w-10 h-10 bg-[#E8F0EE] hover:bg-primary hover:text-on-primary rounded-full flex items-center justify-center transition-colors text-primary font-medium text-[14px]" href="pidtrymaty.html" data-soon="Посилання уточнюється">TG</a></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="flex items-start gap-4"><div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined text-[20px]">location_on</span></div><div><div class="font-medium text-on-surface text-body-md">Офіс у Києві</div><div class="text-body-md text-on-surface-variant text-[14px]">Київ, Україна</div></div></div><div class="flex items-start gap-4"><div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined text-[20px]">call</span></div><div><div class="font-medium text-on-surface text-body-md">Телефон</div><span class="text-body-md text-on-surface-variant hover:text-primary text-[14px]"><span class="udh-todo">уточнюється</span></span></div></div><div class="flex items-start gap-4"><div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined text-[20px]">mail</span></div><div><div class="font-medium text-on-surface text-body-md">Відділ партнерств</div><span class="text-body-md text-on-surface-variant hover:text-primary text-[14px]"><span class="udh-todo">уточнюється</span></span></div></div></div></div></div></main>
+<script src="assets/site.js"></script>
+</body></html>
