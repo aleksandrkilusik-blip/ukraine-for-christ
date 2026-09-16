@@ -106,13 +106,17 @@
 <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <div class="md:col-span-5">
 <h2 class="text-headline-md font-headline-md text-primary mb-6">Про нас:</h2>
-<div class="flex space-x-12 mt-12 border-t border-outline-variant pt-8">
+<div class="flex flex-wrap gap-x-12 gap-y-8 mt-12 border-t border-outline-variant pt-8">
 <div>
-<span class="text-display-lg-mobile font-display-lg-mobile text-primary block">35</span>
+<span class="text-display-lg-mobile font-display-lg-mobile text-primary block tabular-nums" data-count="1991" data-from="1950">1991</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase mt-2 block">рік початку служіння</span>
+</div>
+<div>
+<span class="text-display-lg-mobile font-display-lg-mobile text-primary block tabular-nums" data-count="35">35</span>
 <span class="text-label-caps font-label-caps text-on-surface-variant uppercase mt-2 block">років в Україні</span>
 </div>
 <div>
-<span class="text-display-lg-mobile font-display-lg-mobile text-primary block">11</span>
+<span class="text-display-lg-mobile font-display-lg-mobile text-primary block tabular-nums" data-count="11">11</span>
 <span class="text-label-caps font-label-caps text-on-surface-variant uppercase mt-2 block">напрямків служіння</span>
 </div>
 </div>
@@ -155,5 +159,26 @@
 <div class="max-w-container-max mx-auto text-center"><h2 class="text-display-lg-mobile md:text-headline-md font-display-lg-mobile md:font-headline-md mb-6 max-w-3xl mx-auto">Готові долучитися до місії, що змінює життя?</h2><p class="text-body-lg font-body-lg text-inverse-on-surface opacity-90 max-w-2xl mx-auto mb-10">Ваша підтримка та участь допомагають поширювати надію та дієву допомогу тим, хто цього найбільше потребує по всій Україні.</p><a class="inline-flex items-center justify-center px-10 py-4 bg-on-primary text-primary rounded-full font-body-lg text-body-lg font-medium hover:bg-inverse-primary transition-colors duration-300" href="doluchytys.html">Долучитися до нас</a></div>
 </section>
 </main>
+<script>
+// Лічильники в блоці «Про нас»: рахують від нуля, коли блок з'являється на екрані
+(function () {
+  var els = document.querySelectorAll('[data-count]');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function run(el) {
+    var to = +el.dataset.count, from = +(el.dataset.from || 0), t0 = null, dur = 1800;
+    function step(t) {
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(from + (to - from) * e);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { run(en.target); io.unobserve(en.target); } });
+  }, { threshold: 0.6 });
+  els.forEach(function (el) { el.textContent = el.dataset.from || 0; io.observe(el); });
+})();
+</script>
 <script src="assets/site.js"></script>
 </body></html>
