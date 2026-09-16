@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Хто ми — Україна для Христа</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00332b',
+            'primary-light': '#0a463c',
+            'primary-dark': '#00241e',
+            secondary: '#1b4d3e',
+            tertiary: '#f59e0b',
+            surface: '#fcf9f8',
+            'surface-dim': '#f3eee9',
+            'surface-card': '#ffffff',
+            'surface-container-low': '#f8f5f2',
+            'surface-container-high': '#ece6df',
+            'on-primary': '#ffffff',
+            'on-surface': '#1c1b1f',
+            'on-surface-variant': '#49454f',
+            'outline-variant': '#e4ded7',
+          },
+          fontFamily: {
+            sans: ['"Manrope"', 'sans-serif'],
+          },
+          maxWidth: {
+            'container-max': '1280px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #fcf9f8;
+      color: #1c1b1f;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .accordion-content {
+      transition: max-height 0.35s ease-out, opacity 0.3s ease-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .accordion-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+    .accordion-icon.rotated {
+      transform: rotate(180deg);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-surface text-on-surface antialiased selection:bg-tertiary selection:text-primary">
+
+  <main class="flex-grow">
+
+    <!-- HERO / TITLE SECTION -->
+    <section class="relative pt-12 pb-14 sm:pt-16 sm:pb-20 bg-gradient-to-b from-surface-dim/70 to-surface border-b border-outline-variant/40">
+      <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase mb-4">
+            <span>Про місію</span>
+            <span>•</span>
+            <span>Україна для Христа</span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight leading-[1.15] mb-6">
+            Хто ми
+          </h1>
+          <p class="text-lg sm:text-xl text-on-surface-variant leading-relaxed mb-8">
+            Ми покликані нести надію, розвивати учнівство та єднати християн заради духовного й соціального відродження нашого суспільства.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="index.html#ministries" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-on-primary font-semibold text-base shadow-md hover:bg-primary-light hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 group">
+              <span>Переглянути всі служіння</span>
+              <svg class="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </a>
+            <a href="#team" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white border border-outline-variant text-on-surface font-medium text-base hover:bg-surface-dim transition-colors">
+              <span>Команда лідерів</span>
+              <svg class="w-4 h-4 text-on-surface-variant" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 1: НАША ІСТОРІЯ -->
+    <section id="history" class="py-14 sm:py-20 bg-surface">
+      <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+
+          <div class="lg:col-span-4">
+            <div class="inline-block text-xs font-bold uppercase tracking-widest text-tertiary mb-2">Наше покликання</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">Наша історія</h2>
+            <div class="w-12 h-1 bg-tertiary rounded-full mt-3 mb-6"></div>
+
+            <div class="flex items-baseline gap-6 py-4 border-y border-outline-variant/60 my-6">
+              <div>
+                <span class="block text-4xl sm:text-5xl font-extrabold text-primary">35</span>
+                <span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">років служіння</span>
+              </div>
+              <div class="h-10 w-px bg-outline-variant"></div>
+              <div>
+                <span class="block text-4xl sm:text-5xl font-extrabold text-primary">11</span>
+                <span class="text-xs uppercase font-semibold text-on-surface-variant tracking-wider">напрямів роботи</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 space-y-6">
+            <div class="p-6 sm:p-8 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm">
+              <p class="text-xl sm:text-2xl font-semibold text-primary leading-snug mb-4">
+                «“Україна для Христа” (УДХ) — це міжконфесійна християнська місія, яка безперервно діє в Україні з 1991 року. Усе починалося з невеликої команди місіонерів та кількох українських студентів-волонтерів у Києві».
+              </p>
+              <p class="text-base sm:text-lg text-on-surface-variant leading-relaxed">
+                Ми є частиною міжнародного християнського руху <span class="font-semibold text-on-surface">Cru</span> (заснованого у 1951 році). Сьогодні наша команда об'єднує співробітників, капеланів, наставників та волонтерів по всій країні. Ми віримо, що жива віра змінює кожну сферу людського життя — від студентських аудиторій та спортивних полів до сімейного затишку та підтримки захисників на передовій.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 2: МІСІЯ ТА БАЧЕННЯ (АКОРДЕОН) -->
+    <section class="py-14 sm:py-20 bg-surface-dim/40 border-y border-outline-variant/60">
+      <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="inline-block text-xs font-bold uppercase tracking-widest text-primary mb-2">Стратегічний орієнтир</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">Місія та бачення</h2>
+          <p class="mt-3 text-base sm:text-lg text-on-surface-variant">
+            Основоположні вектори нашого руху в Україні та світі. Натисніть на заголовок, щоб розгорнути або згорнути деталі.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+
+          <div class="accordion-item rounded-2xl bg-surface-card border border-outline-variant shadow-sm overflow-hidden transition-all duration-200">
+            <button type="button" class="accordion-header w-full px-6 sm:px-8 py-5 sm:py-6 flex items-center justify-between text-left focus:outline-none focus:bg-surface-dim/50" aria-expanded="true">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-tertiary block">ДНК служіння</span>
+                  <span class="text-xl sm:text-2xl font-bold text-primary">Наша місія</span>
+                </div>
+              </div>
+              <div class="accordion-icon rotated w-8 h-8 rounded-full bg-surface-dim flex items-center justify-center text-primary shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </button>
+
+            <div class="accordion-content open px-6 sm:px-8 pb-6 sm:pb-8 text-on-surface-variant">
+              <div class="pt-2 border-t border-outline-variant/60">
+                <blockquote class="text-lg sm:text-xl font-medium text-primary italic mb-4">
+                  «Будувати духовні рухи скрізь, щоб кожен в Україні знав когось, хто щиро слідує за Ісусом Христом».
+                </blockquote>
+                <p class="leading-relaxed text-base mb-4">
+                  Ми покликані об'єднувати, підтримувати та споряджати віруючих у кожній сфері суспільства. Ми діємо за біблійною стратегією <strong>WIN — BUILD — SEND</strong>:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4 pt-2">
+                  <div class="p-4 rounded-xl bg-surface-dim/60 border border-outline-variant/50">
+                    <div class="font-bold text-primary text-sm mb-1">WIN (Досягати)</div>
+                    <div class="text-xs leading-relaxed">Ділитися Євангелієм зрозумілою мовою у кожному середовищі.</div>
+                  </div>
+                  <div class="p-4 rounded-xl bg-surface-dim/60 border border-outline-variant/50">
+                    <div class="font-bold text-primary text-sm mb-1">BUILD (Наставляти)</div>
+                    <div class="text-xs leading-relaxed">Допомагати зростати у вірі та формувати стійкий християнський характер.</div>
+                  </div>
+                  <div class="p-4 rounded-xl bg-surface-dim/60 border border-outline-variant/50">
+                    <div class="font-bold text-primary text-sm mb-1">SEND (Відправляти)</div>
+                    <div class="text-xs leading-relaxed">Споряджати лідерів ініціювати нові служіння по всій країні.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item rounded-2xl bg-surface-card border border-outline-variant shadow-sm overflow-hidden transition-all duration-200">
+            <button type="button" class="accordion-header w-full px-6 sm:px-8 py-5 sm:py-6 flex items-center justify-between text-left focus:outline-none focus:bg-surface-dim/50" aria-expanded="false">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-tertiary block">Горизонт майбутнього</span>
+                  <span class="text-xl sm:text-2xl font-bold text-primary">Наше бачення</span>
+                </div>
+              </div>
+              <div class="accordion-icon w-8 h-8 rounded-full bg-surface-dim flex items-center justify-center text-primary shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </button>
+
+            <div class="accordion-content px-6 sm:px-8 pb-6 sm:pb-8 text-on-surface-variant">
+              <div class="pt-2 border-t border-outline-variant/60">
+                <blockquote class="text-lg sm:text-xl font-medium text-primary italic mb-4">
+                  «Євангеліє надії відновлює Україну через цілісних лідерів, зрілі спільноти та зцілені родини».
+                </blockquote>
+                <p class="leading-relaxed text-base mb-3">
+                  Ми прагнемо бачити трансформоване українське суспільство, де Божа істина формує етику підприємців, зміцнює вчителів, дає силу воїнам і дарує надію дітям і молоді.
+                </p>
+                <p class="leading-relaxed text-base">
+                  Через синергію з помісними церквами, капеланськими корпусами та громадськими ініціативами ми будуємо тривалу спадщину віри для майбутніх поколінь.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BLOCK 3: ФОТОКАРУСЕЛЬ ЖИТТЯ МІСІЇ -->
+    <section class="py-14 sm:py-20 bg-surface">
+      <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12">
+          <div>
+            <div class="inline-block text-xs font-bold uppercase tracking-widest text-tertiary mb-2">Життя в дії</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">Фотогалерея місії</h2>
+            <p class="mt-2 text-base text-on-surface-variant max-w-xl">
+              Моменти живого служіння, таборів, наставництва, допомоги та спільності по всій Україні.
+            </p>
+          </div>
+
+          <div class="hidden sm:flex items-center gap-3 mt-4 md:mt-0">
+            <button id="carousel-prev" class="p-3 rounded-full border border-outline-variant bg-white hover:bg-surface-dim text-primary transition-all shadow-sm active:scale-95" aria-label="Попереднє фото">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button id="carousel-next" class="p-3 rounded-full border border-outline-variant bg-white hover:bg-surface-dim text-primary transition-all shadow-sm active:scale-95" aria-label="Наступне фото">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="carousel-container" class="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-outline-variant bg-surface-dim/20 shadow-inner">
+          <div id="carousel-track" class="carousel-track flex no-scrollbar overflow-x-auto snap-x snap-mandatory touch-pan-x sm:overflow-hidden sm:snap-none">
+
+            <div class="carousel-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2 sm:p-3 snap-start">
+              <div class="h-80 sm:h-96 rounded-xl sm:rounded-2xl overflow-hidden relative group bg-surface-card border border-outline-variant/60 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/aida/AEtjO1UDz4UgtUmsS23zNTLDYTldxTew7gtc52uZXT1LtNo9QBEY0K096JhaUbrjPV2OqCdxWE5ijNiJWl1vdxX2L_bPdpMcr1aoZSLRGnVlZybi9UfsyM4EEqrqgIyjO0NUUlWrLMNdzvq7kxeQlVhEkBysoYr7jbZchKIIrAA2W4QO6w49WixYLtmW34fR1HVBOnWaCvLJYPIfNEGTxTNawf_M6evDDZgiJg8iVuMg54il8npzT2TPszjBFfh3" alt="Спортивне служіння Sport Kids" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-xs font-bold uppercase tracking-wider text-tertiary">Sport Kids</span>
+                  <p class="text-base font-semibold leading-snug">Дитячі футбольні тренування та табори</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2 sm:p-3 snap-start">
+              <div class="h-80 sm:h-96 rounded-xl sm:rounded-2xl overflow-hidden relative group bg-surface-card border border-outline-variant/60 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVj7cqls7wzQzdc6Br50LZTA-o0xfxuUhmuR3PEwL8DzyFKNah7xbNxitQ4Re7PxotgOAGjmhRoFV_tHe2_QoEJBVwXqonsaA4uBBoE8J09W7_w7H_48-6GDMoJGbzhX16cna9fyCCtygYWyf8tceIZB-rh3uc50gV7O_TA8Tvv_dcnmlyDfW_GbRUGON4w86GhGHxipeF5yFrliz1JTjNwqOKpVl83nuunZRKuCRgmY4Mf6pzFb_NkxLeg3cEO09sDfw" alt="Студентські зустрічі Campus Ukraine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-xs font-bold uppercase tracking-wider text-tertiary">Campus Ukraine</span>
+                  <p class="text-base font-semibold leading-snug">Молодіжні зустрічі, конференції та спільнота</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2 sm:p-3 snap-start">
+              <div class="h-80 sm:h-96 rounded-xl sm:rounded-2xl overflow-hidden relative group bg-surface-card border border-outline-variant/60 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRFfIO0SCRWeX5oIWwZebMPpKbPj3_G1ctlWqXLbSBWQxzD5-38hMHLuVYZ2pkhnR3WLBG59Qm19yFk3R8gjeyploCVn-jkI09C5E5V1NasR1x90Rscqqi8iZcl4HqhomCgM9CIjwe5wnH7nQoytuNmmeA47xzLqUyKsdDPOEyyjqx7ZbAj6TClq4KMonF69cXvyFuYyaEtmRc5V5CYtMF2fxwpN9RtkDG9ZFLRjbmHtjSrUl-p8AC2ycgFFl_F_yF1i0" alt="Гуманітарне служіння УДХ" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-xs font-bold uppercase tracking-wider text-tertiary">Гуманітарний рух</span>
+                  <p class="text-base font-semibold leading-snug">Жовті коробки допомоги та надії для родин</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2 sm:p-3 snap-start">
+              <div class="h-80 sm:h-96 rounded-xl sm:rounded-2xl overflow-hidden relative group bg-surface-card border border-outline-variant/60 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp7ZjLAUvHDlfY90Ga5SKCv0Ft6gZ1YZID1ELjtWS5tgsi-m_8GUyZnLHuiy4BzgtVgrSodMcyKvnRcH1fR7GrFmz2Nb1mBANS5ZARjOilhoa2w14xuYa2nw1sry49yN9f3SoabTbBm7GUDbJESFdtIQEVuEHDw63cW6wi-pQUIYyG_-5GmUtgc3vfjCpmnsuW_u9xajWeMOdilg1AFa7FH4pVELzJE_FuBbUGWqZwhLmR9XkEA4MyULDyzVARM5BokO4" alt="Військові капелани та Military Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-xs font-bold uppercase tracking-wider text-tertiary">Military Ministry</span>
+                  <p class="text-base font-semibold leading-snug">Капеланська підтримка захисників України</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2 sm:p-3 snap-start">
+              <div class="h-80 sm:h-96 rounded-xl sm:rounded-2xl overflow-hidden relative group bg-surface-card border border-outline-variant/60 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQJPY_JxYAlOa2X7V3JxzSxT0pRIMuoFHndlbrmdSl1WZGa3aWOQyFUs3X9rPukbFUAbpwgSCBKsTy7efpx_1-gfvKytiOFPCfbP-5BmVxDdKahQv8jWQYI0tlDg2nvOEmZRP8zyLEiVhm5lqf-LF0mXtLhlrhiP0l8iMlr9mlN3pfFXR4IndVteHmKB6zA0DB7I3BzTQ0ARbJTs5mXjzG5e8A7bFhpUFLfplEly9og-yLONvcHNYDS0CvA0o5Y4aHJoY" alt="Волонтери Rebuild Ukraine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-xs font-bold uppercase tracking-wider text-tertiary">Відбудова</span>
+                  <p class="text-base font-semibold leading-snug">Команди волонтерів на відновленні пошкодженого житла</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2 sm:p-3 snap-start">
+              <div class="h-80 sm:h-96 rounded-xl sm:rounded-2xl overflow-hidden relative group bg-surface-card border border-outline-variant/60 shadow-sm">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkJwd7EIktuT3Hi8Dvb6qrUpXTpcKo1EfHBSAgpRYhNTa_PSsnRkLiENOLeKY3pjfPKsH7FU3uOukjN6J2RATwq9GBv8OLHej45ochwusPqhtooyCS_mvR6fBLWyBYh70jjZ1MsDbOQmt8QGx7CHI3Ns8dzfxDjuC9E3fMTHyb4HN3MbbdpgVGZuh5aN00perUj4PkUB07supbMGxUminCdpHeiTtiQeP50RRLwUHlZDciqENh7o2JoptJdz6oi8i4S14" alt="Команда служіння" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-xs font-bold uppercase tracking-wider text-tertiary">Команда</span>
+                  <p class="text-base font-semibold leading-snug">Служіння родинам та лідерське наставництво</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 mt-4 sm:hidden">
+          <div class="carousel-dot w-2 h-2 rounded-full bg-primary"></div>
+          <div class="carousel-dot w-2 h-2 rounded-full bg-outline-variant"></div>
+          <div class="carousel-dot w-2 h-2 rounded-full bg-outline-variant"></div>
+          <div class="carousel-dot w-2 h-2 rounded-full bg-outline-variant"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 4: КОМАНДА ЛІДЕРІВ -->
+    <section id="team" class="py-14 sm:py-20 bg-surface-dim/30 border-t border-outline-variant/60 scroll-mt-20">
+      <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-12">
+          <div class="inline-block text-xs font-bold uppercase tracking-widest text-tertiary mb-2">Обличчя місії</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">Команда лідерів</h2>
+          <p class="mt-3 text-base sm:text-lg text-on-surface-variant">
+            Познайомтеся з відданими людьми, які керують нашою місією та координують ключові напрямки служіння по всій Україні.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Олександр Зібаров</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Національний лідер</p>
+            <p class="text-xs text-on-surface-variant mt-1">Будапешт / координація руху</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Алла Семікіна</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Асоціативна нацлідерка</p>
+            <p class="text-xs text-on-surface-variant mt-1">Стратегічний розвиток</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Ірина Недельчева</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">LDHR</p>
+            <p class="text-xs text-on-surface-variant mt-1">Розвиток лідерів та персоналу</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Олександр Залевський</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Передав LDHR <span class="udh-todo">внутрішня примітка</span></p>
+            <p class="text-xs text-on-surface-variant mt-1">Консультант та наставник</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Анатолій Демінко</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Адмін з 1.01.2027 <span class="udh-todo">внутрішня примітка</span></p>
+            <p class="text-xs text-on-surface-variant mt-1">Операційне управління</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Олег Вржещ</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Адмінкоманда</p>
+            <p class="text-xs text-on-surface-variant mt-1">Фінанси та адміністрування</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Марія Парчук</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Студентське служіння</p>
+            <p class="text-xs text-on-surface-variant mt-1">Лідерка Campus Ukraine</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Дмитро Тищенко</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Гуманітарне служіння</p>
+            <p class="text-xs text-on-surface-variant mt-1">«Жовта коробка» та допомога</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Олексій Травніков</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Сімейне служіння</p>
+            <p class="text-xs text-on-surface-variant mt-1">Лідер FamilyLife Ukraine</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Артем Перков</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Стратегія хабів</p>
+            <p class="text-xs text-on-surface-variant mt-1">Mission Hub та осередки</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
+            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
+              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary">Георгій Аветисян</h3>
+            <p class="text-sm font-medium text-tertiary mt-0.5">Розвиток партнерства</p>
+            <p class="text-xs text-on-surface-variant mt-1">Церкви, фонди та співпраця</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-16 sm:py-20 bg-primary text-on-primary">
+      <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-2xl mx-auto space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-semibold uppercase tracking-wider">
+            11 спеціалізованих команд
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            Ознайомтеся з усіма напрямами нашого служіння
+          </h2>
+          <p class="text-base sm:text-lg text-white/80 leading-relaxed">
+            Кожна команда має свій унікальний фокус: від студентів та спортсменів до вчителів, бізнес-лідерів та військових капеланів.
+          </p>
+          <div class="pt-2">
+            <a href="index.html#ministries" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-tertiary text-primary font-bold text-base shadow-lg hover:bg-amber-400 hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 group">
+              <span>Перейти до служінь на головній</span>
+              <svg class="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Mission & Vision Accordion
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.accordion-item');
+        const content = item.querySelector('.accordion-content');
+        const icon = header.querySelector('.accordion-icon');
+        const isOpen = content.classList.contains('open');
+
+        if (isOpen) {
+          content.classList.remove('open');
+          icon.classList.remove('rotated');
+          header.setAttribute('aria-expanded', 'false');
+        } else {
+          content.classList.add('open');
+          icon.classList.add('rotated');
+          header.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Carousel Logic
+    const track = document.getElementById('carousel-track');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+
+    if (track && prevBtn && nextBtn) {
+      let currentIndex = 0;
+      const getSlidesPerView = () => {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 640) return 2;
+        return 1;
+      };
+
+      const slides = track.querySelectorAll('.carousel-slide');
+      const maxIndex = () => Math.max(0, slides.length - getSlidesPerView());
+
+      const updateDesktopSlide = () => {
+        const slideWidth = slides[0].offsetWidth;
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      };
+
+      prevBtn.addEventListener('click', () => {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex();
+        updateDesktopSlide();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = currentIndex < maxIndex() ? currentIndex + 1 : 0;
+        updateDesktopSlide();
+      });
+
+      window.addEventListener('resize', () => {
+        if (currentIndex > maxIndex()) currentIndex = maxIndex();
+        if (window.innerWidth >= 640) {
+          updateDesktopSlide();
+        } else {
+          track.style.transform = 'none';
+        }
+      });
+    }
+  </script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
