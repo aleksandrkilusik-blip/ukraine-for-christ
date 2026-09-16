@@ -82,7 +82,16 @@
         body { font-family: 'Manrope', sans-serif; background-color: #fcf9f8; color: #1c1b1b; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .card-bg-tint { background-color: #E8F0EE; }
-    </style>
+    /* Бачення */
+.v-quote{position:absolute;top:-10px;right:4%;font-size:420px;line-height:1;font-weight:800;color:rgba(162,208,196,.07);pointer-events:none;user-select:none}
+.v-text em{font-style:normal}
+.v-text .vw{color:rgba(255,255,255,.2);transition:color .35s ease}
+.v-text .vw.on{color:#fff}
+.v-text .v-acc .vw.on{color:#e9c349}
+.v-pill{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--d),transform .6s ease var(--d)}
+.v-pill.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.v-text .vw{transition:none}.v-pill{opacity:1;transform:none;transition:none}}
+</style>
 </head>
 <body class="antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
 <main class="flex-grow">
@@ -134,8 +143,17 @@
 </div>
 </section>
 <!-- Values Section -->
-<section class="py-section-v-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="values">
-<div class="max-w-container-max mx-auto"><div class="text-center max-w-3xl mx-auto"><span class="inline-block text-body-md font-bold tracking-widest text-tertiary uppercase mb-4">— НАШЕ БАЧЕННЯ</span><p class="text-headline-sm md:text-headline-md font-headline-sm md:font-headline-md text-primary leading-tight font-medium mt-2">«Ми благовістимо, зрощуємо учнів і споряджаємо лідерів з огляду на актуальні виклики й особливості служіння в різних цільових аудиторіях. Ми бачимо, як Євангеліє дає надію на зцілення тисячам українців, які відновлюються духовно й емоційно та відбудовують країну.»</p></div></div>
+<section class="relative overflow-hidden bg-primary text-on-primary py-section-v-padding px-margin-mobile md:px-margin-desktop" id="values">
+<span class="v-quote" aria-hidden="true">“</span>
+<div class="max-w-container-max mx-auto relative">
+<span class="inline-block text-body-md font-bold tracking-widest text-[#e9c349] uppercase">— Наше бачення</span>
+<p class="v-text mt-8 max-w-5xl text-[28px] md:text-[42px] lg:text-[50px] leading-[1.22] font-semibold tracking-tight">Ми <em class="v-acc">благовістимо</em>, <em class="v-acc">зрощуємо учнів</em> і <em class="v-acc">споряджаємо лідерів</em> з огляду на актуальні виклики й особливості служіння в різних цільових аудиторіях. Ми бачимо, як <em class="v-acc">Євангеліє дає надію</em> на зцілення тисячам українців, які відновлюються духовно й емоційно та відбудовують країну.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-10 border-t border-white/15">
+<div class="v-pill" style="--d:0ms"><span class="text-sm font-bold tracking-widest text-[#e9c349]">01</span><div class="mt-3 flex items-center gap-3"><span class="material-symbols-outlined text-3xl text-[#a2d0c4]">campaign</span><h3 class="text-xl lg:text-2xl font-semibold">Благовістимо</h3></div></div>
+<div class="v-pill" style="--d:150ms"><span class="text-sm font-bold tracking-widest text-[#e9c349]">02</span><div class="mt-3 flex items-center gap-3"><span class="material-symbols-outlined text-3xl text-[#a2d0c4]">diversity_3</span><h3 class="text-xl lg:text-2xl font-semibold">Зрощуємо учнів</h3></div></div>
+<div class="v-pill" style="--d:300ms"><span class="text-sm font-bold tracking-widest text-[#e9c349]">03</span><div class="mt-3 flex items-center gap-3"><span class="material-symbols-outlined text-3xl text-[#a2d0c4]">trending_up</span><h3 class="text-xl lg:text-2xl font-semibold">Споряджаємо лідерів</h3></div></div>
+</div>
+</div>
 </section>
 <!-- Directions Section -->
 <section class="py-section-v-padding px-margin-mobile md:px-margin-desktop bg-surface scroll-mt-20" id="ministries">
@@ -159,6 +177,38 @@
 <div class="max-w-container-max mx-auto text-center"><h2 class="text-display-lg-mobile md:text-headline-md font-display-lg-mobile md:font-headline-md mb-6 max-w-3xl mx-auto">Готові долучитися до місії, що змінює життя?</h2><p class="text-body-lg font-body-lg text-inverse-on-surface opacity-90 max-w-2xl mx-auto mb-10">Ваша підтримка та участь допомагають поширювати надію та дієву допомогу тим, хто цього найбільше потребує по всій Україні.</p><a class="inline-flex items-center justify-center px-10 py-4 bg-on-primary text-primary rounded-full font-body-lg text-body-lg font-medium hover:bg-inverse-primary transition-colors duration-300" href="doluchytys.html">Долучитися до нас</a></div>
 </section>
 </main>
+<script>
+// Бачення: слова «засвічуються» під час прокрутки, три кроки з'являються по черзі
+(function () {
+  var box = document.getElementById('values'), text = box.querySelector('.v-text');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  (function wrap(node) {
+    [].slice.call(node.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) {
+        var frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(function (part) {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          var w = document.createElement('span'); w.className = 'vw'; w.textContent = part; frag.appendChild(w);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1) wrap(n);
+    });
+  })(text);
+  var words = text.querySelectorAll('.vw'), pills = box.querySelectorAll('.v-pill');
+  if (reduce) { words.forEach(function (w) { w.classList.add('on'); }); return; }
+  function update() {
+    var r = text.getBoundingClientRect(), vh = innerHeight;
+    var p = (vh * 0.85 - r.top) / (r.height + vh * 0.35);
+    var lit = Math.round(Math.max(0, Math.min(1, p)) * words.length * 1.1);
+    words.forEach(function (w, i) { w.classList.toggle('on', i < lit); });
+    if (box.getBoundingClientRect().bottom < vh + 40) pills.forEach(function (x) { x.classList.add('is-in'); });
+  }
+  addEventListener('scroll', update, { passive: true });
+  addEventListener('resize', update);
+  update();
+})();
+</script>
 <script>
 // Лічильники в блоці «Про нас»: рахують від нуля, коли блок з'являється на екрані
 (function () {
