@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="uk" class="scroll-smooth"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Історії — Україна для Христа</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#bdece0",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#735c00",
+                        "surface-bright": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#cba72f",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "secondary-fixed-dim": "#c0c8c6",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-background": "#1c1b1b",
+                        "on-surface": "#1c1b1b",
+                        "surface-tint": "#3b665d",
+                        "outline": "#717976",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-container": "#5c6463",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary": "#001c17",
+                        "surface-dim": "#dcd9d9",
+                        "secondary-fixed": "#dce4e2",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#404846",
+                        "on-primary-fixed-variant": "#224e45",
+                        "inverse-surface": "#313030",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "inverse-primary": "#a2d0c4",
+                        "surface-container": "#f0eded",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#151d1c",
+                        "primary-fixed-dim": "#a2d0c4",
+                        "secondary-container": "#d9e1df",
+                        "tertiary-fixed": "#ffe088",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-primary-fixed": "#00201b",
+                        "primary-container": "#00332b",
+                        "on-primary-container": "#709c91",
+                        "on-tertiary-fixed": "#241a00",
+                        "outline-variant": "#c0c8c5",
+                        "on-secondary-fixed-variant": "#404847",
+                        "error": "#ba1a1a",
+                        "secondary": "#58605f",
+                        "background": "#fcf9f8",
+                        "on-tertiary-container": "#4e3d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "section-v-padding": "100px",
+                        "stack-lg": "48px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "headline-sm": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(252, 249, 248, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(229, 226, 225, 0.5);
+        }
+        .lift-hover {
+            transition: all 0.3s ease;
+        }
+        .lift-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<main class="flex-grow w-full max-w-full px-6 md:px-12 pb-section-v-padding">
+<header class="py-stack-lg border-b border-surface-variant mb-stack-lg">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-stack-md">Історії та Блог</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Надихаючі свідоцтва, оновлення з полів служіння та історії про те, як Бог діє через наші команди по всій Україні. <span class="udh-todo">статті-приклади, замінити реальними</span></p>
+</header>
+<div class="flex flex-col lg:flex-row gap-gutter">
+<div class="w-full flex flex-col gap-stack-lg">
+<article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-xl overflow-hidden bg-surface-container-low border border-surface-variant">
+<div class="aspect-[16/9] w-full relative overflow-hidden bg-surface-dim">
+<img alt="Featured Story" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-quality documentary style photograph of young volunteers serving warm meals in a bustling community center in Kyiv. The scene is lit with warm, natural daylight streaming through large windows, creating a hopeful and compassionate mood. The aesthetic is modern photojournalism, capturing authentic emotional connection between the volunteers and the community." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhwNLizxKRPmAIcH98d8lJFgehgzqZL6kbprRfTLAXbQdogFLEg72mnZIdH02CY5h_wSc7U802iNzuQn1W3WuUr4M2j70A90NzbpGGYadXoRx5PtYxWUkUV19JQvzLkeP2mWrGVCXaD0hkooQeL3boP4c9ghVF3GDTOf1R0BTKFoBMTAgfUrCt3bMa01mMFHEXMhk8LHRjXh_knnZ3fM7k960RW5HIoj3fyVw2D1KcFRvziZhORw2Kyg">
+</div>
+<div class="p-8 md:p-12">
+<div class="flex items-center gap-4 mb-4">
+<span class="bg-[#fcf5d9] text-tertiary px-3 py-1 rounded-full font-label-caps text-label-caps">Служіння</span>
+<span class="text-on-surface-variant text-sm">12 Жовтня, 2023</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4 group-hover:text-surface-tint transition-colors">Світло в темряві: Як молодіжна команда відроджує надію в прифронтових містах</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 line-clamp-3">Наші команди продовжують відвідувати міста на сході України, приносячи не лише гуманітарну допомогу, але й духовну підтримку. Ця історія про неймовірну стійкість та віру, що долає страх.</p>
+<span class="text-primary font-medium flex items-center gap-2 group-hover:gap-3 transition-all">Читати далі <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></span>
+</div>
+</article>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+<article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-lg overflow-hidden bg-surface-container-low border border-surface-variant flex flex-col">
+<div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-dim">
+<img alt="Story" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A serene landscape shot of a quiet morning in a Ukrainian village, with a small church building in the background. Soft mist hangs over the fields, and the rising sun casts a gentle, golden-hour light. The aesthetic is contemplative and peaceful, symbolizing renewal and faith." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa9FwByq8MMGHJlNfeCflNn8MUHOLxLPLbUMfOKMZL8iyjLVMIG126jjIRzi6Mvgkwm9xk0-YA4P8USEG0rTJjOmwl8NaPDfqUQRT3M3TQlzaTy3yAShM_l328yaooS2WvwbcsmEXRnWWvI-S-dyPLchsPhBEyLff-vJHsur6Pobo6ncHX3EuzdijkCbD_3SjlUaDZw80LsrtudgBrY9vvsZqC8bpEHkAkL28hm1ciVHyz1XJJynhlpw">
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-[#fcf5d9] text-tertiary px-2 py-1 rounded-full font-label-caps text-label-caps text-[10px]">Новини</span>
+<span class="text-on-surface-variant text-sm">05 Жовтня, 2023</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3 flex-grow">Новий етап розбудови церков на заході країни</h3>
+<span class="text-surface-tint font-medium flex items-center gap-1 text-sm group-hover:underline decoration-surface-tint underline-offset-4">Детальніше</span>
+</div>
+</article>
+<article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-lg overflow-hidden bg-surface-container-low border border-surface-variant flex flex-col">
+<div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-dim">
+<img alt="Story" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A close-up portrait of an older woman with kind, weathered features, holding a worn Bible. The lighting is soft and cinematic, focusing on her expression of deep gratitude and peace. The background is slightly blurred, showing a modest room interior. The mood is intimate and spiritually resonant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDciEIueg9xgxXLM3UDrDAyXCK-g3Po8Z3ouNeTViwPOKcqbtOKH28FS9yVJgEWknBUp22VQ8NX45K61JJ6K5mgnESVYvaF7OQUfeFbHsjvpoCClRFfCcrgocNjKUNUk1KDGGUhlRA_SZ-umkjDBeUPkyd-zvBJ6bkVSlU5fDdT2CFJInjMIEDbwVNfKdGoudDuTiUdPVXzCzRXx-hoil3h_aJTN5BqqvosY8hqNrH6366D9OZk9RE1yw">
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-[#fcf5d9] text-tertiary px-2 py-1 rounded-full font-label-caps text-label-caps text-[10px]">Історії Життя</span>
+<span class="text-on-surface-variant text-sm">28 Вересня, 2023</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3 flex-grow">"Я знайшла мир, якого шукала все життя" – Історія Олени</h3>
+<span class="text-surface-tint font-medium flex items-center gap-1 text-sm group-hover:underline decoration-surface-tint underline-offset-4">Детальніше</span>
+</div>
+</article>
+<article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-lg overflow-hidden bg-surface-container-low border border-surface-variant flex flex-col">
+<div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-dim">
+<img alt="Story" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A vibrant outdoor scene showing a large group of teenagers participating in a summer camp activity. They are gathered in a circle in a sunlit pine forest, laughing and engaging in a discussion. The aesthetic is energetic, youthful, and vibrant, emphasizing community and joy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU_vilJr81RsV47qELroFHF9HmtLbdwCyq2CVGxbGyQPg0ikjOtBcIr9W0gkz2ZF705YPgwSCCj8RpGaweodEA5Oh0HYmYFqwihbIDo0jXcwL4_MQseIJA8VRJD_T-enVPZykrSA0rF_FQ1so_-gt3Uzmf8PTK1Z5lOArsoIXDN4wUYF0z1zhK44Oe5-ZacbDMNSmArMN4sGnyiY2Sg44lYvCW9PiaumVpHrteFQevUZF1T7bEgIQWbw">
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-[#fcf5d9] text-tertiary px-2 py-1 rounded-full font-label-caps text-label-caps text-[10px]">Молодь</span>
+<span class="text-on-surface-variant text-sm">15 Вересня, 2023</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3 flex-grow">Підсумки літніх таборів: Сотні змінених життів</h3>
+<span class="text-surface-tint font-medium flex items-center gap-1 text-sm group-hover:underline decoration-surface-tint underline-offset-4">Детальніше</span>
+</div>
+</article>
+<article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-lg overflow-hidden bg-surface-container-low border border-surface-variant flex flex-col">
+<div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-dim">
+<img alt="Story" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern, minimalist workspace shot showing an open laptop displaying a map of Ukraine with scattered mission points, alongside a notebook and a cup of coffee. The lighting is bright and even, typical of a modern office environment. The mood is strategic, organized, and focused on future planning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlH6HHRxNNyn6HLR_n-HGKAJi7xF75VZ29uIVKC0QkxHuRvLskmDVzVqNKqXrVfaeU0YsB9WoTDsDjbRszwUiRLxsLgPFtn6ErZ8CnSTBlGktJsN4KjsFkAXEpx4Do_BHf2oKx58Yi-PMH1kd4DpdH0izqg4ddd0lsYc8xUSttYC5PKUboMxGDHMT_XXXWAzVtRb1HzZE0ANUKBg_Ky5N8R4jTd-_vv7HASir8jHOmCyywI7SYN6p39Q">
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex items-center gap-3 mb-3">
+<span class="bg-[#fcf5d9] text-tertiary px-2 py-1 rounded-full font-label-caps text-label-caps text-[10px]">Новини</span>
+<span class="text-on-surface-variant text-sm">02 Вересня, 2023</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3 flex-grow">Стратегія 2024: Напрямки розвитку та нові виклики</h3>
+<span class="text-surface-tint font-medium flex items-center gap-1 text-sm group-hover:underline decoration-surface-tint underline-offset-4">Детальніше</span>
+</div>
+</article>
+<article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-lg overflow-hidden bg-surface-container-low border border-surface-variant flex flex-col"><div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-dim"><img alt="Story" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Volunteers organizing humanitarian food packages in warehouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhwNLizxKRPmAIcH98d8lJFgehgzqZL6kbprRfTLAXbQdogFLEg72mnZIdH02CY5h_wSc7U802iNzuQn1W3WuUr4M2j70A90NzbpGGYadXoRx5PtYxWUkUV19JQvzLkeP2mWrGVCXaD0hkooQeL3boP4c9ghVF3GDTOf1R0BTKFoBMTAgfUrCt3bMa01mMFHEXMhk8LHRjXh_knnZ3fM7k960RW5HIoj3fyVw2D1KcFRvziZhORw2Kyg"></div><div class="p-6 flex-grow flex flex-col"><div class="flex items-center gap-3 mb-3"><span class="bg-[#fcf5d9] text-tertiary px-2 py-1 rounded-full font-label-caps text-label-caps text-[10px]">Волонтерство</span><span class="text-on-surface-variant text-sm">24 Серпня, 2023</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-3 flex-grow">Руки допомоги: Як волонтери забезпечують теплом прифронтові села</h3><span class="text-surface-tint font-medium flex items-center gap-1 text-sm group-hover:underline decoration-surface-tint underline-offset-4">Детальніше</span></div></article><article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-lg overflow-hidden bg-surface-container-low border border-surface-variant flex flex-col"><div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-dim"><img alt="Story" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Youth prayer and worship gathering in Kyiv" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU_vilJr81RsV47qELroFHF9HmtLbdwCyq2CVGxbGyQPg0ikjOtBcIr9W0gkz2ZF705YPgwSCCj8RpGaweodEA5Oh0HYmYFqwihbIDo0jXcwL4_MQseIJA8VRJD_T-enVPZykrSA0rF_FQ1so_-gt3Uzmf8PTK1Z5lOArsoIXDN4wUYF0z1zhK44Oe5-ZacbDMNSmArMN4sGnyiY2Sg44lYvCW9PiaumVpHrteFQevUZF1T7bEgIQWbw"></div><div class="p-6 flex-grow flex flex-col"><div class="flex items-center gap-3 mb-3"><span class="bg-[#fcf5d9] text-tertiary px-2 py-1 rounded-full font-label-caps text-label-caps text-[10px]">Служіння</span><span class="text-on-surface-variant text-sm">18 Серпня, 2023</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-3 flex-grow">Молитва, що єднає: Зустріч лідерів церков з усієї країни</h3><span class="text-surface-tint font-medium flex items-center gap-1 text-sm group-hover:underline decoration-surface-tint underline-offset-4">Детальніше</span></div></article><article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-lg overflow-hidden bg-surface-container-low border border-surface-variant flex flex-col"><div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-dim"><img alt="Служіння на передовій: Як військові капелани тримають душевний фронт" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUylx-BfzCM107jjwQfF7dn9E7_z6GXr_XMh-L8qjX58PUeau11WX6hGOI9AHZ2aof8K85HDqdkbOwHVlaDDxmL17FExxKeVIbBt_LBGbxDgzkE0guKgxcYrG6JocerVwBLq4wCBa9rGRsDpAbTOi5vEWMwU0M2YCLzurZ1g-ASWefLfNq7uwXznTjrXjsMzZ1BUTq0bE--QWfVFe503D3WQxaFSHF4T7lBFKHDtiVu8dzqHdvSf_WUg"></div><div class="p-6 flex-grow flex flex-col"><div class="flex items-center gap-3 mb-3"><span class="bg-[#fcf5d9] text-tertiary px-2 py-1 rounded-full font-label-caps text-label-caps text-[10px]">Військове</span><span class="text-on-surface-variant text-sm">14 Серпня, 2023</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-3 flex-grow">Служіння на передовій: Як військові капелани тримають душевний фронт</h3><span class="text-surface-tint font-medium flex items-center gap-1 text-sm group-hover:underline decoration-surface-tint underline-offset-4">Детальніше <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></span></div></article><article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-lg overflow-hidden bg-surface-container-low border border-surface-variant flex flex-col"><div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-dim"><img alt="Студентські ініціативи: Простір довіри, музики та щирого спілкування" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDkM_0H2nPnWGLE9z3ztLYfxylG7LaZqcIDowcqBPF0nWo6Bza4b0G5D3qSjxCvoSbccfKYMYvgeRChJ17qLrOzpJ_ykVBa8IO_BJMTY07Q56YP24vrv7GlRSmREVCGv2R7msFie_1PMdDM263hFZj1xLvCN1We9-WhNeBnldi-mFRaA1dGLkr3Bd-qVBedWDo3knGtp1slprhi-XxVX8WK8YxGXkBLKrdSmnT_YxwjrNQsL_hj0CcGA"></div><div class="p-6 flex-grow flex flex-col"><div class="flex items-center gap-3 mb-3"><span class="bg-[#fcf5d9] text-tertiary px-2 py-1 rounded-full font-label-caps text-label-caps text-[10px]">Молодь</span><span class="text-on-surface-variant text-sm">03 Серпня, 2023</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-3 flex-grow">Студентські ініціативи: Простір довіри, музики та щирого спілкування</h3><span class="text-surface-tint font-medium flex items-center gap-1 text-sm group-hover:underline decoration-surface-tint underline-offset-4">Детальніше <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></span></div></article><article data-soon="Повна історія ще готується" class="group cursor-pointer lift-hover rounded-lg overflow-hidden bg-surface-container-low border border-surface-variant flex flex-col"><div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-dim"><img alt="Гармонія надії: Як класична музика торкається сердець та зцілює душі" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCH7k36UUJTQiVVjP0qO0uqk8g0i13wBnQilCBE7MUy28l_Hm9_ACmTKsJmXQfu7c1xxvb5VV3u53zIzZFJDaSpTqqLxLXHJ8hW2YHlgWGbNU8swbzGHxFEBRRdLmLNzKQAV7QaCkn-SqF9VrX63L78T09znM9KaeInbGuhDlw8Xx3h8H_wwK7OOekksmPFDUU2IVCO-MamUUxuBG0dwxdd63Olr17LZNbBPUJAWvoZjTy4TTo4bYn-A"></div><div class="p-6 flex-grow flex flex-col"><div class="flex items-center gap-3 mb-3"><span class="bg-primary-fixed text-primary px-2 py-1 rounded-full font-label-caps text-label-caps text-[10px]">Класичні музиканти</span><span class="text-on-surface-variant text-sm">26 Липня, 2023</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-3 flex-grow">Гармонія надії: Як класична музика торкається сердець та зцілює душі</h3><span class="text-surface-tint font-medium flex items-center gap-1 text-sm group-hover:underline decoration-surface-tint underline-offset-4">Детальніше <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></span></div></article></div>
+<div class="flex justify-center items-center gap-4 mt-stack-md pt-stack-md border-t border-surface-variant">
+<button data-soon="Архів історій ще готується" class="w-10 h-10 rounded flex items-center justify-center border border-outline-variant text-on-surface-variant hover:bg-surface-variant transition-colors disabled:opacity-50"><span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span></button>
+<button data-soon="Архів історій ще готується" class="w-10 h-10 rounded flex items-center justify-center bg-primary text-on-primary font-medium">1</button>
+<button data-soon="Архів історій ще готується" class="w-10 h-10 rounded flex items-center justify-center hover:bg-surface-variant text-on-surface transition-colors font-medium">2</button>
+<button data-soon="Архів історій ще готується" class="w-10 h-10 rounded flex items-center justify-center hover:bg-surface-variant text-on-surface transition-colors font-medium">3</button>
+<span class="text-on-surface-variant">...</span>
+<button data-soon="Архів історій ще готується" class="w-10 h-10 rounded flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+<aside class="lg:w-1/4 flex flex-col gap-stack-md sticky top-[120px] h-fit">
+<div class="bg-surface-container-low p-6 rounded-lg border border-surface-variant">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-surface-variant pb-2">Пошук</h3>
+<div class="relative">
+<input class="w-full bg-surface border border-outline-variant rounded px-4 py-2 pl-10 focus:outline-none focus:border-surface-tint focus:ring-1 focus:ring-surface-tint transition-all" placeholder="Знайти історію..." type="text">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border border-surface-variant">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-surface-variant pb-2">Категорії</h3>
+<ul class="flex flex-col gap-2"><li class=""><a class="flex justify-between items-center group bg-surface-variant p-2 rounded text-primary font-medium" href="istoriyi.html"><span class="text-primary font-medium">Особисті історії</span><span class="bg-primary text-on-primary text-xs py-1 px-2 rounded-full font-bold">42</span></a></li><li class=""><a class="flex justify-between items-center group p-2 rounded hover:bg-surface-variant transition-colors" href="istoriyi.html"><span class="text-on-surface-variant group-hover:text-surface-tint transition-colors">Новини</span><span class="bg-surface-variant text-on-surface-variant text-xs py-1 px-2 rounded-full">32</span></a></li><li class=""><a class="flex justify-between items-center group p-2 rounded hover:bg-surface-variant transition-colors" href="podiyi.html"><span class="text-on-surface-variant group-hover:text-surface-tint transition-colors">Події</span><span class="bg-surface-variant text-on-surface-variant text-xs py-1 px-2 rounded-full">18</span></a></li><li class=""><a class="flex justify-between items-center group p-2 rounded hover:bg-surface-variant transition-colors" href="doluchytys.html#volunteer"><span class="text-on-surface-variant group-hover:text-surface-tint transition-colors">Волонтерство</span><span class="bg-surface-variant text-on-surface-variant text-xs py-1 px-2 rounded-full">9</span></a></li></ul>
+</div>
+<form class="bg-primary p-6 rounded-lg text-on-primary">
+<span class="material-symbols-outlined text-4xl mb-2 text-primary-fixed" data-icon="mail">mail</span>
+<h3 class="font-headline-sm text-headline-sm mb-2">Підписатись</h3>
+<p class="text-sm opacity-90 mb-4">Отримуйте найкращі історії та новини на свій email раз на місяць.</p>
+<input class="w-full bg-on-primary text-primary border-none rounded px-4 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-primary-fixed" placeholder="Ваш Email" type="email" required>
+<button type="submit" class="w-full bg-primary-fixed text-primary font-bold py-2 rounded hover:bg-primary-fixed-dim transition-colors">Підписатись</button>
+</form>
+</aside>
+</div>
+</main>
+<script src="assets/site.js"></script>
+</body></html>
