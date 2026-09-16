@@ -71,6 +71,26 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+    /* Команда лідерів */
+    .team-card{opacity:0;transform:translateY(24px);transition:opacity .6s ease var(--d),transform .6s ease var(--d),box-shadow .3s ease}
+    .team-card.is-in{opacity:1;transform:none}
+    .team-card:hover,.team-card:focus-visible{box-shadow:0 20px 40px -12px rgba(0,28,23,.35)}
+    .team-photo{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+    .team-card:hover .team-photo,.team-card:focus-visible .team-photo{transform:scale(1.06)}
+    .team-ph{background:radial-gradient(circle at 30% 20%,#3b665d 0%,#00332b 55%,#001c17 100%)}
+    .team-ph span{font-size:clamp(64px,9vw,112px);font-weight:800;letter-spacing:-.04em;color:rgba(233,195,73,.9)}
+    .team-info{transition:transform .4s ease}
+    .team-desc{margin-top:6px}
+    @media (hover:hover){
+      .team-info{transform:translateY(28px)}
+      .team-desc{opacity:0;transition:opacity .4s ease}
+      .team-card:hover .team-info,.team-card:focus-visible .team-info{transform:none}
+      .team-card:hover .team-desc,.team-card:focus-visible .team-desc{opacity:1}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .team-card,.team-photo,.team-info,.team-desc{transition:none!important}
+      .team-card{opacity:1;transform:none}
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col bg-surface text-on-surface antialiased selection:bg-tertiary selection:text-primary">
@@ -364,107 +384,106 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <img src="assets/img/team/zibarov.jpg" alt="Олександр Зібаров" class="w-full h-full object-cover" loading="lazy">
+        <div class="team-grid flex flex-wrap justify-center gap-6">
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:0ms" tabindex="0">
+            <img src="assets/img/team/zibarov.jpg" alt="Олександр Зібаров" class="team-photo absolute inset-0 w-full h-full object-cover object-top" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Національний лідер</p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Олександр Зібаров</h3>
+              <p class="team-desc text-sm text-white/80">Будапешт / координація руху</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Олександр Зібаров</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Національний лідер</p>
-            <p class="text-xs text-on-surface-variant mt-1">Будапешт / координація руху</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:60ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>АС</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Асоціативна нацлідерка</p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Алла Семікіна</h3>
+              <p class="team-desc text-sm text-white/80">Стратегічний розвиток</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Алла Семікіна</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Асоціативна нацлідерка</p>
-            <p class="text-xs text-on-surface-variant mt-1">Стратегічний розвиток</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:120ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>ІН</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">LDHR</p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Ірина Недельчева</h3>
+              <p class="team-desc text-sm text-white/80">Розвиток лідерів та персоналу</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Ірина Недельчева</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">LDHR</p>
-            <p class="text-xs text-on-surface-variant mt-1">Розвиток лідерів та персоналу</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:180ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>ОЗ</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Передав LDHR <span class="udh-todo">внутрішня примітка</span></p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Олександр Залевський</h3>
+              <p class="team-desc text-sm text-white/80">Консультант та наставник</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Олександр Залевський</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Передав LDHR <span class="udh-todo">внутрішня примітка</span></p>
-            <p class="text-xs text-on-surface-variant mt-1">Консультант та наставник</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:240ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>АД</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Адмін з 1.01.2027 <span class="udh-todo">внутрішня примітка</span></p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Анатолій Демінко</h3>
+              <p class="team-desc text-sm text-white/80">Операційне управління</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Анатолій Демінко</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Адмін з 1.01.2027 <span class="udh-todo">внутрішня примітка</span></p>
-            <p class="text-xs text-on-surface-variant mt-1">Операційне управління</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:300ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>ОВ</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Адмінкоманда</p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Олег Вржещ</h3>
+              <p class="team-desc text-sm text-white/80">Фінанси та адміністрування</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Олег Вржещ</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Адмінкоманда</p>
-            <p class="text-xs text-on-surface-variant mt-1">Фінанси та адміністрування</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:360ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>МП</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Студентське служіння</p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Марія Парчук</h3>
+              <p class="team-desc text-sm text-white/80">Лідерка Campus Ukraine</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Марія Парчук</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Студентське служіння</p>
-            <p class="text-xs text-on-surface-variant mt-1">Лідерка Campus Ukraine</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:420ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>ДТ</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Гуманітарне служіння</p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Дмитро Тищенко</h3>
+              <p class="team-desc text-sm text-white/80">«Жовта коробка» та допомога</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Дмитро Тищенко</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Гуманітарне служіння</p>
-            <p class="text-xs text-on-surface-variant mt-1">«Жовта коробка» та допомога</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:480ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>ОТ</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Сімейне служіння</p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Олексій Травніков</h3>
+              <p class="team-desc text-sm text-white/80">Лідер FamilyLife Ukraine</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Олексій Травніков</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Сімейне служіння</p>
-            <p class="text-xs text-on-surface-variant mt-1">Лідер FamilyLife Ukraine</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:540ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>АП</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Стратегія хабів</p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Артем Перков</h3>
+              <p class="team-desc text-sm text-white/80">Mission Hub та осередки</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Артем Перков</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Стратегія хабів</p>
-            <p class="text-xs text-on-surface-variant mt-1">Mission Hub та осередки</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-surface-card border border-outline-variant/70 shadow-sm flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-            <div class="w-28 h-28 rounded-full bg-surface-dim flex items-center justify-center text-primary/40 mb-4 overflow-hidden border-2 border-outline-variant group-hover:border-primary transition-colors">
-              <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </article>
+          <article class="team-card group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] aspect-[4/5] rounded-3xl overflow-hidden bg-primary shadow-sm" style="--d:600ms" tabindex="0">
+            <div class="team-photo team-ph absolute inset-0 flex items-center justify-center" aria-hidden="true"><span>ГА</span></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/40 to-transparent"></div>
+            <div class="team-info absolute inset-x-0 bottom-0 p-6 sm:p-7 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Розвиток партнерства</p>
+              <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Георгій Аветисян</h3>
+              <p class="team-desc text-sm text-white/80">Церкви, фонди та співпраця</p>
             </div>
-            <h3 class="text-lg font-bold text-primary">Георгій Аветисян</h3>
-            <p class="text-sm font-medium text-tertiary mt-0.5">Розвиток партнерства</p>
-            <p class="text-xs text-on-surface-variant mt-1">Церкви, фонди та співпраця</p>
-          </div>
-
+          </article>
         </div>
 
       </div>
@@ -498,6 +517,16 @@
   </main>
 
   <script>
+    // Команда: поява карток під час прокрутки
+    (function () {
+      var cards = document.querySelectorAll('.team-card');
+      if (!('IntersectionObserver' in window)) { cards.forEach(function (c) { c.classList.add('is-in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+      }, { threshold: 0.15 });
+      cards.forEach(function (c) { io.observe(c); });
+    })();
+
     // Mission & Vision Accordion
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     accordionHeaders.forEach(header => {
