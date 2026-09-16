@@ -88,7 +88,7 @@
 .v-text .vw{color:rgba(255,255,255,.2);transition:color .35s ease}
 .v-text .vw.on{color:#fff}
 .v-text .v-acc .vw.on{color:#e9c349}
-.v-pill{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--d),transform .6s ease var(--d)}
+.v-pill{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--d),transform .6s ease var(--d),background-color .3s ease,border-color .3s ease}
 .v-pill.is-in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.v-text .vw{transition:none}.v-pill{opacity:1;transform:none;transition:none}}
 /* Напрямки: список із фото, що летить за курсором */
@@ -174,10 +174,10 @@
 <div class="max-w-container-max mx-auto relative">
 <span class="inline-block text-body-md font-bold tracking-widest text-[#e9c349] uppercase">— Наше бачення</span>
 <p class="v-text mt-8 max-w-5xl text-[28px] md:text-[42px] lg:text-[50px] leading-[1.22] font-semibold tracking-tight">Ми <em class="v-acc">благовістимо</em>, <em class="v-acc">зрощуємо учнів</em> і <em class="v-acc">споряджаємо лідерів</em> з огляду на актуальні виклики й особливості служіння в різних цільових аудиторіях. Ми бачимо, як <em class="v-acc">Євангеліє дає надію</em> на зцілення тисячам українців, які відновлюються духовно й емоційно та відбудовують країну.</p>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-10 border-t border-white/15">
-<div class="v-pill" style="--d:0ms"><span class="text-sm font-bold tracking-widest text-[#e9c349]">01</span><div class="mt-3 flex items-center gap-3"><span class="material-symbols-outlined text-3xl text-[#a2d0c4]">campaign</span><h3 class="text-xl lg:text-2xl font-semibold">Благовістимо</h3></div></div>
-<div class="v-pill" style="--d:150ms"><span class="text-sm font-bold tracking-widest text-[#e9c349]">02</span><div class="mt-3 flex items-center gap-3"><span class="material-symbols-outlined text-3xl text-[#a2d0c4]">diversity_3</span><h3 class="text-xl lg:text-2xl font-semibold">Зрощуємо учнів</h3></div></div>
-<div class="v-pill" style="--d:300ms"><span class="text-sm font-bold tracking-widest text-[#e9c349]">03</span><div class="mt-3 flex items-center gap-3"><span class="material-symbols-outlined text-3xl text-[#a2d0c4]">trending_up</span><h3 class="text-xl lg:text-2xl font-semibold">Споряджаємо лідерів</h3></div></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+<div class="v-pill rounded-2xl bg-white/[0.06] border border-white/10 p-7 lg:p-8 flex flex-col gap-8 hover:bg-white/[0.1] hover:border-[#e9c349]/40" style="--d:0ms"><div class="flex items-start justify-between"><span class="w-14 h-14 rounded-full bg-[#e9c349] text-[#001c17] flex items-center justify-center"><span class="material-symbols-outlined text-3xl">campaign</span></span><span class="text-5xl font-extrabold leading-none text-white/15 tabular-nums">01</span></div><h3 class="text-2xl xl:text-3xl font-semibold text-white">Благовістимо</h3></div>
+<div class="v-pill rounded-2xl bg-white/[0.06] border border-white/10 p-7 lg:p-8 flex flex-col gap-8 hover:bg-white/[0.1] hover:border-[#e9c349]/40" style="--d:150ms"><div class="flex items-start justify-between"><span class="w-14 h-14 rounded-full bg-[#e9c349] text-[#001c17] flex items-center justify-center"><span class="material-symbols-outlined text-3xl">diversity_3</span></span><span class="text-5xl font-extrabold leading-none text-white/15 tabular-nums">02</span></div><h3 class="text-2xl xl:text-3xl font-semibold text-white">Зрощуємо учнів</h3></div>
+<div class="v-pill rounded-2xl bg-white/[0.06] border border-white/10 p-7 lg:p-8 flex flex-col gap-8 hover:bg-white/[0.1] hover:border-[#e9c349]/40" style="--d:300ms"><div class="flex items-start justify-between"><span class="w-14 h-14 rounded-full bg-[#e9c349] text-[#001c17] flex items-center justify-center"><span class="material-symbols-outlined text-3xl">trending_up</span></span><span class="text-5xl font-extrabold leading-none text-white/15 tabular-nums">03</span></div><h3 class="text-2xl xl:text-3xl font-semibold text-white">Споряджаємо лідерів</h3></div>
 </div>
 </div>
 </section>
@@ -310,7 +310,7 @@
   if (reduce) { words.forEach(function (w) { w.classList.add('on'); }); return; }
   function update() {
     var r = text.getBoundingClientRect(), vh = innerHeight;
-    var p = (vh * 0.85 - r.top) / (r.height + vh * 0.35);
+    var p = (vh * 0.9 - r.top) / (r.height + vh * 0.15);
     var lit = Math.round(Math.max(0, Math.min(1, p)) * words.length * 1.1);
     words.forEach(function (w, i) { w.classList.toggle('on', i < lit); });
     if (box.getBoundingClientRect().bottom < vh + 40) pills.forEach(function (x) { x.classList.add('is-in'); });
