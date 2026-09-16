@@ -91,6 +91,32 @@
 .v-pill{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--d),transform .6s ease var(--d)}
 .v-pill.is-in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.v-text .vw{transition:none}.v-pill{opacity:1;transform:none;transition:none}}
+/* Напрямки: список із фото, що летить за курсором */
+.m-list{border-top:1px solid #c0c8c5}
+.m-row{position:relative;display:grid;grid-template-columns:48px 1fr 40px;gap:4px 16px;align-items:center;padding:22px 8px;border-bottom:1px solid #c0c8c5;color:#001c17;text-decoration:none;overflow:hidden;opacity:0;transform:translateY(16px);transition:opacity .5s ease var(--d),transform .5s ease var(--d)}
+.m-row.is-in{opacity:1;transform:none}
+.m-row::before{content:"";position:absolute;inset:0;background:#00332b;transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.7,.2,1);z-index:0}
+.m-row>*{position:relative;z-index:1;transition:color .3s ease,transform .45s cubic-bezier(.2,.7,.2,1)}
+.m-num{font-size:14px;font-weight:700;letter-spacing:.1em;color:#735c00}
+.m-name{font-size:22px;line-height:1.25;font-weight:600;letter-spacing:-.01em}
+.m-desc{grid-column:2/3;font-size:15px;line-height:1.5;color:#404846}
+.m-arrow{grid-row:1/3;grid-column:3;font-size:28px;justify-self:end}
+.m-row:hover::before,.m-row:focus-visible::before{transform:scaleX(1)}
+.m-row:hover .m-name,.m-row:focus-visible .m-name{color:#fff;transform:translateX(8px)}
+.m-row:hover .m-desc,.m-row:focus-visible .m-desc{color:rgba(255,255,255,.75)}
+.m-row:hover .m-num,.m-row:focus-visible .m-num{color:#e9c349}
+.m-row:hover .m-arrow,.m-row:focus-visible .m-arrow{color:#e9c349;transform:rotate(45deg)}
+@media (min-width:1024px){
+  .m-row{grid-template-columns:72px minmax(0,1.1fr) minmax(0,1fr) 48px;padding:30px 16px}
+  .m-name{font-size:34px}
+  .m-desc{grid-column:auto}
+  .m-arrow{grid-row:auto;grid-column:auto}
+}
+.m-preview{position:fixed;left:0;top:0;width:300px;height:210px;border-radius:16px;overflow:hidden;pointer-events:none;z-index:50;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .25s ease,transform .25s ease;box-shadow:0 24px 48px -12px rgba(0,0,0,.45)}
+.m-preview.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.m-preview img{width:100%;height:100%;object-fit:cover}
+@media (hover:none),(max-width:1023px){.m-preview{display:none}}
+@media (prefers-reduced-motion:reduce){.m-row{opacity:1;transform:none;transition:none}.m-row::before,.m-row>*{transition:none}}
 </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
@@ -157,19 +183,76 @@
 </section>
 <!-- Directions Section -->
 <section class="py-section-v-padding px-margin-mobile md:px-margin-desktop bg-surface scroll-mt-20" id="ministries">
-<div class="max-w-container-max mx-auto"><div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"><div><span class="text-label-caps font-label-caps tracking-widest text-tertiary uppercase block mb-4">— НАПРЯМКИ ДІЯЛЬНОСТІ</span><h2 class="text-headline-md font-headline-md text-primary">11 спеціалізованих команд</h2><p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl">Ми розвиваємо служіння у різних сферах суспільства, щоб кожен міг почути Євангеліє зрозумілою йому мовою.</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAioL7bbOU7D6U2_7G4O-4gujdKs9QeOgAHMN1YhoHAnfdjK8ee5oSnK0tW1UcOiO-PxT9QdIPO7C6iEse6J55X2SBaKCBcurnZGPpiWiqPR3MUSTnEkr8wEPeIBO26CH3u0-Br0Ydf1aIIq1iauGZ2TCnRdZSltJ7DHQkS8lbmHWoARCAsaCkkXh2SrwThMzrqbSM61RxdLORhusazaYwuAwCb6T8eerxnzggMZZz9PhLs_es-Ln6-yuvovmFxe3uXO0" alt="Campus Ukraine" class="h-12 w-12 object-contain mb-stack-md rounded"><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Студентське служіння</h3><p class="font-body-md text-body-md text-on-surface-variant">Формування майбутніх лідерів через християнські цінності в університетах.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="campus.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU5qqdd_0_jZlc-7guVWK7zT03i_j24rjSRmv85e6AvlW6YHh-5v-IK3O9nZcNFCY4WjQGT1zSnAnT5U3WsoWa9kMTmUF6LmmdLgyMWxTSbAJQP_07Sr83_7fNzMKojx--pQcopMBCa0pW-FhC5hiVH7VPKwOgOqDA4PQLr7qkcGLsmgBcj2aqGG0f2MmzPWbnmoc-5xhwO2DY1pWaQtfr2AhlpYg7GSsg2Vrs_IwNaP31SfCXoyHcvNZeplxwh0ifLSw" alt="Військове служіння" class="h-12 w-auto object-contain mb-stack-md rounded"><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Військове служіння</h3><p class="font-body-md text-body-md text-on-surface-variant">Духовна та психологічна підтримка захисників України на фронті та в тилу.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="viyskove.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhusGrkl2Qq07mSq1UD0dwV1Adnf9Xak-XBqWsx5hlzdfm2R2rjmG6nUUibu5Sq3mZ4qwJoPApFF3C_LrIUlrdDQgxDCiS65ZGBWtB-C2teYKejwWDfbVDhf8Ij7sfUPvtwpwyfkHcBGmNu7jEOwX2Rwmgr7NAlQKDCNCFdeWCWhQRY5UDKaXJWWbenuxxBrP5LZM1-muIE2iLEXOhXNS3hmVuPeUWDdUvqu8sM5vZcCyNYnRFWbwuC_mdTeu-MDVAi0M" alt="Сімейне життя" class="h-12 w-auto object-contain mb-stack-md rounded"><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Сімейне служіння</h3><p class="font-body-md text-body-md text-on-surface-variant">Зміцнення сімейних стосунків та допомога родинам у кризових ситуаціях (FamilyLife).</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="simeyne-zhyttya.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><span class="material-symbols-outlined text-4xl text-primary mb-stack-md" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Гуманітарна допомога</h3><p class="font-body-md text-body-md text-on-surface-variant">Забезпечення базових потреб переселенців та постраждалих від війни, генератори, евакуація.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="humanitarne.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><span class="material-symbols-outlined text-4xl text-primary mb-stack-md" style="font-variation-settings: 'FILL' 1;">sports_soccer</span><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Спортивне служіння</h3><p class="font-body-md text-body-md text-on-surface-variant">Тренування й табори для дітей, які бракує безпечного простору, виховання характеру.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="sport.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><span class="material-symbols-outlined text-4xl text-primary mb-stack-md" style="font-variation-settings: 'FILL' 1;">church</span><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Глобальний церковний рух</h3><p class="font-body-md text-body-md text-on-surface-variant">Зміцнення та розвиток церковних громад для ефективного служіння суспільству.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="gcr.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><span class="material-symbols-outlined text-4xl text-primary mb-stack-md" style="font-variation-settings: 'FILL' 1;">menu_book</span><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Рух освітян</h3><p class="font-body-md text-body-md text-on-surface-variant">Підтримка та об'єднання вчителів, викладачів та освітян для трансформації освітнього простору.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="osvitiany.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><span class="material-symbols-outlined text-4xl text-primary mb-stack-md" style="font-variation-settings: 'FILL' 1;">music_note</span><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Класичні музиканти</h3><p class="font-body-md text-body-md text-on-surface-variant">Спільнота музикантів: репетиції, концерти, розмови про віру й покликання.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="crescendo.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoc92GYqZjZYodmi5FHVOJmRS7U_UAo5sUSsYE4JUQp_fQ6hdNBQFSjvnZKXxEJruOZrhsA80KkxyzozmWAeYPs1t_xnTfKj4cAv1C6ryPh-n9pgWO7kMVjnyiEZBLs0CCFcsG1r-tfzztTVjRBwWzl2wAS7sZd9Zt4fcmCTvvl2VDBahxmb-WYnaCt4iiFj2MrhXb4n-gZWCyQUW2uOnRf29xS2SbgJIcvx5zfa20R2Cp9jtCi3iGRkAS8cTa0IP08Ro" alt="LeaderImpact" class="h-12 w-auto object-contain mb-stack-md rounded"><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">LeaderImpact</h3><p class="font-body-md text-body-md text-on-surface-variant">Лідерський рух: об'єднання та розвиток цілісних лідерів і підприємців у бізнесі.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="leaderimpact.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><span class="material-symbols-outlined text-4xl text-primary mb-stack-md" style="font-variation-settings: 'FILL' 1;">public</span><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Українці за кордоном</h3><p class="font-body-md text-body-md text-on-surface-variant">Підтримка українських родин, біженців та діаспори, збереження зв'язку та духовний супровід.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="za-kordonom.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-<div class="card-bg-tint p-8 rounded-lg flex flex-col group hover:-translate-y-1 transition-transform duration-300 justify-between"><span class="material-symbols-outlined text-4xl text-primary mb-stack-md" style="font-variation-settings: 'FILL' 1;">hub</span><h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Mission Hub</h3><p class="font-body-md text-body-md text-on-surface-variant">Навчання, ресурси, хаб та супровід для команд і утворення нових місійних ініціатив.</p><div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center"><a href="mission-hub.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-body-md font-medium hover:bg-primary-container transition-all duration-200 shadow-sm"><span class="">Детальніше</span><span class="material-symbols-outlined text-body-md">arrow_forward</span></a></div></div>
-</div></div>
+<div class="max-w-container-max mx-auto"><div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"><div><span class="text-label-caps font-label-caps tracking-widest text-tertiary uppercase block mb-4">— НАПРЯМКИ ДІЯЛЬНОСТІ</span><h2 class="text-headline-md font-headline-md text-primary">11 спеціалізованих команд</h2><p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl">Ми розвиваємо служіння у різних сферах суспільства, щоб кожен міг почути Євангеліє зрозумілою йому мовою.</p></div></div><div class="m-list">
+<a class="m-row" href="campus.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAOwMYtuhJYxh5A2XTWB62WxUMx1zK6Xh-RmjuBg6lPWEasquapcFUbI7DMBBATKZbPtD56d4y4SZcBydRAo2t_yY6roGV4qc6ErWAtjwzsFMNn82rgE1sFDi3lJrcYPFm0I5IPVvshjicz7Cfm5LrjxlkMT4nc1i2BqrRn8NprPjR7X9OZSzbsVvGacZ3dJtWquxiQF0xdV735kKzs-KV2DvuNUrljgpuo63FMbwSMgicdvjlyLGOG27WJ5rv1p-r2qio" style="--d:0ms">
+<span class="m-num">01</span>
+<span class="m-name">Студентське служіння</span>
+<span class="m-desc">Формування майбутніх лідерів через християнські цінності в університетах.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="viyskove.html" style="--d:50ms">
+<span class="m-num">02</span>
+<span class="m-name">Військове служіння</span>
+<span class="m-desc">Духовна та психологічна підтримка захисників України на фронті та в тилу.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="simeyne-zhyttya.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuBPy4hi3-67nyGSD-SOFHmgTFkN1bnCMF1DHnhQeqLfExPrS9UBKDNBzlxMR6XtmDx5sZoj9TMtkiQSJHP3h1AdDFtvnVqQIRnJgsqa30M0GHBcS7KDq4gRJY3BQETt41OTzBkO5ISn3T0-azpfGIctSYhIkV5NMG1E0OamWGRtI60FuNUUT6550_r3BS9gtpRahmkBv4eHnTgjyUWMecO6Ls8Ny6SjL3VV9-MDi2zmLlBSJJQn3cGhtuVt4YoS2vOJQo0" style="--d:100ms">
+<span class="m-num">03</span>
+<span class="m-name">Сімейне служіння</span>
+<span class="m-desc">Зміцнення сімейних стосунків та допомога родинам у кризових ситуаціях (FamilyLife).</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="humanitarne.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAaZocEf7AMOmXMKdUphDei5BahU_yNiPGC9GWH2L50M82NDjggqApP8JjPRGro8jLi8kL3zxyu53ZL9zyXkK-Qkg8GYknEb1bg7qFfKpzkk-EZAIq1uTYEyMbjh3fXI8LT_OJIqMkaFtz7Y7OGF0eHO8eJm8Gk1szMJIMTxk0M0SmpO0hDikMmf_Uw9kK1tgAwgAyvnVDxfFQ32lRgKo6wvhbbm0Bf6h7QlsiCnA-qLWI_kuGZO2sSstPmN1R6dOIykVI" style="--d:150ms">
+<span class="m-num">04</span>
+<span class="m-name">Гуманітарна допомога</span>
+<span class="m-desc">Забезпечення базових потреб переселенців та постраждалих від війни, генератори, евакуація.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="sport.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDSt3Rsh8qBN9Qjaq_c3yKnz9xrY2Ug6hUbVbBuuYckDkG-l9pKmxZsuuv3QK1DdbxGhf9ewk_MAxzIZvZY8L_FfcAmvSOi3Q62_gEi56cta3Ey6rs5vxnX8BKw3yzHIjoSTOLjvrtU2xbuYMgl0lBhi4CDN9ghqCAdB-tubr6K7q8SYR5AkOck4acDCGiX5gMc5gALqglG6SPZfgqoUHiUfokwc2E0uiwWUbUZAeC9-bYxdkhas462axe6QZZSC1PrOTA" style="--d:200ms">
+<span class="m-num">05</span>
+<span class="m-name">Спортивне служіння</span>
+<span class="m-desc">Тренування й табори для дітей, які бракує безпечного простору, виховання характеру.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="gcr.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuC_aYg_VEdi9aeyb5sKFKynrJRM0InsE3yspfMXZuBttPtQkert08ipWZ3YVAzJ0qcB__Xcm17Xl5_zy6vxwN0999xa-PJtKYV_SzEcTgLiZP2NkFYApPW8Ye9WhQfsxcQuJU_1Fp0-9Y6IZIjWUEU5cxXrcVkAKsIGON1fqGaiEisRD22DrTJuyrQNduGIcIX7maQokA5nGGbynqLRYYIk0_Ny5Vod8VqHTa0hqw_VHjSaFiD0r2htvA" style="--d:250ms">
+<span class="m-num">06</span>
+<span class="m-name">Глобальний церковний рух</span>
+<span class="m-desc">Зміцнення та розвиток церковних громад для ефективного служіння суспільству.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="osvitiany.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuC1P2SlA78-mBsfN3VL1ZywJ4ifYzircYgmsLhSOHm19aEEPxxSk6jqblBRqgm0OoSABHFSp9YCTym9gEomv7PM0yjp-ypKZ6FI167qqOGWSVRw4MoJ8mHVRKZuz2oPNWng5BYptSxzwLdaKTDZ0mX4NrPH7HepiEmdw9c7CGbnZCeKHgztpvoNkqcBBHUhVjXXJb8s98dg54a5Y25n7uj0q3AHmcB4HPrGKLsqirdblHotoyMdFBlR9Urjo1X2s5VxtKQ" style="--d:300ms">
+<span class="m-num">07</span>
+<span class="m-name">Рух освітян</span>
+<span class="m-desc">Підтримка та об'єднання вчителів, викладачів та освітян для трансформації освітнього простору.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="crescendo.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Vn4PId7AzsuTuqKQFwyXes4MbfAZRpv6V2GPhwjkLN8QOxXQbu6Ki-F2hp45RqWtOdj5YIHzbiuuHvhSbpPpFKABm7JqS4L2oJO0RDiHnkQ7MTJrsqIWPANILgq5FsZyigDgj7imOuJnWVHjfE4Z9b75ABev9vbUAvF3w6ttKo0Izd29ewpnIk7yOtUcRO69zKUJRVcOpzMgcEWYylzy_UAod5jbs1tTCawSsEWymwH-Tg_bMeqJSg" style="--d:350ms">
+<span class="m-num">08</span>
+<span class="m-name">Класичні музиканти</span>
+<span class="m-desc">Спільнота музикантів: репетиції, концерти, розмови про віру й покликання.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="leaderimpact.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAEzBTW-VpSx42_IKbRFLa6SQb3WC5xYTkdVNVub2AE58x0yElUGOWwhjDLHmti0UBMSlL_9PsLTGz6DqWcsJ6c6AQe2cnK9iPON4RJuJ9sPq-8ORSKh1HSK75PkadtTJANWL9nZ-_c55_bxatpak_pcCVsSJRddfmf3Uuska4iRAtGw8WhixQ_zHEvPLZjxy6PjRGH_l5OiBuG3jou0hj9wXdEb_2d6GTSxGx1kvY2VNC0ZRcMwoL_Vsb2Eq-23FiktuE" style="--d:400ms">
+<span class="m-num">09</span>
+<span class="m-name">LeaderImpact</span>
+<span class="m-desc">Лідерський рух: об'єднання та розвиток цілісних лідерів і підприємців у бізнесі.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="za-kordonom.html" data-img="assets/img/za-kordonom/02-spilnyi-vyizd-rodynamy.jpg" style="--d:450ms">
+<span class="m-num">10</span>
+<span class="m-name">Українці за кордоном</span>
+<span class="m-desc">Підтримка українських родин, біженців та діаспори, збереження зв'язку та духовний супровід.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+<a class="m-row" href="mission-hub.html" data-img="assets/img/mission-hub/03-velykodne-svyato-zala.jpg" style="--d:500ms">
+<span class="m-num">11</span>
+<span class="m-name">Mission Hub</span>
+<span class="m-desc">Навчання, ресурси, хаб та супровід для команд і утворення нових місійних ініціатив.</span>
+<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+</a>
+</div>
+<div class="m-preview" aria-hidden="true"><img alt=""></div>
+</div>
 </section>
 <!-- Events Section -->
 <section class="py-section-v-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="calendar"><div class="max-w-container-max mx-auto"><div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"><div><span class="text-label-caps font-label-caps tracking-widest text-tertiary uppercase block mb-4">— ПОДІЇ</span><h2 class="text-headline-md font-headline-md text-primary">Найближчі події <span class="udh-todo">події-приклади, уточнити</span></h2><p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl">Приєднуйтесь до наших конференцій, навчальних курсів, семінарів та зустрічей спільноти.</p></div><a class="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-primary text-primary rounded-full font-body-md text-body-md font-medium hover:bg-primary hover:text-on-primary transition-all duration-300" href="podiyi.html"><span class="">Відкрити повний календар →</span></a></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="bg-surface rounded-xl p-8 border border-transparent hover:border-surface-variant hover:shadow-lg transition-all duration-300 flex flex-col justify-between"><div class="space-y-4"><div class="flex items-center justify-between"><span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-label-caps font-bold">15–17 ЖОВТНЯ</span><span class="text-label-caps font-medium text-tertiary uppercase">Конференція</span></div><h3 class="text-headline-sm font-headline-sm text-primary">Студентська Конференція «Новий Старт»</h3><p class="text-body-md font-body-md text-on-surface-variant">Триденне занурення для студентів: лідерство, духовні практики та побудова міцної християнської спільноти в кампусах.</p><div class="flex items-center gap-2 text-on-surface-variant text-body-md pt-2"><span class="material-symbols-outlined text-tertiary">location_on</span><span class="">Київ, Україна</span></div></div><div class="mt-8 pt-6 border-t border-outline-variant"><a class="inline-flex items-center justify-center w-full py-3 bg-primary text-on-primary rounded-full font-body-md text-body-md font-medium hover:bg-primary-container transition-colors duration-200" href="campus.html#join">Реєстрація</a></div></div><div class="bg-surface rounded-xl p-8 border border-transparent hover:border-surface-variant hover:shadow-lg transition-all duration-300 flex flex-col justify-between"><div class="space-y-4"><div class="flex items-center justify-between"><span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-caps font-bold">24–26 ЛИСТОПАДА</span><span class="text-label-caps font-medium text-tertiary uppercase">Ретрит</span></div><h3 class="text-headline-sm font-headline-sm text-primary">Сімейний вікенд «Міцні основи»</h3><p class="text-body-md font-body-md text-on-surface-variant">Практичний семінар та відновлювальний вікенд для подружніх пар, зосереджений на підтримці, спілкуванні та подоланні викликів.</p><div class="flex items-center gap-2 text-on-surface-variant text-body-md pt-2"><span class="material-symbols-outlined text-tertiary">location_on</span><span class="">Львівська обл., Україна</span></div></div><div class="mt-8 pt-6 border-t border-outline-variant"><a class="inline-flex items-center justify-center w-full py-3 bg-primary text-on-primary rounded-full font-body-md text-body-md font-medium hover:bg-primary-container transition-colors duration-200" href="simeyne-zhyttya.html#contact">Реєстрація</a></div></div><div class="bg-surface rounded-xl p-8 border border-transparent hover:border-surface-variant hover:shadow-lg transition-all duration-300 flex flex-col justify-between"><div class="space-y-4"><div class="flex items-center justify-between"><span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-label-caps font-bold">5–7 ГРУДНЯ</span><span class="text-label-caps font-medium text-tertiary uppercase">Тренінг</span></div><h3 class="text-headline-sm font-headline-sm text-primary">Лідерська школа капеланів та волонтерів</h3><p class="text-body-md font-body-md text-on-surface-variant">Інтенсивний вишкіл для тих, хто надає духовну та емоційну опіку військовим, родинам загиблих та переселенцям.</p><div class="flex items-center gap-2 text-on-surface-variant text-body-md pt-2"><span class="material-symbols-outlined text-tertiary">location_on</span><span class="">Дніпро, Україна</span></div></div><div class="mt-8 pt-6 border-t border-outline-variant"><a class="inline-flex items-center justify-center w-full py-3 bg-primary text-on-primary rounded-full font-body-md text-body-md font-medium hover:bg-primary-container transition-colors duration-200" href="viyskove.html">Реєстрація</a></div></div></div></div></section>
@@ -177,6 +260,34 @@
 <div class="max-w-container-max mx-auto text-center"><h2 class="text-display-lg-mobile md:text-headline-md font-display-lg-mobile md:font-headline-md mb-6 max-w-3xl mx-auto">Готові долучитися до місії, що змінює життя?</h2><p class="text-body-lg font-body-lg text-inverse-on-surface opacity-90 max-w-2xl mx-auto mb-10">Ваша підтримка та участь допомагають поширювати надію та дієву допомогу тим, хто цього найбільше потребує по всій Україні.</p><a class="inline-flex items-center justify-center px-10 py-4 bg-on-primary text-primary rounded-full font-body-lg text-body-lg font-medium hover:bg-inverse-primary transition-colors duration-300" href="doluchytys.html">Долучитися до нас</a></div>
 </section>
 </main>
+<script>
+// Напрямки: поява рядків і фото-прев'ю, що рухається за курсором
+(function () {
+  var rows = document.querySelectorAll('.m-row'), prev = document.querySelector('.m-preview'), pimg = prev.querySelector('img');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+    }, { threshold: 0.2 });
+    rows.forEach(function (r) { io.observe(r); });
+  } else rows.forEach(function (r) { r.classList.add('is-in'); });
+  if (!matchMedia('(hover: hover) and (min-width: 1024px)').matches) return;
+  var x = 0, y = 0, cx = 0, cy = 0, raf = null;
+  function loop() {
+    cx += (x - cx) * 0.18; cy += (y - cy) * 0.18;
+    prev.style.left = cx + 'px'; prev.style.top = cy + 'px';
+    raf = Math.abs(x - cx) + Math.abs(y - cy) > 0.5 ? requestAnimationFrame(loop) : null;
+  }
+  rows.forEach(function (r) {
+    r.addEventListener('mouseenter', function (e) {
+      if (!r.dataset.img) return;
+      if (!prev.classList.contains('on')) { cx = x = e.clientX + 180; cy = y = e.clientY; }
+      pimg.src = r.dataset.img; prev.classList.add('on');
+    });
+    r.addEventListener('mouseleave', function () { prev.classList.remove('on'); });
+    r.addEventListener('mousemove', function (e) { x = e.clientX + 180; y = e.clientY; if (!raf) raf = requestAnimationFrame(loop); });
+  });
+})();
+</script>
 <script>
 // Бачення: слова «засвічуються» під час прокрутки, три кроки з'являються по черзі
 (function () {
