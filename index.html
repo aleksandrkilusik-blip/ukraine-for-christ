@@ -91,32 +91,9 @@
 .v-pill{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--d),transform .6s ease var(--d),background-color .3s ease,border-color .3s ease}
 .v-pill.is-in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.v-text .vw{transition:none}.v-pill{opacity:1;transform:none;transition:none}}
-/* Напрямки: список із фото, що летить за курсором */
-.m-list{border-top:1px solid #c0c8c5}
-.m-row{position:relative;display:grid;grid-template-columns:48px 1fr 40px;gap:4px 16px;align-items:center;padding:22px 8px;border-bottom:1px solid #c0c8c5;color:#001c17;text-decoration:none;overflow:hidden;opacity:0;transform:translateY(16px);transition:opacity .5s ease var(--d),transform .5s ease var(--d)}
-.m-row.is-in{opacity:1;transform:none}
-.m-row::before{content:"";position:absolute;inset:0;background:#00332b;transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.7,.2,1);z-index:0}
-.m-row>*{position:relative;z-index:1;transition:color .3s ease,transform .45s cubic-bezier(.2,.7,.2,1)}
-.m-num{font-size:14px;font-weight:700;letter-spacing:.1em;color:#735c00}
-.m-name{font-size:22px;line-height:1.25;font-weight:600;letter-spacing:-.01em}
-.m-desc{grid-column:2/3;font-size:15px;line-height:1.5;color:#404846}
-.m-arrow{grid-row:1/3;grid-column:3;font-size:28px;justify-self:end}
-.m-row:hover::before,.m-row:focus-visible::before{transform:scaleX(1)}
-.m-row:hover .m-name,.m-row:focus-visible .m-name{color:#fff;transform:translateX(8px)}
-.m-row:hover .m-desc,.m-row:focus-visible .m-desc{color:rgba(255,255,255,.75)}
-.m-row:hover .m-num,.m-row:focus-visible .m-num{color:#e9c349}
-.m-row:hover .m-arrow,.m-row:focus-visible .m-arrow{color:#e9c349;transform:rotate(45deg)}
-@media (min-width:1024px){
-  .m-row{grid-template-columns:72px minmax(0,1.1fr) minmax(0,1fr) 48px;padding:30px 16px}
-  .m-name{font-size:34px}
-  .m-desc{grid-column:auto}
-  .m-arrow{grid-row:auto;grid-column:auto}
-}
-.m-preview{position:fixed;left:0;top:0;width:300px;height:210px;border-radius:16px;overflow:hidden;pointer-events:none;z-index:50;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .25s ease,transform .25s ease;box-shadow:0 24px 48px -12px rgba(0,0,0,.45)}
-.m-preview.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
-.m-preview img{width:100%;height:100%;object-fit:cover}
-@media (hover:none),(max-width:1023px){.m-preview{display:none}}
-@media (prefers-reduced-motion:reduce){.m-row{opacity:1;transform:none;transition:none}.m-row::before,.m-row>*{transition:none}}
+/* Напрямки: картки як у подіях */
+.mn-icon{position:absolute;top:24px;right:24px;z-index:1;width:48px;height:48px;border-radius:9999px;background:#e9c349;color:#001c17;display:flex;align-items:center;justify-content:center;font-size:26px;transition:transform .35s ease}
+.ev-card:hover .mn-icon{transform:rotate(-8deg) scale(1.08)}
 /* Події: картки-календарики */
 .ev-card{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:#fff;border:1px solid #e5e2e1;color:#001c17;text-decoration:none;opacity:0;transform:translateY(24px);transition:opacity .6s ease var(--d),transform .6s ease var(--d),box-shadow .35s ease,border-color .35s ease}
 .ev-card.is-in{opacity:1;transform:none}
@@ -204,75 +181,63 @@
 </section>
 <!-- Directions Section -->
 <section class="py-section-v-padding px-margin-mobile md:px-margin-desktop bg-surface scroll-mt-20" id="ministries">
-<div class="max-w-container-max mx-auto"><div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"><div><span class="text-label-caps font-label-caps tracking-widest text-tertiary uppercase block mb-4">— НАПРЯМКИ ДІЯЛЬНОСТІ</span><h2 class="text-headline-md font-headline-md text-primary">11 спеціалізованих команд</h2><p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl">Ми розвиваємо служіння у різних сферах суспільства, щоб кожен міг почути Євангеліє зрозумілою йому мовою.</p></div></div><div class="m-list">
-<a class="m-row" href="campus.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAOwMYtuhJYxh5A2XTWB62WxUMx1zK6Xh-RmjuBg6lPWEasquapcFUbI7DMBBATKZbPtD56d4y4SZcBydRAo2t_yY6roGV4qc6ErWAtjwzsFMNn82rgE1sFDi3lJrcYPFm0I5IPVvshjicz7Cfm5LrjxlkMT4nc1i2BqrRn8NprPjR7X9OZSzbsVvGacZ3dJtWquxiQF0xdV735kKzs-KV2DvuNUrljgpuo63FMbwSMgicdvjlyLGOG27WJ5rv1p-r2qio" style="--d:0ms">
-<span class="m-num">01</span>
-<span class="m-name">Студентське служіння</span>
-<span class="m-desc">Формування майбутніх лідерів через християнські цінності в університетах.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<div class="max-w-container-max mx-auto"><div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"><div><span class="text-label-caps font-label-caps tracking-widest text-tertiary uppercase block mb-4">— НАПРЯМКИ ДІЯЛЬНОСТІ</span><h2 class="text-headline-md font-headline-md text-primary">11 спеціалізованих команд</h2><p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl">Ми розвиваємо служіння у різних сферах суспільства, щоб кожен міг почути Євангеліє зрозумілою йому мовою.</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<a class="ev-card" href="campus.html" style="--d:0ms">
+<div class="ev-date"><div><span class="ev-day">01</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">school</span></div>
+<div class="ev-body"><h3 class="ev-title">Студентське служіння</h3><p class="ev-desc">Формування майбутніх лідерів через християнські цінності в університетах.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="viyskove.html" style="--d:50ms">
-<span class="m-num">02</span>
-<span class="m-name">Військове служіння</span>
-<span class="m-desc">Духовна та психологічна підтримка захисників України на фронті та в тилу.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="viyskove.html" style="--d:120ms">
+<div class="ev-date"><div><span class="ev-day">02</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">shield</span></div>
+<div class="ev-body"><h3 class="ev-title">Військове служіння</h3><p class="ev-desc">Духовна та психологічна підтримка захисників України на фронті та в тилу.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="simeyne-zhyttya.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuBPy4hi3-67nyGSD-SOFHmgTFkN1bnCMF1DHnhQeqLfExPrS9UBKDNBzlxMR6XtmDx5sZoj9TMtkiQSJHP3h1AdDFtvnVqQIRnJgsqa30M0GHBcS7KDq4gRJY3BQETt41OTzBkO5ISn3T0-azpfGIctSYhIkV5NMG1E0OamWGRtI60FuNUUT6550_r3BS9gtpRahmkBv4eHnTgjyUWMecO6Ls8Ny6SjL3VV9-MDi2zmLlBSJJQn3cGhtuVt4YoS2vOJQo0" style="--d:100ms">
-<span class="m-num">03</span>
-<span class="m-name">Сімейне служіння</span>
-<span class="m-desc">Зміцнення сімейних стосунків та допомога родинам у кризових ситуаціях (FamilyLife).</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="simeyne-zhyttya.html" style="--d:240ms">
+<div class="ev-date"><div><span class="ev-day">03</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">diversity_1</span></div>
+<div class="ev-body"><h3 class="ev-title">Сімейне служіння</h3><p class="ev-desc">Зміцнення сімейних стосунків та допомога родинам у кризових ситуаціях (FamilyLife).</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="humanitarne.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAaZocEf7AMOmXMKdUphDei5BahU_yNiPGC9GWH2L50M82NDjggqApP8JjPRGro8jLi8kL3zxyu53ZL9zyXkK-Qkg8GYknEb1bg7qFfKpzkk-EZAIq1uTYEyMbjh3fXI8LT_OJIqMkaFtz7Y7OGF0eHO8eJm8Gk1szMJIMTxk0M0SmpO0hDikMmf_Uw9kK1tgAwgAyvnVDxfFQ32lRgKo6wvhbbm0Bf6h7QlsiCnA-qLWI_kuGZO2sSstPmN1R6dOIykVI" style="--d:150ms">
-<span class="m-num">04</span>
-<span class="m-name">Гуманітарна допомога</span>
-<span class="m-desc">Забезпечення базових потреб переселенців та постраждалих від війни, генератори, евакуація.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="humanitarne.html" style="--d:0ms">
+<div class="ev-date"><div><span class="ev-day">04</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">volunteer_activism</span></div>
+<div class="ev-body"><h3 class="ev-title">Гуманітарна допомога</h3><p class="ev-desc">Забезпечення базових потреб переселенців та постраждалих від війни, генератори, евакуація.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="sport.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDSt3Rsh8qBN9Qjaq_c3yKnz9xrY2Ug6hUbVbBuuYckDkG-l9pKmxZsuuv3QK1DdbxGhf9ewk_MAxzIZvZY8L_FfcAmvSOi3Q62_gEi56cta3Ey6rs5vxnX8BKw3yzHIjoSTOLjvrtU2xbuYMgl0lBhi4CDN9ghqCAdB-tubr6K7q8SYR5AkOck4acDCGiX5gMc5gALqglG6SPZfgqoUHiUfokwc2E0uiwWUbUZAeC9-bYxdkhas462axe6QZZSC1PrOTA" style="--d:200ms">
-<span class="m-num">05</span>
-<span class="m-name">Спортивне служіння</span>
-<span class="m-desc">Тренування й табори для дітей, які бракує безпечного простору, виховання характеру.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="sport.html" style="--d:120ms">
+<div class="ev-date"><div><span class="ev-day">05</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">sports_soccer</span></div>
+<div class="ev-body"><h3 class="ev-title">Спортивне служіння</h3><p class="ev-desc">Тренування й табори для дітей, які бракує безпечного простору, виховання характеру.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="gcr.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuC_aYg_VEdi9aeyb5sKFKynrJRM0InsE3yspfMXZuBttPtQkert08ipWZ3YVAzJ0qcB__Xcm17Xl5_zy6vxwN0999xa-PJtKYV_SzEcTgLiZP2NkFYApPW8Ye9WhQfsxcQuJU_1Fp0-9Y6IZIjWUEU5cxXrcVkAKsIGON1fqGaiEisRD22DrTJuyrQNduGIcIX7maQokA5nGGbynqLRYYIk0_Ny5Vod8VqHTa0hqw_VHjSaFiD0r2htvA" style="--d:250ms">
-<span class="m-num">06</span>
-<span class="m-name">Глобальний церковний рух</span>
-<span class="m-desc">Зміцнення та розвиток церковних громад для ефективного служіння суспільству.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="gcr.html" style="--d:240ms">
+<div class="ev-date"><div><span class="ev-day">06</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">church</span></div>
+<div class="ev-body"><h3 class="ev-title">Глобальний церковний рух</h3><p class="ev-desc">Зміцнення та розвиток церковних громад для ефективного служіння суспільству.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="osvitiany.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuC1P2SlA78-mBsfN3VL1ZywJ4ifYzircYgmsLhSOHm19aEEPxxSk6jqblBRqgm0OoSABHFSp9YCTym9gEomv7PM0yjp-ypKZ6FI167qqOGWSVRw4MoJ8mHVRKZuz2oPNWng5BYptSxzwLdaKTDZ0mX4NrPH7HepiEmdw9c7CGbnZCeKHgztpvoNkqcBBHUhVjXXJb8s98dg54a5Y25n7uj0q3AHmcB4HPrGKLsqirdblHotoyMdFBlR9Urjo1X2s5VxtKQ" style="--d:300ms">
-<span class="m-num">07</span>
-<span class="m-name">Рух освітян</span>
-<span class="m-desc">Підтримка та об'єднання вчителів, викладачів та освітян для трансформації освітнього простору.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="osvitiany.html" style="--d:0ms">
+<div class="ev-date"><div><span class="ev-day">07</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">menu_book</span></div>
+<div class="ev-body"><h3 class="ev-title">Рух освітян</h3><p class="ev-desc">Підтримка та об'єднання вчителів, викладачів та освітян для трансформації освітнього простору.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="crescendo.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Vn4PId7AzsuTuqKQFwyXes4MbfAZRpv6V2GPhwjkLN8QOxXQbu6Ki-F2hp45RqWtOdj5YIHzbiuuHvhSbpPpFKABm7JqS4L2oJO0RDiHnkQ7MTJrsqIWPANILgq5FsZyigDgj7imOuJnWVHjfE4Z9b75ABev9vbUAvF3w6ttKo0Izd29ewpnIk7yOtUcRO69zKUJRVcOpzMgcEWYylzy_UAod5jbs1tTCawSsEWymwH-Tg_bMeqJSg" style="--d:350ms">
-<span class="m-num">08</span>
-<span class="m-name">Класичні музиканти</span>
-<span class="m-desc">Спільнота музикантів: репетиції, концерти, розмови про віру й покликання.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="crescendo.html" style="--d:120ms">
+<div class="ev-date"><div><span class="ev-day">08</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">music_note</span></div>
+<div class="ev-body"><h3 class="ev-title">Класичні музиканти</h3><p class="ev-desc">Спільнота музикантів: репетиції, концерти, розмови про віру й покликання.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="leaderimpact.html" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAEzBTW-VpSx42_IKbRFLa6SQb3WC5xYTkdVNVub2AE58x0yElUGOWwhjDLHmti0UBMSlL_9PsLTGz6DqWcsJ6c6AQe2cnK9iPON4RJuJ9sPq-8ORSKh1HSK75PkadtTJANWL9nZ-_c55_bxatpak_pcCVsSJRddfmf3Uuska4iRAtGw8WhixQ_zHEvPLZjxy6PjRGH_l5OiBuG3jou0hj9wXdEb_2d6GTSxGx1kvY2VNC0ZRcMwoL_Vsb2Eq-23FiktuE" style="--d:400ms">
-<span class="m-num">09</span>
-<span class="m-name">LeaderImpact</span>
-<span class="m-desc">Лідерський рух: об'єднання та розвиток цілісних лідерів і підприємців у бізнесі.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="leaderimpact.html" style="--d:240ms">
+<div class="ev-date"><div><span class="ev-day">09</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">workspace_premium</span></div>
+<div class="ev-body"><h3 class="ev-title">LeaderImpact</h3><p class="ev-desc">Лідерський рух: об'єднання та розвиток цілісних лідерів і підприємців у бізнесі.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="za-kordonom.html" data-img="assets/img/za-kordonom/02-spilnyi-vyizd-rodynamy.jpg" style="--d:450ms">
-<span class="m-num">10</span>
-<span class="m-name">Українці за кордоном</span>
-<span class="m-desc">Підтримка українських родин, біженців та діаспори, збереження зв'язку та духовний супровід.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="za-kordonom.html" style="--d:0ms">
+<div class="ev-date"><div><span class="ev-day">10</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">public</span></div>
+<div class="ev-body"><h3 class="ev-title">Українці за кордоном</h3><p class="ev-desc">Підтримка українських родин, біженців та діаспори, збереження зв'язку та духовний супровід.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
-<a class="m-row" href="mission-hub.html" data-img="assets/img/mission-hub/03-velykodne-svyato-zala.jpg" style="--d:500ms">
-<span class="m-num">11</span>
-<span class="m-name">Mission Hub</span>
-<span class="m-desc">Навчання, ресурси, хаб та супровід для команд і утворення нових місійних ініціатив.</span>
-<span class="m-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+<a class="ev-card" href="mission-hub.html" style="--d:120ms">
+<div class="ev-date"><div><span class="ev-day">11</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">hub</span></div>
+<div class="ev-body"><h3 class="ev-title">Mission Hub</h3><p class="ev-desc">Навчання, ресурси, хаб та супровід для команд і утворення нових місійних ініціатив.</p>
+<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
 </a>
 </div>
-<div class="m-preview" aria-hidden="true"><img alt=""></div>
 </div>
 </section>
 <!-- Events Section -->
@@ -315,34 +280,6 @@
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
   }, { threshold: 0.2 });
   cards.forEach(function (c) { io.observe(c); });
-})();
-</script>
-<script>
-// Напрямки: поява рядків і фото-прев'ю, що рухається за курсором
-(function () {
-  var rows = document.querySelectorAll('.m-row'), prev = document.querySelector('.m-preview'), pimg = prev.querySelector('img');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
-    }, { threshold: 0.2 });
-    rows.forEach(function (r) { io.observe(r); });
-  } else rows.forEach(function (r) { r.classList.add('is-in'); });
-  if (!matchMedia('(hover: hover) and (min-width: 1024px)').matches) return;
-  var x = 0, y = 0, cx = 0, cy = 0, raf = null;
-  function loop() {
-    cx += (x - cx) * 0.18; cy += (y - cy) * 0.18;
-    prev.style.left = cx + 'px'; prev.style.top = cy + 'px';
-    raf = Math.abs(x - cx) + Math.abs(y - cy) > 0.5 ? requestAnimationFrame(loop) : null;
-  }
-  rows.forEach(function (r) {
-    r.addEventListener('mouseenter', function (e) {
-      if (!r.dataset.img) return;
-      if (!prev.classList.contains('on')) { cx = x = e.clientX + 180; cy = y = e.clientY; }
-      pimg.src = r.dataset.img; prev.classList.add('on');
-    });
-    r.addEventListener('mouseleave', function () { prev.classList.remove('on'); });
-    r.addEventListener('mousemove', function (e) { x = e.clientX + 180; y = e.clientY; if (!raf) raf = requestAnimationFrame(loop); });
-  });
 })();
 </script>
 <script>
