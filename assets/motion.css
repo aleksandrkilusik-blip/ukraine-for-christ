@@ -11,3 +11,7 @@
 .js .rv.lift.is-in:hover{transform:translateY(-6px)}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .v-text .vw{color:#fff;transition:none}.lift,.lift:hover{transition:none;transform:none}}
 .gal{scrollbar-width:none;-ms-overflow-style:none}.gal::-webkit-scrollbar{display:none}
+.gal-btn{position:absolute;top:50%;margin-top:-32px;width:64px;height:64px;border-radius:9999px;background:#e9c349;color:#001c17;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(0,28,23,.45);transition:background-color .3s ease,color .3s ease,opacity .3s ease;z-index:2}
+.gal-btn:hover{background:#001c17;color:#fff}
+.gal-btn[disabled]{opacity:0;pointer-events:none}
+@media (max-width:767px){.gal-btn{display:none}}

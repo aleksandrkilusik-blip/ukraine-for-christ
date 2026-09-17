@@ -68,7 +68,18 @@ document.addEventListener('click', function (e) {
   if (!b) return;
   var id = b.getAttribute('data-gal-prev') || b.getAttribute('data-gal-next');
   var g = document.getElementById(id);
-  if (g) g.scrollBy({ left: (b.hasAttribute('data-gal-next') ? 1 : -1) * g.clientWidth * 0.8, behavior: 'smooth' });
+  if (!g) return;
+  var item = g.firstElementChild, step = item ? item.getBoundingClientRect().width + 16 : g.clientWidth;
+  g.scrollBy({ left: (b.hasAttribute('data-gal-next') ? 1 : -1) * step, behavior: 'smooth' });
+});
+// Ховаємо стрілку на початку/в кінці стрічки
+document.querySelectorAll('.gal').forEach(function (g) {
+  var prev = document.querySelector('[data-gal-prev="' + g.id + '"]'), next = document.querySelector('[data-gal-next="' + g.id + '"]');
+  function upd() {
+    if (prev) prev.disabled = g.scrollLeft < 8;
+    if (next) next.disabled = g.scrollLeft + g.clientWidth > g.scrollWidth - 8;
+  }
+  g.addEventListener('scroll', upd, { passive: true }); addEventListener('resize', upd); upd();
 });
 
 // Відео YouTube: спершу обкладинка, плеєр вантажиться лише після натискання

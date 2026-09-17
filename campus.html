@@ -18,65 +18,75 @@
 </head>
 <body class="antialiased">
   <main>
-    <!-- HERO -->
-    <section class="relative overflow-hidden bg-[#001c17] text-white min-h-[80svh] flex items-center py-20">
+    <!-- HERO: лише назва служіння -->
+    <section class="relative overflow-hidden bg-[#001c17] text-white min-h-[calc(100svh-72px)] flex items-end pb-16 md:pb-24 pt-24">
       <img src="assets/img/campus/hero.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-r from-[#001c17] via-[#001c17]/85 to-[#001c17]/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#001c17] via-[#001c17]/55 to-[#001c17]/20"></div>
       <div class="relative w-full max-w-7xl mx-auto px-6">
-        <div class="max-w-3xl">
-          <div class="rv flex flex-wrap items-center gap-3 mb-8" style="--d:0ms">
-            <a href="index.html#ministries" class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white/80 hover:text-white bg-white/10 px-3 py-1.5 rounded-full transition-colors"><span class="material-symbols-outlined text-base" aria-hidden="true">arrow_back</span>Напрямки служіння</a>
-            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#e9c349]/15 text-[#e9c349] text-xs font-bold uppercase tracking-wider"><span class="w-2 h-2 rounded-full bg-[#e9c349] animate-pulse"></span>Служіння серед студентів України</span>
-          </div>
-          <div class="rv flex items-center gap-5 mb-8" style="--d:120ms">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA0NotJk5I0fZ0m9w2jDvsn__im_v4tksUV_zzAChAPWMxnM9i0wfMvhH_iQUWqJdLaX3NofibAZs131yJtjSQXSxbrWTXsVj5ryY4or2rHFuNKENNdzKtAoklBhXGm-7RzB3aE9IkaTGxw7dmtL3oZNrGKVzSpiUDWWCL7vPsJeMjuOHNWr7zTEB1Pmu7qzdmknjwqIpaWgm_4Kkkp2PsyLtt8df0HmEJXyePzNkZ1iqVVJIutpFaPnQnFJEPgLBPs7Q" alt="Campus Ukraine Logo" class="h-16 w-16 md:h-20 md:w-20 rounded-2xl object-contain bg-white p-1 shrink-0">
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.02]">Campus Ukraine</h1>
-          </div>
-          <p class="rv text-2xl md:text-3xl font-semibold leading-snug mb-6" style="--d:240ms">Ми є спільнотою, яка допомагає студентам <span class="text-[#e9c349]">пізнавати Христа</span>, <span class="text-[#e9c349]">зростати у вірі</span> і ставати <span class="text-[#e9c349]">духовними лідерами</span>, які впливають на майбутнє України.</p>
-          <p class="rv text-lg text-white/75 leading-relaxed mb-10" style="--d:320ms">Campus Ukraine служить студентам України, створюючи спільноти, де вони можуть розвиватися, знаходити підтримку та відкривати для себе християнські цінності. Ми ділимося зі студентами Благою Звісткою, будуємо з ними стосунки, допомагаємо зростати у вірі та розвивати лідерські якості. Заохочуємо студентів впливати на своє оточення через благовістя, учнівство, волонтерство та відповідальне лідерство. Прагнемо бачити випускників, які продовжують духовно й практично впливати на свої церкви, професійні сфери та суспільство в Україні.</p>
-          <div class="rv flex flex-wrap items-center gap-4" style="--d:420ms">
-            <a href="#join" class="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-[#e9c349] text-[#001c17] font-semibold hover:bg-white transition-colors group">Приєднатися до руху<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span></a>
-            <a href="#projects" class="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors">Дізнатися про проєкти<span class="material-symbols-outlined text-xl" aria-hidden="true">arrow_downward</span></a>
-          </div>
-          <div class="rv flex flex-wrap items-center gap-x-6 gap-y-2 mt-10 text-sm text-white/60" style="--d:520ms">
-            <a href="https://www.campus.org.ua/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-semibold text-white hover:text-[#e9c349] transition-colors">campus.org.ua<span class="material-symbols-outlined text-base" aria-hidden="true">north_east</span></a>
-            <a href="https://www.instagram.com/thecampusukraine/" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-[#e9c349] transition-colors">Instagram</a>
-            <a href="https://www.facebook.com/campus.ukr/" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-[#e9c349] transition-colors">Facebook</a>
-          </div>
+        <div class="rv flex flex-wrap items-center gap-3 mb-8" style="--d:0ms">
+          <a href="index.html#ministries" class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white/80 hover:text-white bg-white/10 backdrop-blur px-3 py-1.5 rounded-full transition-colors"><span class="material-symbols-outlined text-base" aria-hidden="true">arrow_back</span>Напрямки служіння</a>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#e9c349]/20 backdrop-blur text-[#e9c349] text-xs font-bold uppercase tracking-wider"><span class="w-2 h-2 rounded-full bg-[#e9c349] animate-pulse"></span>Служіння серед студентів України</span>
         </div>
+        <div class="rv flex items-center gap-5 md:gap-8" style="--d:150ms">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA0NotJk5I0fZ0m9w2jDvsn__im_v4tksUV_zzAChAPWMxnM9i0wfMvhH_iQUWqJdLaX3NofibAZs131yJtjSQXSxbrWTXsVj5ryY4or2rHFuNKENNdzKtAoklBhXGm-7RzB3aE9IkaTGxw7dmtL3oZNrGKVzSpiUDWWCL7vPsJeMjuOHNWr7zTEB1Pmu7qzdmknjwqIpaWgm_4Kkkp2PsyLtt8df0HmEJXyePzNkZ1iqVVJIutpFaPnQnFJEPgLBPs7Q" alt="Campus Ukraine Logo" class="h-20 w-20 md:h-32 md:w-32 rounded-3xl object-contain bg-white p-1.5 shrink-0">
+          <h1 class="text-6xl sm:text-7xl lg:text-[9rem] font-extrabold tracking-tight leading-[0.95]">Campus<br class="sm:hidden"> Ukraine</h1>
+        </div>
+        <a href="#about" class="rv mt-14 inline-flex items-center gap-3 text-sm font-semibold text-white/70 hover:text-white transition-colors" style="--d:300ms">
+          <span class="w-11 h-11 rounded-full border border-white/30 flex items-center justify-center animate-bounce"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></span>Гортайте, щоб дізнатися більше
+        </a>
       </div>
     </section>
 
-    <!-- МАСШТАБ -->
-    <section class="py-20 bg-[#fcf9f8]">
+    <!-- ХТО МИ + ГЕОГРАФІЯ -->
+    <section id="about" class="py-20 md:py-28 bg-[#fcf9f8] scroll-mt-20">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="rv flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-          <div><span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Географія та масштаб</span><h2 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Вплив серед студентства України</h2></div>
-          <p class="text-[#404846] max-w-md">Станом на осінь 2026 року через локальні команди співробітників і волонтерів</p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+          <div class="rv lg:col-span-7">
+            <span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Хто ми</span>
+            <h2 class="mt-5 text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.15] text-[#001c17]">Ми є спільнотою, яка допомагає студентам <span class="text-[#735c00]">пізнавати Христа</span>, <span class="text-[#735c00]">зростати у вірі</span> і ставати <span class="text-[#735c00]">духовними лідерами</span>, які впливають на майбутнє України.</h2>
+          </div>
+          <div class="rv lg:col-span-5 lg:pt-12" style="--d:150ms">
+            <p class="text-lg text-[#404846] leading-relaxed">Campus Ukraine служить студентам України, створюючи спільноти, де вони можуть розвиватися, знаходити підтримку та відкривати для себе християнські цінності. Ми ділимося зі студентами Благою Звісткою, будуємо з ними стосунки, допомагаємо зростати у вірі та розвивати лідерські якості. Заохочуємо студентів впливати на своє оточення через благовістя, учнівство, волонтерство та відповідальне лідерство. Прагнемо бачити випускників, які продовжують духовно й практично впливати на свої церкви, професійні сфери та суспільство в Україні.</p>
+            <div class="flex flex-wrap items-center gap-3 mt-8">
+              <a href="#join" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#001c17] text-white font-semibold hover:bg-[#00332b] transition-colors group">Приєднатися до руху<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span></a>
+              <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-[#001c17]/25 text-[#001c17] font-medium hover:bg-[#001c17] hover:text-white transition-colors">Проєкти</a>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-6 text-sm">
+              <a href="https://www.campus.org.ua/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-semibold text-[#001c17] hover:text-[#735c00]">campus.org.ua<span class="material-symbols-outlined text-base" aria-hidden="true">north_east</span></a>
+              <a href="https://www.instagram.com/thecampusukraine/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[#001c17] hover:text-[#735c00]">Instagram</a>
+              <a href="https://www.facebook.com/campus.ukr/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[#001c17] hover:text-[#735c00]">Facebook</a>
+            </div>
+          </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-y border-[#e5e2e1]">
-          <div class="rv py-8 lg:px-8 border-b lg:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:0ms">
+
+        <div class="mt-20 pt-10 border-t border-[#e5e2e1]">
+          <div class="rv flex flex-col md:flex-row md:items-end justify-between gap-4 mb-2">
+            <div><span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Географія та масштаб</span><p class="mt-3 text-xl md:text-2xl font-bold text-[#001c17] max-w-3xl">Ми працюємо через локальні команди співробітників і волонтерів у містах, де є студенти, поєднуючи регулярні зустрічі, особисте спілкування, проєкти, навчання та всеукраїнські ініціативи.</p></div>
+            <p class="text-sm text-[#404846] md:text-right shrink-0">Станом на осінь 2026 року</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
+            <div class="rv py-8 lg:px-8 lg:first:pl-0 border-b sm:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:0ms">
             <span class="block text-5xl md:text-6xl font-extrabold text-[#001c17] tracking-tight tabular-nums" data-count="35">35</span>
             <span class="block mt-3 text-sm font-bold uppercase tracking-wider text-[#1c1b1b]">років в Україні</span>
             <span class="block mt-1 text-sm text-[#404846]">з 1991 року разом із молоддю</span>
           </div>
-          <div class="rv py-8 lg:px-8 border-b lg:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:100ms">
+            <div class="rv py-8 lg:px-8 lg:first:pl-0 border-b sm:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:100ms">
             <span class="block text-5xl md:text-6xl font-extrabold text-[#001c17] tracking-tight tabular-nums" data-count="10">10</span>
             <span class="block mt-3 text-sm font-bold uppercase tracking-wider text-[#1c1b1b]">міст України</span>
             <span class="block mt-1 text-sm text-[#404846]">активні локальні студентські хаби</span>
           </div>
-          <div class="rv py-8 lg:px-8 border-b lg:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:200ms">
+            <div class="rv py-8 lg:px-8 lg:first:pl-0 border-b sm:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:200ms">
             <span class="block text-5xl md:text-6xl font-extrabold text-[#001c17] tracking-tight tabular-nums" data-count="50" data-suffix="+">50+</span>
             <span class="block mt-3 text-sm font-bold uppercase tracking-wider text-[#1c1b1b]">університетів (ВНЗ)</span>
             <span class="block mt-1 text-sm text-[#404846]">охоплення студентських кампусів</span>
           </div>
-          <div class="rv py-8 lg:px-8 border-b lg:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:300ms">
+            <div class="rv py-8 lg:px-8 lg:first:pl-0 border-b sm:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:300ms">
             <span class="block text-5xl md:text-6xl font-extrabold text-[#001c17] tracking-tight tabular-nums" data-count="250">250</span>
             <span class="block mt-3 text-sm font-bold uppercase tracking-wider text-[#1c1b1b]">активних волонтерів</span>
             <span class="block mt-1 text-sm text-[#404846]">студенти та наставники команд</span>
           </div>
+          </div>
         </div>
-        <p class="rv mt-8 text-[#404846] max-w-3xl">Ми працюємо через локальні команди співробітників і волонтерів у містах, де є студенти, поєднуючи регулярні зустрічі, особисте спілкування, проєкти, навчання та всеукраїнські ініціативи.</p>
       </div>
     </section>
 
@@ -164,18 +174,16 @@
     </section>
 
     <!-- ГАЛЕРЕЯ -->
-    <section class="py-20 bg-[#fcf9f8] overflow-hidden">
+    <section class="py-20 bg-[#fcf9f8]">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="rv flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-          <div><span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Галерея</span><h2 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Життя Campus</h2></div>
-          <div class="flex items-center gap-3">
-            <button type="button" data-gal-prev="campus-gal" class="w-12 h-12 rounded-full border border-[#001c17]/20 text-[#001c17] flex items-center justify-center hover:bg-[#001c17] hover:text-white transition-colors" aria-label="Попередні фото"><span class="material-symbols-outlined">arrow_back</span></button>
-            <button type="button" data-gal-next="campus-gal" class="w-12 h-12 rounded-full bg-[#001c17] text-white flex items-center justify-center hover:bg-[#e9c349] hover:text-[#001c17] transition-colors" aria-label="Наступні фото"><span class="material-symbols-outlined">arrow_forward</span></button>
+        <div class="rv mb-10"><span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Галерея</span><h2 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Життя Campus</h2></div>
+        <div class="rv relative" style="--d:120ms">
+          <div id="campus-gal" class="gal flex gap-4 overflow-x-auto snap-x snap-mandatory rounded-3xl">
+            <figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g01.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g02.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g03.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g04.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g05.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g06.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g07.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g08.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g09.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g10.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g11.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%_-_2rem)/3)] aspect-[4/5] overflow-hidden rounded-3xl bg-[#e5e2e1]"><img src="assets/img/campus/g12.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure>
           </div>
+          <button type="button" data-gal-prev="campus-gal" class="gal-btn left-4" aria-label="Попередні фото"><span class="material-symbols-outlined text-3xl">arrow_back</span></button>
+          <button type="button" data-gal-next="campus-gal" class="gal-btn right-4" aria-label="Наступні фото"><span class="material-symbols-outlined text-3xl">arrow_forward</span></button>
         </div>
-      </div>
-      <div id="campus-gal" class="gal rv flex gap-4 overflow-x-auto snap-x snap-mandatory px-6 lg:px-[max(1.5rem,calc((100vw_-_80rem)/2_+_1.5rem))] pb-2" style="--d:120ms">
-        <figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[3/2]"><img src="assets/img/campus/g01.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[2/3]"><img src="assets/img/campus/g02.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[3/2]"><img src="assets/img/campus/g03.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[2/3]"><img src="assets/img/campus/g04.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[3/2]"><img src="assets/img/campus/g05.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[2/3]"><img src="assets/img/campus/g06.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[2/3]"><img src="assets/img/campus/g07.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[3/2]"><img src="assets/img/campus/g08.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[2/3]"><img src="assets/img/campus/g09.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[2/3]"><img src="assets/img/campus/g10.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[3/2]"><img src="assets/img/campus/g11.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure><figure class="gal-item snap-start shrink-0 h-72 md:h-[26rem] overflow-hidden rounded-2xl bg-[#e5e2e1] aspect-[2/3]"><img src="assets/img/campus/g12.jpg" alt="Життя спільноти Campus Ukraine" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"></figure>
       </div>
     </section>
 
@@ -213,7 +221,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div class="rv lg:col-span-8">
             <button type="button" data-yt="-chwY8ujAV0" data-yt-title="Спільнота студентів — Campus Ukraine" class="yt group relative block w-full aspect-video rounded-3xl overflow-hidden bg-black" aria-label="Відтворити відео «Спільнота студентів»">
-              <img src="https://i.ytimg.com/vi/-chwY8ujAV0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/-chwY8ujAV0/hqdefault.jpg'" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-100">
+              <img src="https://i.ytimg.com/vi/-chwY8ujAV0/maxresdefault.jpg" onload="if(this.naturalWidth&lt;=120)this.src='https://i.ytimg.com/vi/-chwY8ujAV0/hqdefault.jpg'" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/-chwY8ujAV0/hqdefault.jpg'" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-100">
               <span class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></span>
               <span class="absolute inset-0 flex items-center justify-center"><span class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#e9c349] text-[#001c17] flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110"><span class="material-symbols-outlined text-5xl" style="font-variation-settings:'FILL' 1">play_arrow</span></span></span>
               <span class="absolute left-6 bottom-5 text-left"><span class="block text-xs font-bold uppercase tracking-widest text-[#e9c349]">Відео</span><span class="block text-xl md:text-2xl font-bold text-white">Спільнота студентів</span></span>
