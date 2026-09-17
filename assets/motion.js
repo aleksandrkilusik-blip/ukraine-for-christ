@@ -61,3 +61,25 @@
   addEventListener('resize', update);
   update();
 })();
+
+// Галерея: кнопки прокрутки (data-gal-prev / data-gal-next = id стрічки)
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('[data-gal-prev],[data-gal-next]');
+  if (!b) return;
+  var id = b.getAttribute('data-gal-prev') || b.getAttribute('data-gal-next');
+  var g = document.getElementById(id);
+  if (g) g.scrollBy({ left: (b.hasAttribute('data-gal-next') ? 1 : -1) * g.clientWidth * 0.8, behavior: 'smooth' });
+});
+
+// Відео YouTube: спершу обкладинка, плеєр вантажиться лише після натискання
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('[data-yt]');
+  if (!b) return;
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.yt + '?autoplay=1&rel=0';
+  f.title = b.dataset.ytTitle || 'YouTube';
+  f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+  f.allowFullscreen = true;
+  f.className = b.className.replace('group', '');
+  b.replaceWith(f);
+});

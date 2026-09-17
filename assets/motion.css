@@ -10,3 +10,4 @@
 .lift:hover{transform:translateY(-6px);box-shadow:0 24px 44px -16px rgba(0,28,23,.3);border-color:#e9c349}
 .js .rv.lift.is-in:hover{transform:translateY(-6px)}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .v-text .vw{color:#fff;transition:none}.lift,.lift:hover{transition:none;transform:none}}
+.gal{scrollbar-width:none;-ms-overflow-style:none}.gal::-webkit-scrollbar{display:none}
