@@ -1,519 +1,267 @@
-<!DOCTYPE html><html lang="uk" class="scroll-smooth"><head>
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campus Ukraine — Студентське служіння | Україна для Христа</title>
+  <script>document.documentElement.classList.add('js')</script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link href="assets/motion.css" rel="stylesheet">
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              dark: '#00332b',
-              deep: '#032621',
-              primary: '#0a4237',
-              accent: '#d97706',
-              warm: '#c25e00',
-              cream: '#fcf9f8',
-              surface: '#f6f3f2',
-              card: '#ffffff',
-              border: '#e7e2df',
-              text: '#191c1b',
-              muted: '#4a5551',
-              lightgreen: '#e6f4f1'
-            }
-          },
-          fontFamily: {
-            sans: ['Manrope', 'sans-serif'],
-            serif: ['Playfair Display', 'serif']
-          }
-        }
-      }
-    }
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Manrope', 'sans-serif'] } } } }
   </script>
-  <style>
-    body {
-      font-family: 'Manrope', sans-serif;
-      background-color: #fcf9f8;
-      color: #191c1b;
-    }
-  </style>
+  <style>body{font-family:'Manrope',sans-serif;background:#fcf9f8;color:#1c1b1b}</style>
 </head>
-<body class="bg-brand-cream text-brand-text antialiased selection:bg-brand-primary selection:text-white">
-
+<body class="antialiased">
   <main>
-    <section class="relative pt-12 pb-16 md:py-20 border-b border-brand-border bg-gradient-to-b from-white to-brand-cream">
-      <div class="max-w-7xl mx-auto px-6">
-        
-        <div class="flex flex-wrap items-center gap-3 mb-6">
-          <a href="index.html#ministries" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-muted hover:text-brand-dark bg-white border border-brand-border px-3 py-1.5 rounded-full shadow-2xs transition-colors">
-            ← Напрямки служіння
-          </a>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold uppercase tracking-wider border border-emerald-200">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Студентське служіння
-          </span>
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-[#001c17] text-white min-h-[80svh] flex items-center py-20">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOwMYtuhJYxh5A2XTWB62WxUMx1zK6Xh-RmjuBg6lPWEasquapcFUbI7DMBBATKZbPtD56d4y4SZcBydRAo2t_yY6roGV4qc6ErWAtjwzsFMNn82rgE1sFDi3lJrcYPFm0I5IPVvshjicz7Cfm5LrjxlkMT4nc1i2BqrRn8NprPjR7X9OZSzbsVvGacZ3dJtWquxiQF0xdV735kKzs-KV2DvuNUrljgpuo63FMbwSMgicdvjlyLGOG27WJ5rv1p-r2qio" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#001c17] via-[#001c17]/85 to-[#001c17]/30"></div>
+      <div class="relative w-full max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl">
+          <div class="rv flex flex-wrap items-center gap-3 mb-8" style="--d:0ms">
+            <a href="index.html#ministries" class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white/80 hover:text-white bg-white/10 px-3 py-1.5 rounded-full transition-colors"><span class="material-symbols-outlined text-base" aria-hidden="true">arrow_back</span>Напрямки служіння</a>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#e9c349]/15 text-[#e9c349] text-xs font-bold uppercase tracking-wider"><span class="w-2 h-2 rounded-full bg-[#e9c349] animate-pulse"></span>Студентське служіння</span>
+          </div>
+          <div class="rv flex items-center gap-5 mb-8" style="--d:120ms">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA0NotJk5I0fZ0m9w2jDvsn__im_v4tksUV_zzAChAPWMxnM9i0wfMvhH_iQUWqJdLaX3NofibAZs131yJtjSQXSxbrWTXsVj5ryY4or2rHFuNKENNdzKtAoklBhXGm-7RzB3aE9IkaTGxw7dmtL3oZNrGKVzSpiUDWWCL7vPsJeMjuOHNWr7zTEB1Pmu7qzdmknjwqIpaWgm_4Kkkp2PsyLtt8df0HmEJXyePzNkZ1iqVVJIutpFaPnQnFJEPgLBPs7Q" alt="Campus Ukraine Logo" class="h-16 w-16 md:h-20 md:w-20 rounded-2xl object-contain bg-white p-1 shrink-0">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.02]">Campus Ukraine</h1>
+          </div>
+          <p class="rv text-2xl md:text-3xl font-semibold leading-snug mb-6" style="--d:240ms">«Спільнота, де студенти <span class="text-[#e9c349]">зростають у вірі</span> й стають <span class="text-[#e9c349]">лідерами</span> майбутньої України»</p>
+          <p class="rv text-lg text-white/75 leading-relaxed mb-10" style="--d:320ms">Campus Ukraine служить студентам, створюючи спільноти, де можна розвиватися, знаходити підтримку й відкривати для себе християнські цінності. Ми будуємо зі студентами стосунки, разом читаємо Біблію, говоримо про віру, вибір і покликання, допомагаємо зростати духовно та розвивати лідерські якості.</p>
+          <div class="rv flex flex-wrap items-center gap-4" style="--d:420ms">
+            <a href="#join" class="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-[#e9c349] text-[#001c17] font-semibold hover:bg-white transition-colors group">Приєднатися до руху<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span></a>
+            <a href="#projects" class="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors">Дізнатися про проєкти<span class="material-symbols-outlined text-xl" aria-hidden="true">arrow_downward</span></a>
+          </div>
+          <div class="rv flex flex-wrap items-center gap-x-6 gap-y-2 mt-10 text-sm text-white/60" style="--d:520ms">
+            <a href="https://www.campus.org.ua/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-semibold text-white hover:text-[#e9c349] transition-colors">campus.org.ua<span class="material-symbols-outlined text-base" aria-hidden="true">north_east</span></a>
+            <a href="https://www.instagram.com/thecampusukraine/" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-[#e9c349] transition-colors">Instagram</a>
+            <a href="https://www.facebook.com/campus.ukr/" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-[#e9c349] transition-colors">Facebook</a>
+            <span>Життя, спілкування, відкритий простір та пошук сенсу</span>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- МАСШТАБ -->
+    <section class="py-20 bg-[#fcf9f8]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="rv flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div><span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Географія та масштаб</span><h2 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Вплив серед студентства України</h2></div>
+          <p class="text-[#404846] max-w-md">Станом на осінь 2026 року через локальні команди співробітників і волонтерів</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-y border-[#e5e2e1]">
+          <div class="rv py-8 lg:px-8 border-b lg:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:0ms">
+            <span class="block text-5xl md:text-6xl font-extrabold text-[#001c17] tracking-tight tabular-nums" data-count="35">35</span>
+            <span class="block mt-3 text-sm font-bold uppercase tracking-wider text-[#1c1b1b]">років в Україні</span>
+            <span class="block mt-1 text-sm text-[#404846]">з 1991 року разом із молоддю</span>
+          </div>
+          <div class="rv py-8 lg:px-8 border-b lg:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:100ms">
+            <span class="block text-5xl md:text-6xl font-extrabold text-[#001c17] tracking-tight tabular-nums" data-count="10">10</span>
+            <span class="block mt-3 text-sm font-bold uppercase tracking-wider text-[#1c1b1b]">міст України</span>
+            <span class="block mt-1 text-sm text-[#404846]">активні локальні студентські хаби</span>
+          </div>
+          <div class="rv py-8 lg:px-8 border-b lg:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:200ms">
+            <span class="block text-5xl md:text-6xl font-extrabold text-[#001c17] tracking-tight tabular-nums" data-count="50" data-suffix="+">50+</span>
+            <span class="block mt-3 text-sm font-bold uppercase tracking-wider text-[#1c1b1b]">університетів (ВНЗ)</span>
+            <span class="block mt-1 text-sm text-[#404846]">охоплення студентських кампусів</span>
+          </div>
+          <div class="rv py-8 lg:px-8 border-b lg:border-b-0 lg:border-l first:border-l-0 border-[#e5e2e1]" style="--d:300ms">
+            <span class="block text-5xl md:text-6xl font-extrabold text-[#001c17] tracking-tight tabular-nums" data-count="250">250</span>
+            <span class="block mt-3 text-sm font-bold uppercase tracking-wider text-[#1c1b1b]">активних волонтерів</span>
+            <span class="block mt-1 text-sm text-[#404846]">студенти та наставники команд</span>
+          </div>
+        </div>
+        <p class="rv mt-8 text-[#404846] max-w-3xl">Працюємо через регулярні зустрічі, особисте спілкування, проєкти розвитку лідерства, навчання та всеукраїнські ініціативи.</p>
+      </div>
+    </section>
+
+    <!-- ПРОЄКТИ -->
+    <section id="projects" class="py-20 bg-[#f6f3f2] scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="rv flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div><span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Формати взаємодії</span><h2 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Поточні проєкти та ініціативи</h2></div>
+          <p class="text-[#404846] max-w-md">Практичні інструменти, регулярні клуби та події для духовного зростання й формування критичного мислення.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article class="rv lift rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:0ms">
+            <div class="relative overflow-hidden bg-[#00332b] text-white px-8 py-6 flex items-center justify-between">
+              <span class="text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">01</span>
+              <div class="flex items-center gap-2"><span class="text-xs font-semibold text-white/70">Особистий формат</span><span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-200">діє</span></div>
+            </div>
+            <div class="p-8 flex flex-col gap-4 flex-grow">
+              <h3 class="text-2xl font-bold text-[#001c17]">Особисті зустрічі та менторство</h3>
+              <p class="text-[#404846] leading-relaxed">Персональний формат, де студент отримує увагу, підтримку й безпечний простір для щирих розмов про життя, вибір, цінності, віру й власне майбутнє.</p><div><span class="block text-xs font-bold uppercase tracking-wider text-[#001c17] mb-2">Авторські формати:</span><div class="flex flex-wrap gap-2"><span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-[#f6f3f2] text-[#001c17]">«Людина-Людина»</span><span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-[#ffe088] text-[#574500]">«ЯХТО»</span><span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-[#f6f3f2] text-[#001c17]">«Успіх Inside»</span><span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-[#f6f3f2] text-[#001c17]">«Твій світогляд»</span><span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-[#f6f3f2] text-[#001c17]">«Step Up»</span><span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-[#f6f3f2] text-[#001c17]">«Зростай»</span><span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-[#f6f3f2] text-[#001c17]">«ПРО тебе»</span><span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-[#f6f3f2] text-[#001c17]">«ПРО твої цінності»</span></div></div>
+            </div>
+          </article>
+          <article class="rv lift rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:120ms">
+            <div class="relative overflow-hidden bg-[#00332b] text-white px-8 py-6 flex items-center justify-between">
+              <span class="text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">02</span>
+              <div class="flex items-center gap-2"><span class="text-xs font-semibold text-white/70">Груповий формат</span><span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-200">діє</span></div>
+            </div>
+            <div class="p-8 flex flex-col gap-4 flex-grow">
+              <h3 class="text-2xl font-bold text-[#001c17]">Дискусійні групи та воркшопи</h3>
+              <p class="text-[#404846] leading-relaxed">Інтерактивні регулярні зустрічі про всебічний розвиток, лідерство, вибір професії, побудову міцних стосунків і світогляд.</p><div class="p-4 rounded-2xl bg-[#f6f3f2] text-sm text-[#1c1b1b] leading-relaxed"><strong>Мета:</strong> Допомагаємо студентам формувати власну стійку життєву позицію, критично мислити та аргументувати погляди у дружній атмосфері.</div><p class="text-sm text-[#404846] mt-auto">Формати доступні наживо в університетах та онлайн для всіх регіонів.</p>
+            </div>
+          </article>
+          <article class="rv lift rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:0ms">
+            <div class="relative overflow-hidden bg-[#00332b] text-white px-8 py-6 flex items-center justify-between">
+              <span class="text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">03</span>
+              <div class="flex items-center gap-2"><span class="text-xs font-semibold text-white/70">Клуби</span><span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-200">діє</span></div>
+            </div>
+            <div class="p-8 flex flex-col gap-4 flex-grow">
+              <h3 class="text-2xl font-bold text-[#001c17]">Англійські клуби (English Clubs)</h3>
+              <p class="text-[#404846] leading-relaxed">Розмовні клуби з носіями мови та викладачами в невимушеній дружній атмосфері кав'ярні чи хабу.</p><div class="p-4 rounded-2xl bg-[#f6f3f2] text-sm text-[#1c1b1b] leading-relaxed"><strong>Атмосфера:</strong> Безпечний і легкий простір для практики іноземної мови, зародження нової дружби та знайомства зі спільнотою християнських студентів.</div>
+            </div>
+          </article>
+          <article class="rv lift rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:120ms">
+            <div class="relative overflow-hidden bg-[#00332b] text-white px-8 py-6 flex items-center justify-between">
+              <span class="text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">04</span>
+              <div class="flex items-center gap-2"><span class="text-xs font-semibold text-white/70">Масштабні події</span><span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-200">діє</span></div>
+            </div>
+            <div class="p-8 flex flex-col gap-4 flex-grow">
+              <h3 class="text-2xl font-bold text-[#001c17]">Всеукраїнські проєкти та поїздки</h3>
+              <p class="text-[#404846] leading-relaxed">Студентські кемпи, конференції лідерства та навчальні програми, що об'єднують сотні активних студентів з різних міст України.</p><div class="p-4 rounded-2xl bg-[#001c17] text-white flex items-start gap-3"><span class="w-10 h-10 rounded-full bg-[#e9c349] text-[#001c17] flex items-center justify-center shrink-0"><span class="material-symbols-outlined">bolt</span></span><div><div class="font-bold">CAMPUS UNITED — 2–3 жовтня, Львів</div><div class="text-sm text-white/70 mt-0.5">Очікується ~450 учасників. Головна щорічна зустріч для натхнення, нетворкінгу та єдності.</div></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ІСТОРІЯ -->
+    <section class="relative overflow-hidden bg-[#001c17] text-white py-20 sm:py-28">
+      <span class="v-quote" aria-hidden="true">“</span>
+      <div class="relative max-w-7xl mx-auto px-6">
+        <span class="inline-block text-sm font-bold tracking-widest uppercase text-[#e9c349]">— Особисте свідчення</span>
+        <p class="v-text mt-8 max-w-5xl text-[28px] md:text-[42px] lg:text-[50px] leading-[1.22] font-semibold tracking-tight">«Саме тут я <em class="v-acc">зустріла Бога</em>, знайшла <em class="v-acc">щирих друзів</em> та відкрила <em class="v-acc">справжній сенс</em> свого життя...»</p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-14 pt-12 border-t border-white/15">
+          <div class="rv lg:col-span-4 flex items-center gap-4">
+            <span class="w-16 h-16 rounded-full bg-[#e9c349] text-[#001c17] text-2xl font-extrabold flex items-center justify-center shrink-0">Н</span>
+            <div><h2 class="text-2xl font-bold">Історія Наді: від першої зустрічі до наставництва</h2><p class="text-sm text-white/60 mt-1">Випускниця проєкту «ЯХТО», волонтерка Campus Острог</p></div>
+          </div>
+          <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-white/75 leading-relaxed">
+            <p class="rv" style="--d:0ms">Надя вперше познайомилася з Campus завдяки волонтеру, який запросив її на студентську подію та до церкви в місті Острог. Згодом вона почала проходити проєкт <strong class="text-white">«ЯХТО»</strong> — серію особистих довірливих зустрічей про світогляд, цінності та християнську віру.</p>
+            <p class="rv" style="--d:120ms">Під час однієї з таких зустрічей Надя стала свідком того, як інша дівчина щиро вирішила слідувати за Христом — це стало переломним і визначальним моментом і для неї самої.</p>
+            <p class="rv text-white font-medium" style="--d:240ms">Сьогодні Надя вже сама в активній команді волонтерів Campus Ukraine, готується до хрещення та надихає нових студентів робити свій усвідомлений вибір.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ДОЛУЧИТИСЯ -->
+    <section id="join" class="py-20 bg-[#fcf9f8] scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="rv max-w-3xl mb-12"><span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Шлях співдії</span><h2 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Як долучитися до Campus Ukraine</h2><p class="mt-3 text-lg text-[#404846]">Три прості кроки, через які кожен може стати частиною великого руху перетворення студентського середовища.</p></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="rv lift rounded-3xl p-8 border bg-white text-[#1c1b1b] border-[#e5e2e1] flex flex-col gap-6" style="--d:0ms">
+            <div class="flex items-start justify-between"><span class="w-14 h-14 rounded-full bg-[#e9c349] text-[#001c17] flex items-center justify-center"><span class="material-symbols-outlined text-3xl">group_add</span></span><span class="text-5xl font-extrabold leading-none tabular-nums text-[#001c17]/10">01</span></div>
+            <div class="flex-grow"><h3 class="text-2xl font-bold text-[#001c17]">Приєднуйся</h3><p class="mt-3 text-[#404846] leading-relaxed">Навчайся та служи разом із нами. Запрошуємо студентів, випускників та молодь, які розділяють наше бачення досягати студентів України та будувати живі спільноти.</p></div>
+            <a href="https://t.me/MariaParchuk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-[#001c17] text-white font-semibold hover:bg-[#00332b] transition-colors">Стати волонтером<span class="material-symbols-outlined text-xl" aria-hidden="true">arrow_forward</span></a>
+          </div>
+          <div class="rv lift rounded-3xl p-8 border bg-white text-[#1c1b1b] border-[#e5e2e1] flex flex-col gap-6" style="--d:120ms">
+            <div class="flex items-start justify-between"><span class="w-14 h-14 rounded-full bg-[#e9c349] text-[#001c17] flex items-center justify-center"><span class="material-symbols-outlined text-3xl">handshake</span></span><span class="text-5xl font-extrabold leading-none tabular-nums text-[#001c17]/10">02</span></div>
+            <div class="flex-grow"><h3 class="text-2xl font-bold text-[#001c17]">Співпрацюй</h3><p class="mt-3 text-[#404846] leading-relaxed">Спільні проєкти та партнерський обмін ресурсами для церков, університетів та організацій: адаптовані навчальні матеріали, інструменти наставництва, тренінги та спільні події.</p></div>
+            <a href="mailto:campus.ukraine@cru.org" class="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-full border border-[#001c17] text-[#001c17] font-semibold hover:bg-[#001c17] hover:text-white transition-colors">Запропонувати партнерство</a>
+          </div>
+          <div class="rv lift rounded-3xl p-8 border bg-[#001c17] text-white border-[#001c17] flex flex-col gap-6" style="--d:240ms">
+            <div class="flex items-start justify-between"><span class="w-14 h-14 rounded-full bg-[#e9c349] text-[#001c17] flex items-center justify-center"><span class="material-symbols-outlined text-3xl">volunteer_activism</span></span><span class="text-5xl font-extrabold leading-none tabular-nums text-white/15">03</span></div>
+            <div class="flex-grow"><h3 class="text-2xl font-bold text-white">Інвестуй</h3><p class="mt-3 text-white/75 leading-relaxed">Підтримуй розвиток локальних команд у містах, якісне навчання лідерів та створення нових можливостей для духовного впливу на майбутнє покоління України.</p></div>
+            <a href="pidtrymaty.html" class="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-[#e9c349] text-[#001c17] font-semibold hover:bg-white transition-colors">Фінансово підтримати<span class="material-symbols-outlined text-xl" aria-hidden="true">arrow_forward</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВІДЕО -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="rv flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div><span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Відеоматеріали</span><h2 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Побачити життя Campus</h2></div>
+          <a href="https://www.instagram.com/thecampusukraine/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-semibold text-[#001c17] hover:text-[#735c00]">Більше відео в Instagram<span class="material-symbols-outlined text-xl" aria-hidden="true">north_east</span></a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="rv group" style="--d:0ms">
+            <div class="aspect-video rounded-2xl bg-gradient-to-br from-[#00332b] to-[#001c17] flex items-center justify-center relative overflow-hidden">
+              <span class="w-16 h-16 rounded-full bg-white/15 text-white flex items-center justify-center transition-all duration-300 group-hover:bg-[#e9c349] group-hover:text-[#001c17] group-hover:scale-110"><span class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1">play_arrow</span></span><span class="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-2 py-0.5 rounded font-mono">Головне</span>
+            </div>
+            <h3 class="font-bold text-lg text-[#001c17] mt-4">Campus UNITED'25</h3><p class="text-sm text-[#404846] mt-1">Огляд всеукраїнської щорічної конференції студентства</p>
+          </div>
+          <div class="rv group" style="--d:120ms">
+            <div class="aspect-video rounded-2xl bg-gradient-to-br from-[#00332b] to-[#001c17] flex items-center justify-center relative overflow-hidden">
+              <span class="w-16 h-16 rounded-full bg-white/15 text-white flex items-center justify-center transition-all duration-300 group-hover:bg-[#e9c349] group-hover:text-[#001c17] group-hover:scale-110"><span class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1">play_arrow</span></span>
+            </div>
+            <h3 class="font-bold text-lg text-[#001c17] mt-4">Що для тебе кемпус?</h3><p class="text-sm text-[#404846] mt-1">Щирі бліц-відповіді студентів та волонтерів з різних міст</p>
+          </div>
+          <div class="rv group" style="--d:240ms">
+            <div class="aspect-video rounded-2xl bg-gradient-to-br from-[#00332b] to-[#001c17] flex items-center justify-center relative overflow-hidden">
+              <span class="w-16 h-16 rounded-full bg-white/15 text-white flex items-center justify-center transition-all duration-300 group-hover:bg-[#e9c349] group-hover:text-[#001c17] group-hover:scale-110"><span class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1">play_arrow</span></span>
+            </div>
+            <h3 class="font-bold text-lg text-[#001c17] mt-4">Спільнота студентів</h3><p class="text-sm text-[#404846] mt-1">Як проходять регулярні клуби, виїзди на природу та волонтерство</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- МОЛИТВА -->
+    <section class="py-20 bg-[#f6f3f2]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="rv max-w-3xl mb-12"><span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Духовна підтримка</span><h2 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Молитовні потреби Campus Ukraine</h2><p class="mt-3 text-lg text-[#404846]">Запрошуємо вас молитися разом із нами за ключові сфери студентського руху:</p></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="rv lift rounded-3xl p-8 bg-white border border-[#e5e2e1]" style="--d:0ms">
+            <span class="w-12 h-12 rounded-full bg-[#00332b] text-[#e9c349] flex items-center justify-center mb-6"><span class="material-symbols-outlined text-2xl">school</span></span>
+            <h3 class="text-xl font-bold text-[#001c17] mb-2">За студентів</h3><p class="text-[#404846] leading-relaxed">Щоб Бог відкривав їхні серця, давав прагнення істини та вів до щирих особистих стосунків із Христом під час навчання.</p>
+          </div>
+          <div class="rv lift rounded-3xl p-8 bg-white border border-[#e5e2e1]" style="--d:120ms">
+            <span class="w-12 h-12 rounded-full bg-[#00332b] text-[#e9c349] flex items-center justify-center mb-6"><span class="material-symbols-outlined text-2xl">diversity_1</span></span>
+            <h3 class="text-xl font-bold text-[#001c17] mb-2">За волонтерів</h3><p class="text-[#404846] leading-relaxed">Щоб Господь посилав присвячених людей, готових брати відповідальність за себе, власне духовне зростання та допомагати зростати іншим.</p>
+          </div>
+          <div class="rv lift rounded-3xl p-8 bg-white border border-[#e5e2e1]" style="--d:240ms">
+            <span class="w-12 h-12 rounded-full bg-[#00332b] text-[#e9c349] flex items-center justify-center mb-6"><span class="material-symbols-outlined text-2xl">spa</span></span>
+            <h3 class="text-xl font-bold text-[#001c17] mb-2">За зростання</h3><p class="text-[#404846] leading-relaxed">Формування сильних команд у нових містах та університетах, розширення впливу: більше відкритих студентів — більше зрілих лідерів для України.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТИ -->
+    <section class="py-20 bg-[#fcf9f8]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="rv rounded-3xl bg-[#001c17] text-white p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div class="lg:col-span-7">
-            <div class="flex items-center gap-4 mb-6"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA0NotJk5I0fZ0m9w2jDvsn__im_v4tksUV_zzAChAPWMxnM9i0wfMvhH_iQUWqJdLaX3NofibAZs131yJtjSQXSxbrWTXsVj5ryY4or2rHFuNKENNdzKtAoklBhXGm-7RzB3aE9IkaTGxw7dmtL3oZNrGKVzSpiUDWWCL7vPsJeMjuOHNWr7zTEB1Pmu7qzdmknjwqIpaWgm_4Kkkp2PsyLtt8df0HmEJXyePzNkZ1iqVVJIutpFaPnQnFJEPgLBPs7Q" alt="Campus Ukraine Logo" class="h-14 md:h-16 w-14 md:w-16 rounded-2xl shadow-sm object-contain border border-brand-border/60 shrink-0"><h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-tight">Campus Ukraine</h1></div>
-            <p class="text-xl md:text-2xl font-serif text-brand-primary italic mb-6 leading-relaxed">
-              «Спільнота, де студенти зростають у вірі й стають лідерами майбутньої України»
-            </p>
-            <p class="text-base md:text-lg text-brand-muted leading-relaxed mb-8">
-              Campus Ukraine служить студентам, створюючи спільноти, де можна розвиватися, знаходити підтримку й відкривати для себе християнські цінності. Ми будуємо зі студентами стосунки, разом читаємо Біблію, говоримо про віру, вибір і покликання, допомагаємо зростати духовно та розвивати лідерські якості.
-            </p>
-
-            <div class="flex flex-wrap items-center gap-4">
-              <a href="#join" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-brand-dark text-white font-bold text-sm tracking-wide hover:bg-brand-primary transition-all shadow-md">
-                Приєднатися до руху
-              </a>
-              <a href="#projects" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white border border-brand-border text-brand-dark font-semibold text-sm hover:bg-brand-surface transition-all">
-                Дізнатися про проєкти ↓
-              </a>
-              <a href="https://www.campus.org.ua/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 font-semibold text-sm hover:bg-amber-100 transition-all">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                campus.org.ua
-              </a>
+            <span class="inline-block text-sm font-bold tracking-widest uppercase text-[#e9c349]">— Зв'язок зі служінням</span>
+            <h2 class="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight">Маєте запитання або хочете запросити Campus у свій ВНЗ?</h2>
+            <p class="mt-4 text-white/70 leading-relaxed">Ми відкриті до нових партнерств, зустрічей зі студентами та створення команд у нових містах України.</p>
+            <div class="mt-8 space-y-4">
+              <div class="flex items-center gap-4"><span class="w-10 h-10 rounded-full bg-white/10 text-[#e9c349] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">mail</span></span><div><div class="text-xs uppercase tracking-wider text-white/50">Офіційна пошта</div><a href="mailto:campus.ukraine@cru.org" class="font-semibold hover:text-[#e9c349]">campus.ukraine@cru.org</a></div></div>
+              <div class="flex items-center gap-4"><span class="w-10 h-10 rounded-full bg-white/10 text-[#e9c349] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">language</span></span><div><div class="text-xs uppercase tracking-wider text-white/50">Офіційний сайт</div><a href="https://www.campus.org.ua/" target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-[#e9c349]">www.campus.org.ua</a></div></div>
+              <div class="flex items-center gap-4"><span class="w-10 h-10 rounded-full bg-white/10 text-[#e9c349] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">chat</span></span><div><div class="text-xs uppercase tracking-wider text-white/50">Telegram координатора</div><a href="https://t.me/MariaParchuk" target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-[#e9c349]">@MariaParchuk</a></div></div>
             </div>
           </div>
-
           <div class="lg:col-span-5">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-brand-border/60 bg-white p-2">
-              <div class="relative h-72 md:h-80 rounded-2xl overflow-hidden">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOwMYtuhJYxh5A2XTWB62WxUMx1zK6Xh-RmjuBg6lPWEasquapcFUbI7DMBBATKZbPtD56d4y4SZcBydRAo2t_yY6roGV4qc6ErWAtjwzsFMNn82rgE1sFDi3lJrcYPFm0I5IPVvshjicz7Cfm5LrjxlkMT4nc1i2BqrRn8NprPjR7X9OZSzbsVvGacZ3dJtWquxiQF0xdV735kKzs-KV2DvuNUrljgpuo63FMbwSMgicdvjlyLGOG27WJ5rv1p-r2qio" alt="Студенти Campus Ukraine" class="w-full h-full object-cover object-center">
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 text-white">
-                  <span class="text-xs uppercase tracking-widest font-bold bg-white/20 backdrop-blur px-2.5 py-1 rounded">Campus Community</span>
-                  <p class="text-sm font-medium mt-1">Життя, спілкування, відкритий простір та пошук сенсу</p>
+            <div class="rounded-3xl overflow-hidden bg-white text-[#1c1b1b]">
+              <div class="relative aspect-[4/3] overflow-hidden">
+                <img src="assets/img/team/parchuk.jpg" alt="Марія Парчук" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105">
+                <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-[#001c17] to-transparent text-white">
+                  <p class="text-xs font-bold uppercase tracking-widest text-[#e9c349]">Лідерка напрямку</p>
+                  <h3 class="text-2xl font-extrabold mt-1">Марія Парчук</h3>
                 </div>
               </div>
-
-              <div class="p-4 flex items-center justify-between text-xs text-brand-muted">
-                <span class="">Офіційні соцмережі:</span>
-                <div class="flex items-center gap-3">
-                  <a href="https://www.instagram.com/thecampusukraine/" target="_blank" class="font-bold text-brand-dark hover:text-amber-600 transition-colors">Instagram</a>
-                  <span class="">·</span>
-                  <a href="https://www.facebook.com/campus.ukr/" target="_blank" class="font-bold text-brand-dark hover:text-amber-600 transition-colors">Facebook</a>
-                </div>
+              <div class="p-6 space-y-2 text-sm">
+                <p class="text-[#404846]">Лідерка студентського служіння Campus Ukraine</p>
+                <p>Email: <a href="mailto:mariia.parchuk@cru.org" class="font-semibold hover:underline">mariia.parchuk@cru.org</a></p>
+                <a href="https://t.me/MariaParchuk" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center gap-2 w-full py-3 rounded-full bg-[#001c17] text-white font-semibold hover:bg-[#00332b] transition-colors">Написати в Telegram<span class="material-symbols-outlined text-xl" aria-hidden="true">send</span></a>
               </div>
             </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="py-14 bg-brand-dark text-white relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-      <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Географія та масштаб</span>
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight mt-1 text-white">Вплив серед студентства України</h2>
-          <p class="text-sm text-gray-300 mt-2">Станом на осінь 2026 року через локальні команди співробітників і волонтерів</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur hover:bg-white/10 transition-colors">
-            <div class="text-4xl md:text-5xl font-extrabold text-amber-400 tracking-tight">35</div>
-            <div class="text-sm font-semibold text-gray-200 mt-1">років в Україні</div>
-            <div class="text-xs text-gray-400 mt-1">з 1991 року разом із молоддю</div>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur hover:bg-white/10 transition-colors">
-            <div class="text-4xl md:text-5xl font-extrabold text-amber-400 tracking-tight">10</div>
-            <div class="text-sm font-semibold text-gray-200 mt-1">міст України</div>
-            <div class="text-xs text-gray-400 mt-1">активні локальні студентські хаби</div>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur hover:bg-white/10 transition-colors">
-            <div class="text-4xl md:text-5xl font-extrabold text-amber-400 tracking-tight">50+</div>
-            <div class="text-sm font-semibold text-gray-200 mt-1">університетів (ВНЗ)</div>
-            <div class="text-xs text-gray-400 mt-1">охоплення студентських кампусів</div>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur hover:bg-white/10 transition-colors">
-            <div class="text-4xl md:text-5xl font-extrabold text-amber-400 tracking-tight">250</div>
-            <div class="text-sm font-semibold text-gray-200 mt-1">активних волонтерів</div>
-            <div class="text-xs text-gray-400 mt-1">студенти та наставники команд</div>
-          </div>
-        </div>
-
-        <div class="mt-8 text-center text-sm text-gray-300 max-w-3xl mx-auto">
-          Працюємо через регулярні зустрічі, особисте спілкування, проєкти розвитку лідерства, навчання та всеукраїнські ініціативи.
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="py-20 bg-brand-surface border-b border-brand-border">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">Формати взаємодії</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark tracking-tight mt-1">Поточні проєкти та ініціативи</h2>
-          </div>
-          <p class="text-sm text-brand-muted max-w-md mt-3 md:mt-0">
-            Практичні інструменти, регулярні клуби та події для духовного зростання й формування критичного мислення.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white rounded-3xl p-8 border border-brand-border/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full">діє</span>
-                <span class="text-xs font-semibold text-brand-muted">Особистий формат</span>
-              </div>
-              <h3 class="text-2xl font-bold text-brand-dark mb-3">Особисті зустрічі та менторство</h3>
-              <p class="text-sm text-brand-muted leading-relaxed mb-6">
-                Персональний формат, де студент отримує увагу, підтримку й безпечний простір для щирих розмов про життя, вибір, цінності, віру й власне майбутнє.
-              </p>
-              
-              <div>
-                <span class="text-xs font-bold text-brand-dark uppercase tracking-wider block mb-2">Авторські формати:</span>
-                <div class="flex flex-wrap gap-2">
-                  <span class="text-xs bg-brand-cream border border-brand-border px-2.5 py-1 rounded-md text-brand-dark font-medium">«Людина-Людина»</span>
-                  <span class="text-xs bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-md text-amber-900 font-bold">«ЯХТО»</span>
-                  <span class="text-xs bg-brand-cream border border-brand-border px-2.5 py-1 rounded-md text-brand-dark font-medium">«Успіх Inside»</span>
-                  <span class="text-xs bg-brand-cream border border-brand-border px-2.5 py-1 rounded-md text-brand-dark font-medium">«Твій світогляд»</span>
-                  <span class="text-xs bg-brand-cream border border-brand-border px-2.5 py-1 rounded-md text-brand-dark font-medium">«Step Up»</span>
-                  <span class="text-xs bg-brand-cream border border-brand-border px-2.5 py-1 rounded-md text-brand-dark font-medium">«Зростай»</span>
-                  <span class="text-xs bg-brand-cream border border-brand-border px-2.5 py-1 rounded-md text-brand-dark font-medium">«ПРО тебе»</span>
-                  <span class="text-xs bg-brand-cream border border-brand-border px-2.5 py-1 rounded-md text-brand-dark font-medium">«ПРО твої цінності»</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-3xl p-8 border border-brand-border/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full">діє</span>
-                <span class="text-xs font-semibold text-brand-muted">Груповий формат</span>
-              </div>
-              <h3 class="text-2xl font-bold text-brand-dark mb-3">Дискусійні групи та воркшопи</h3>
-              <p class="text-sm text-brand-muted leading-relaxed mb-4">
-                Інтерактивні регулярні зустрічі про всебічний розвиток, лідерство, вибір професії, побудову міцних стосунків і світогляд. 
-              </p>
-              <div class="p-4 rounded-2xl bg-brand-lightgreen/50 border border-emerald-100 text-sm text-brand-dark mb-2">
-                <strong>Мета:</strong> Допомагаємо студентам формувати власну стійку життєву позицію, критично мислити та аргументувати погляди у дружній атмосфері.
-              </div>
-            </div>
-            <div class="text-xs text-brand-muted mt-4">
-              Формати доступні наживо в університетах та онлайн для всіх регіонів.
-            </div>
-          </div>
-
-          <div class="bg-white rounded-3xl p-8 border border-brand-border/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full">діє</span>
-                <span class="text-xs font-semibold text-brand-muted">Клуби</span>
-              </div>
-              <h3 class="text-2xl font-bold text-brand-dark mb-3">Англійські клуби (English Clubs)</h3>
-              <p class="text-sm text-brand-muted leading-relaxed mb-4">
-                Розмовні клуби з носіями мови та викладачами в невимушеній дружній атмосфері кав'ярні чи хабу.
-              </p>
-              <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-100 text-sm text-amber-950">
-                <strong>Атмосфера:</strong> Безпечний і легкий простір для практики іноземної мови, зародження нової дружби та знайомства зі спільнотою християнських студентів.
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-3xl p-8 border border-brand-border/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full">діє</span>
-                <span class="text-xs font-semibold text-brand-muted">Масштабні події</span>
-              </div>
-              <h3 class="text-2xl font-bold text-brand-dark mb-3">Всеукраїнські проєкти та поїздки</h3>
-              <p class="text-sm text-brand-muted leading-relaxed mb-4">
-                Студентські кемпи, конференції лідерства та навчальні програми, що об'єднують сотні активних студентів з різних міст України.
-              </p>
-              
-              <div class="p-4 rounded-2xl bg-brand-cream border border-brand-border text-sm text-brand-dark flex items-start gap-3">
-                <div class="w-8 h-8 rounded-lg bg-brand-dark text-white flex items-center justify-center font-bold text-xs shrink-0">
-                  ⚡️
-                </div>
-                <div>
-                  <div class="font-bold text-brand-dark">CAMPUS UNITED — 2–3 жовтня, Львів</div>
-                  <div class="text-xs text-brand-muted mt-0.5">Очікується ~450 учасників. Головна щорічна зустріч для натхнення, нетворкінгу та єдності.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="py-20 bg-white border-b border-brand-border">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="bg-gradient-to-br from-brand-surface to-white rounded-3xl p-8 md:p-12 border border-brand-border shadow-sm">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
-            <div class="lg:col-span-4">
-              <div class="relative rounded-2xl overflow-hidden shadow-lg border border-brand-border">
-                <img src="https://lh3.googleusercontent.com/aida/AEtjO1X8MTe0G0w79E4OkGn_ot19cm4DIPZM3s6fllCN_QS5z6vH5CpM6JDUD7xxkqC3Y4q4CPe2F7hGxBSTceybT7zzuFFk6fEbPaa7uZiN5VKKzTSVLl8mN9dlKhIVo2DeCnGLf35YuR29wH-v2eszjLKz6Sqm4sghyKBmzRvYWqcYj2ANk5LQdmGfurdtxSYWpVgm3waUze67I_CHUbFNZ_P6znQgfctF8X-CQo7ZGoskihAtOP44Ef-fzUhl" alt="Історія Наді Campus" class="w-full h-80 object-cover">
-                <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brand-dark uppercase tracking-wider">
-                  Історія змін
-                </div>
-              </div>
-            </div>
-
-            <div class="lg:col-span-8">
-              <span class="text-xs font-bold uppercase tracking-widest text-amber-700">Особисте свідчення</span>
-              <h2 class="text-3xl font-extrabold text-brand-dark tracking-tight mt-1 mb-4">
-                Історія Наді: від першої зустрічі до наставництва
-              </h2>
-              <blockquote class="text-lg md:text-xl font-serif italic text-brand-primary leading-relaxed mb-6">
-                «Саме тут я зустріла Бога, знайшла щирих друзів та відкрила справжній сенс свого життя...»
-              </blockquote>
-              <div class="prose prose-sm text-brand-muted leading-relaxed space-y-3">
-                <p class="">
-                  Надя вперше познайомилася з Campus завдяки волонтеру, який запросив її на студентську подію та до церкви в місті Острог. Згодом вона почала проходити проєкт <strong>«ЯХТО»</strong> — серію особистих довірливих зустрічей про світогляд, цінності та християнську віру.
-                </p>
-                <p class="">
-                  Під час однієї з таких зустрічей Надя стала свідком того, як інша дівчина щиро вирішила слідувати за Христом — це стало переломним і визначальним моментом і для неї самої.
-                </p>
-                <p class="font-medium text-brand-dark">
-                  Сьогодні Надя вже сама в активній команді волонтерів Campus Ukraine, готується до хрещення та надихає нових студентів робити свій усвідомлений вибір.
-                </p>
-              </div>
-
-              <div class="mt-6 pt-6 border-t border-brand-border flex items-center gap-4">
-                <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center text-sm">
-                  Н
-                </div>
-                <div>
-                  <div class="text-sm font-bold text-brand-dark">Надя</div>
-                  <div class="text-xs text-brand-muted">Випускниця проєкту «ЯХТО», волонтерка Campus Острог</div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </section>
-
-    <section id="join" class="py-20 bg-brand-cream border-b border-brand-border">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">Шлях співдії</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark tracking-tight mt-1">
-            Як долучитися до Campus Ukraine
-          </h2>
-          <p class="text-base text-brand-muted mt-3">
-            Три прості кроки, через які кожен може стати частиною великого руху перетворення студентського середовища.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-sm flex flex-col justify-between hover:border-brand-primary transition-all">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-900 font-extrabold flex items-center justify-center text-xl mb-6">
-                01
-              </div>
-              <h3 class="text-2xl font-bold text-brand-dark mb-3">Приєднуйся</h3>
-              <p class="text-sm text-brand-muted leading-relaxed mb-6">
-                Навчайся та служи разом із нами. Запрошуємо студентів, випускників та молодь, які розділяють наше бачення досягати студентів України та будувати живі спільноти.
-              </p>
-            </div>
-            <a href="https://t.me/MariaParchuk" target="_blank" class="inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-brand-dark text-white text-sm font-bold hover:bg-brand-primary transition-colors">
-              Стати волонтером
-            </a>
-          </div>
-
-          <div class="bg-white rounded-3xl p-8 border border-brand-border shadow-sm flex flex-col justify-between hover:border-brand-primary transition-all">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-900 font-extrabold flex items-center justify-center text-xl mb-6">
-                02
-              </div>
-              <h3 class="text-2xl font-bold text-brand-dark mb-3">Співпрацюй</h3>
-              <p class="text-sm text-brand-muted leading-relaxed mb-6">
-                Спільні проєкти та партнерський обмін ресурсами для церков, університетів та організацій: адаптовані навчальні матеріали, інструменти наставництва, тренінги та спільні події.
-              </p>
-            </div>
-            <a href="mailto:campus.ukraine@cru.org" class="inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-white border border-brand-border text-brand-dark text-sm font-bold hover:bg-brand-surface transition-colors">
-              Запропонувати партнерство
-            </a>
-          </div>
-
-          <div class="bg-white rounded-3xl p-8 border border-amber-300 bg-gradient-to-b from-amber-50/40 to-white shadow-sm flex flex-col justify-between">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white font-extrabold flex items-center justify-center text-xl mb-6 shadow-sm">
-                03
-              </div>
-              <h3 class="text-2xl font-bold text-brand-dark mb-3">Інвестуй</h3>
-              <p class="text-sm text-brand-muted leading-relaxed mb-6">
-                Підтримуй розвиток локальних команд у містах, якісне навчання лідерів та створення нових можливостей для духовного впливу на майбутнє покоління України.
-              </p>
-            </div>
-            <a href="pidtrymaty.html" class="inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-[#d9532f] hover:bg-[#c44523] text-white text-sm font-bold transition-colors shadow-sm">
-              Фінансово підтримати
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 bg-white border-b border-brand-border">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between mb-8">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">Відеоматеріали</span>
-            <h2 class="text-2xl md:text-3xl font-bold text-brand-dark tracking-tight">Побачити життя Campus</h2>
-          </div>
-          <a href="https://www.instagram.com/thecampusukraine/" target="_blank" class="text-sm font-bold text-brand-primary hover:underline flex items-center gap-1">
-            Більше відео в Instagram →
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="group rounded-2xl bg-brand-surface border border-brand-border overflow-hidden p-4 hover:shadow-md transition-all">
-            <div class="aspect-video bg-brand-dark/90 rounded-xl flex items-center justify-center relative overflow-hidden group-hover:scale-[1.01] transition-transform">
-              <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur text-white flex items-center justify-center pl-1 shadow-lg group-hover:bg-amber-500 transition-colors">
-                ▶
-              </div>
-              <span class="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-2 py-0.5 rounded font-mono">Головне</span>
-            </div>
-            <h3 class="font-bold text-brand-dark text-base mt-3">🎬 Campus UNITED'25</h3>
-            <p class="text-xs text-brand-muted mt-1">Огляд всеукраїнської щорічної конференції студентства</p>
-          </div>
-
-          <div class="group rounded-2xl bg-brand-surface border border-brand-border overflow-hidden p-4 hover:shadow-md transition-all">
-            <div class="aspect-video bg-brand-primary/80 rounded-xl flex items-center justify-center relative overflow-hidden group-hover:scale-[1.01] transition-transform">
-              <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur text-white flex items-center justify-center pl-1 shadow-lg group-hover:bg-amber-500 transition-colors">
-                ▶
-              </div>
-            </div>
-            <h3 class="font-bold text-brand-dark text-base mt-3">Що для тебе кемпус?</h3>
-            <p class="text-xs text-brand-muted mt-1">Щирі бліц-відповіді студентів та волонтерів з різних міст</p>
-          </div>
-
-          <div class="group rounded-2xl bg-brand-surface border border-brand-border overflow-hidden p-4 hover:shadow-md transition-all">
-            <div class="aspect-video bg-stone-800 rounded-xl flex items-center justify-center relative overflow-hidden group-hover:scale-[1.01] transition-transform">
-              <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur text-white flex items-center justify-center pl-1 shadow-lg group-hover:bg-amber-500 transition-colors">
-                ▶
-              </div>
-            </div>
-            <h3 class="font-bold text-brand-dark text-base mt-3">Спільнота студентів</h3>
-            <p class="text-xs text-brand-muted mt-1">Як проходять регулярні клуби, виїзди на природу та волонтерство</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 bg-brand-surface border-b border-brand-border">
-      <div class="max-w-5xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-          <span class="text-xs font-bold uppercase tracking-widest text-emerald-800">Духовна підтримка</span>
-          <h2 class="text-2xl md:text-3xl font-extrabold text-brand-dark tracking-tight mt-1">
-            Молитовні потреби Campus Ukraine
-          </h2>
-          <p class="text-sm text-brand-muted mt-2">
-            Запрошуємо вас молитися разом із нами за ключові сфери студентського руху:
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-xs">
-            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold text-lg mb-4">
-              🙏
-            </div>
-            <h3 class="font-bold text-brand-dark text-base mb-2">За студентів</h3>
-            <p class="text-sm text-brand-muted leading-relaxed">
-              Щоб Бог відкривав їхні серця, давав прагнення істини та вів до щирих особистих стосунків із Христом під час навчання.
-            </p>
-          </div>
-
-          <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-xs">
-            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold text-lg mb-4">
-              🤝
-            </div>
-            <h3 class="font-bold text-brand-dark text-base mb-2">За волонтерів</h3>
-            <p class="text-sm text-brand-muted leading-relaxed">
-              Щоб Господь посилав присвячених людей, готових брати відповідальність за себе, власне духовне зростання та допомагати зростати іншим.
-            </p>
-          </div>
-
-          <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-xs">
-            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold text-lg mb-4">
-              🌱
-            </div>
-            <h3 class="font-bold text-brand-dark text-base mb-2">За зростання</h3>
-            <p class="text-sm text-brand-muted leading-relaxed">
-              Формування сильних команд у нових містах та університетах, розширення впливу: більше відкритих студентів — більше зрілих лідерів для України.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 bg-white">
-      <div class="max-w-5xl mx-auto px-6">
-        <div class="bg-brand-cream border border-brand-border rounded-3xl p-8 md:p-10">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
-            <div class="md:col-span-7">
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-primary">Зв'язок зі служінням</span>
-              <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mt-1 mb-3">
-                Маєте запитання або хочете запросити Campus у свій ВНЗ?
-              </h2>
-              <p class="text-sm text-brand-muted mb-6 leading-relaxed">
-                Ми відкриті до нових партнерств, зустрічей зі студентами та створення команд у нових містах України.
-              </p>
-
-              <div class="space-y-3 text-sm">
-                <div class="flex items-center gap-3 text-brand-dark">
-                  <span class="w-6 text-brand-primary font-bold">✉️</span>
-                  <span class="text-brand-muted">Офіційна пошта:</span>
-                  <a href="mailto:campus.ukraine@cru.org" class="font-semibold hover:underline">campus.ukraine@cru.org</a>
-                </div>
-                <div class="flex items-center gap-3 text-brand-dark">
-                  <span class="w-6 text-brand-primary font-bold">🌐</span>
-                  <span class="text-brand-muted">Офіційний сайт:</span>
-                  <a href="https://www.campus.org.ua/" target="_blank" class="font-semibold hover:underline">www.campus.org.ua</a>
-                </div>
-                <div class="flex items-center gap-3 text-brand-dark">
-                  <span class="w-6 text-brand-primary font-bold">💬</span>
-                  <span class="text-brand-muted">Telegram координатора:</span>
-                  <a href="https://t.me/MariaParchuk" target="_blank" class="font-semibold text-amber-700 hover:underline">@MariaParchuk</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="md:col-span-5 bg-white p-6 rounded-2xl border border-brand-border shadow-xs">
-              <div class="text-xs font-bold uppercase tracking-wider text-brand-muted mb-3">Лідерка напрямку</div>
-              <div class="flex items-center gap-4 mb-4">
-                <div class="w-14 h-14 rounded-full bg-brand-primary text-white font-bold flex items-center justify-center text-lg shadow-sm">
-                  МП
-                </div>
-                <div>
-                  <h4 class="font-bold text-brand-dark text-base">Марія Парчук</h4>
-                  <p class="text-xs text-brand-muted">Лідерка студентського служіння Campus Ukraine</p>
-                </div>
-              </div>
-              <div class="text-xs text-brand-muted space-y-1.5 border-t border-brand-border pt-3">
-                <div class="">Email: <a href="mailto:mariia.parchuk@cru.org" class="text-brand-dark font-medium hover:underline">mariia.parchuk@cru.org</a></div>
-                <div class="">Telegram: <a href="https://t.me/MariaParchuk" class="text-brand-dark font-medium hover:underline">@MariaParchuk</a></div>
-              </div>
-              <a href="https://t.me/MariaParchuk" target="_blank" class="mt-4 block text-center py-2 px-4 rounded-xl bg-brand-surface border border-brand-border text-xs font-bold text-brand-dark hover:bg-brand-cream transition-colors">
-                Написати в Telegram
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
-
+  <script src="assets/motion.js"></script>
   <script src="assets/site.js"></script>
 </body></html>

@@ -1,0 +1,12 @@
+/* Спільна анімація для сторінок напрямків (стиль головної) */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease var(--d,0ms),transform .7s ease var(--d,0ms)}
+.js .rv.is-in{opacity:1;transform:none}
+.v-quote{position:absolute;top:-10px;right:4%;font-size:420px;line-height:1;font-weight:800;color:rgba(162,208,196,.07);pointer-events:none;user-select:none}
+.v-text em{font-style:normal}
+.js .v-text .vw{color:rgba(255,255,255,.2);transition:color .35s ease}
+.js .v-text .vw.on{color:#fff}
+.v-text .v-acc,.js .v-text .v-acc .vw.on{color:#e9c349}
+.lift{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease,background-color .35s ease}
+.lift:hover{transform:translateY(-6px);box-shadow:0 24px 44px -16px rgba(0,28,23,.3);border-color:#e9c349}
+.js .rv.lift.is-in:hover{transform:translateY(-6px)}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .v-text .vw{color:#fff;transition:none}.lift,.lift:hover{transition:none;transform:none}}
