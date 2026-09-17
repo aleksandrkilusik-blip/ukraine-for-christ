@@ -91,9 +91,14 @@
 .v-pill{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--d),transform .6s ease var(--d),background-color .3s ease,border-color .3s ease}
 .v-pill.is-in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.v-text .vw{transition:none}.v-pill{opacity:1;transform:none;transition:none}}
-/* Напрямки: картки як у подіях */
-.mn-icon{position:absolute;top:24px;right:24px;z-index:1;width:48px;height:48px;border-radius:9999px;background:#e9c349;color:#001c17;display:flex;align-items:center;justify-content:center;font-size:26px;transition:transform .35s ease}
-.ev-card:hover .mn-icon{transform:rotate(-8deg) scale(1.08)}
+/* Напрямки: прості світлі картки */
+.mc{display:flex;flex-direction:column;padding:32px;border:1px solid #e5e2e1;border-radius:8px;background:#faf8f5;color:#1c1b1b;text-decoration:none;transition:border-color .25s ease,box-shadow .25s ease}
+.mc:hover,.mc:focus-visible{border-color:#00332b;box-shadow:0 24px 40px -24px rgba(0,28,23,.35)}
+.mc-ini{width:52px;height:52px;border-radius:9999px;border:2px solid #00332b;color:#00332b;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;transition:background-color .25s ease,color .25s ease}
+.mc:hover .mc-ini,.mc:focus-visible .mc-ini{background:#00332b;color:#fff}
+.mc-title{margin-top:20px;font-size:24px;line-height:1.3;font-weight:600;color:#1c1b1b}
+.mc-desc{margin-top:14px;font-size:17px;line-height:1.6;color:#58605f;flex-grow:1}
+.mc-cta{margin-top:24px;font-weight:700;color:#001c17}
 /* Події: картки-календарики */
 .ev-card{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:#fff;border:1px solid #e5e2e1;color:#001c17;text-decoration:none;opacity:0;transform:translateY(24px);transition:opacity .6s ease var(--d),transform .6s ease var(--d),box-shadow .35s ease,border-color .35s ease}
 .ev-card.is-in{opacity:1;transform:none}
@@ -177,61 +182,17 @@
 <!-- Directions Section -->
 <section class="py-section-v-padding px-margin-mobile md:px-margin-desktop bg-surface scroll-mt-20" id="ministries">
 <div class="max-w-container-max mx-auto"><div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"><div><span class="text-label-caps font-label-caps tracking-widest text-tertiary uppercase block mb-4">— НАПРЯМКИ ДІЯЛЬНОСТІ</span><h2 class="text-headline-md font-headline-md text-primary">11 спеціалізованих команд</h2><p class="text-body-lg font-body-lg text-on-surface-variant mt-4 max-w-2xl">Ми розвиваємо служіння у різних сферах суспільства, щоб кожен міг почути Євангеліє зрозумілою йому мовою.</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<a class="ev-card" href="campus.html" style="--d:0ms">
-<div class="ev-date"><div><span class="ev-day">01</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">school</span></div>
-<div class="ev-body"><h3 class="ev-title">Студентське служіння</h3><p class="ev-desc">Формування майбутніх лідерів через християнські цінності в університетах.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="viyskove.html" style="--d:120ms">
-<div class="ev-date"><div><span class="ev-day">02</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">shield</span></div>
-<div class="ev-body"><h3 class="ev-title">Військове служіння</h3><p class="ev-desc">Духовна та психологічна підтримка захисників України на фронті та в тилу.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="simeyne-zhyttya.html" style="--d:240ms">
-<div class="ev-date"><div><span class="ev-day">03</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">diversity_1</span></div>
-<div class="ev-body"><h3 class="ev-title">Сімейне служіння</h3><p class="ev-desc">Зміцнення сімейних стосунків та допомога родинам у кризових ситуаціях (FamilyLife).</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="humanitarne.html" style="--d:0ms">
-<div class="ev-date"><div><span class="ev-day">04</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">volunteer_activism</span></div>
-<div class="ev-body"><h3 class="ev-title">Гуманітарна допомога</h3><p class="ev-desc">Забезпечення базових потреб переселенців та постраждалих від війни, генератори, евакуація.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="sport.html" style="--d:120ms">
-<div class="ev-date"><div><span class="ev-day">05</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">sports_soccer</span></div>
-<div class="ev-body"><h3 class="ev-title">Спортивне служіння</h3><p class="ev-desc">Тренування й табори для дітей, які бракує безпечного простору, виховання характеру.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="gcr.html" style="--d:240ms">
-<div class="ev-date"><div><span class="ev-day">06</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">church</span></div>
-<div class="ev-body"><h3 class="ev-title">Глобальний церковний рух</h3><p class="ev-desc">Зміцнення та розвиток церковних громад для ефективного служіння суспільству.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="osvitiany.html" style="--d:0ms">
-<div class="ev-date"><div><span class="ev-day">07</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">menu_book</span></div>
-<div class="ev-body"><h3 class="ev-title">Рух освітян</h3><p class="ev-desc">Підтримка та об'єднання вчителів, викладачів та освітян для трансформації освітнього простору.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="crescendo.html" style="--d:120ms">
-<div class="ev-date"><div><span class="ev-day">08</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">music_note</span></div>
-<div class="ev-body"><h3 class="ev-title">Класичні музиканти</h3><p class="ev-desc">Спільнота музикантів: репетиції, концерти, розмови про віру й покликання.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="leaderimpact.html" style="--d:240ms">
-<div class="ev-date"><div><span class="ev-day">09</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">workspace_premium</span></div>
-<div class="ev-body"><h3 class="ev-title">LeaderImpact</h3><p class="ev-desc">Лідерський рух: об'єднання та розвиток цілісних лідерів і підприємців у бізнесі.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="za-kordonom.html" style="--d:0ms">
-<div class="ev-date"><div><span class="ev-day">10</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">public</span></div>
-<div class="ev-body"><h3 class="ev-title">Українці за кордоном</h3><p class="ev-desc">Підтримка українських родин, біженців та діаспори, збереження зв'язку та духовний супровід.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
-<a class="ev-card" href="mission-hub.html" style="--d:120ms">
-<div class="ev-date"><div><span class="ev-day">11</span><span class="ev-month">Напрямок служіння</span></div><span class="mn-icon material-symbols-outlined" aria-hidden="true">hub</span></div>
-<div class="ev-body"><h3 class="ev-title">Mission Hub</h3><p class="ev-desc">Навчання, ресурси, хаб та супровід для команд і утворення нових місійних ініціатив.</p>
-<span class="ev-cta">Детальніше<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></div>
-</a>
+<a class="mc" href="campus.html"><span class="mc-ini" aria-hidden="true">СС</span><h3 class="mc-title">Студентське служіння</h3><p class="mc-desc">Формування майбутніх лідерів через християнські цінності в університетах.</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="viyskove.html"><span class="mc-ini" aria-hidden="true">ВС</span><h3 class="mc-title">Військове служіння</h3><p class="mc-desc">Духовна та психологічна підтримка захисників України на фронті та в тилу.</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="simeyne-zhyttya.html"><span class="mc-ini" aria-hidden="true">СЖ</span><h3 class="mc-title">Сімейне служіння</h3><p class="mc-desc">Зміцнення сімейних стосунків та допомога родинам у кризових ситуаціях (FamilyLife).</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="humanitarne.html"><span class="mc-ini" aria-hidden="true">ГД</span><h3 class="mc-title">Гуманітарна допомога</h3><p class="mc-desc">Забезпечення базових потреб переселенців та постраждалих від війни, генератори, евакуація.</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="sport.html"><span class="mc-ini" aria-hidden="true">СП</span><h3 class="mc-title">Спортивне служіння</h3><p class="mc-desc">Тренування й табори для дітей, які бракує безпечного простору, виховання характеру.</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="gcr.html"><span class="mc-ini" aria-hidden="true">ГЦР</span><h3 class="mc-title">Глобальний церковний рух</h3><p class="mc-desc">Зміцнення та розвиток церковних громад для ефективного служіння суспільству.</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="osvitiany.html"><span class="mc-ini" aria-hidden="true">РО</span><h3 class="mc-title">Рух освітян</h3><p class="mc-desc">Підтримка та об'єднання вчителів, викладачів та освітян для трансформації освітнього простору.</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="crescendo.html"><span class="mc-ini" aria-hidden="true">КМ</span><h3 class="mc-title">Класичні музиканти</h3><p class="mc-desc">Спільнота музикантів: репетиції, концерти, розмови про віру й покликання.</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="leaderimpact.html"><span class="mc-ini" aria-hidden="true">LI</span><h3 class="mc-title">LeaderImpact</h3><p class="mc-desc">Лідерський рух: об'єднання та розвиток цілісних лідерів і підприємців у бізнесі.</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="za-kordonom.html"><span class="mc-ini" aria-hidden="true">УК</span><h3 class="mc-title">Українці за кордоном</h3><p class="mc-desc">Підтримка українських родин, біженців та діаспори, збереження зв'язку та духовний супровід.</p><span class="mc-cta">Детальніше →</span></a>
+<a class="mc" href="mission-hub.html"><span class="mc-ini" aria-hidden="true">MH</span><h3 class="mc-title">Mission Hub</h3><p class="mc-desc">Навчання, ресурси, хаб та супровід для команд і утворення нових місійних ініціатив.</p><span class="mc-cta">Детальніше →</span></a>
 </div>
 </div>
 </section>
