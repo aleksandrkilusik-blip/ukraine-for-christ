@@ -34,26 +34,26 @@
 
   var css = document.createElement('style');
   css.textContent =
-    '.udh-h{position:sticky;top:0;z-index:60;background:rgba(252,249,248,.96);backdrop-filter:blur(12px);border-bottom:1px solid #e5e2e1;font-family:"Manrope",sans-serif}' +
+    '.udh-h{position:sticky;top:0;z-index:60;background:rgba(252,249,248,.96);backdrop-filter:blur(12px);border-bottom:1px solid #ddd5c9;font-family:"Manrope",sans-serif}' +
     '.udh-h .in{max-width:1280px;margin:0 auto;padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}' +
     '.udh-h img{height:44px;width:auto;display:block}' +
-    '.udh-h nav{display:flex;gap:26px}.udh-h nav a{color:#404846;font-size:15px;font-weight:500;text-decoration:none}' +
-    '.udh-h nav a:hover,.udh-h nav a.is-active{color:#00332b}.udh-h nav a.is-active{font-weight:700}' +
+    '.udh-h nav{display:flex;gap:26px}.udh-h nav a{color:#4a5560;font-size:15px;font-weight:500;text-decoration:none}' +
+    '.udh-h nav a:hover,.udh-h nav a.is-active{color:#1c3a57}.udh-h nav a.is-active{font-weight:700}' +
     '.udh-h .act{display:flex;gap:8px;align-items:center}' +
-    '.udh-btn{display:inline-flex;align-items:center;padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid #00332b;color:#00332b}' +
-    '.udh-btn.fill{background:#00332b;color:#fff}' +
-    '.udh-burger{display:none;background:none;border:0;font-size:28px;color:#00332b;cursor:pointer}' +
-    '.udh-mob{display:none;border-top:1px solid #e5e2e1;padding:12px 20px 20px}.udh-mob a{display:block;padding:10px 0;color:#1c1b1b;text-decoration:none;font-weight:500}' +
+    '.udh-btn{display:inline-flex;align-items:center;padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid #1c3a57;color:#1c3a57}' +
+    '.udh-btn.fill{background:#1c3a57;color:#fff}' +
+    '.udh-burger{display:none;background:none;border:0;font-size:28px;color:#1c3a57;cursor:pointer}' +
+    '.udh-mob{display:none;border-top:1px solid #ddd5c9;padding:12px 20px 20px}.udh-mob a{display:block;padding:10px 0;color:#0e2433;text-decoration:none;font-weight:500}' +
     '.udh-mob.open{display:block}' +
     '@media(max-width:1100px){.udh-h nav,.udh-h .act .udh-btn:not(.fill){display:none}.udh-burger{display:block}}' +
-    '.udh-f{background:#001c17;color:#cfd8d5;font-family:"Manrope",sans-serif;font-size:14px}' +
+    '.udh-f{background:#14332c;color:#cbc3b6;font-family:"Manrope",sans-serif;font-size:14px}' +
     '.udh-f .in{max-width:1280px;margin:0 auto;padding:56px 20px 28px;display:grid;grid-template-columns:2fr 2fr 1fr 1.5fr;gap:32px}' +
     '@media(max-width:800px){.udh-f .in{grid-template-columns:1fr}}' +
-    '.udh-f h4{color:#e9c349;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}' +
-    '.udh-f a{display:block;color:#cfd8d5;text-decoration:none;padding:3px 0}.udh-f a:hover{color:#fff}' +
+    '.udh-f h4{color:#f2b948;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}' +
+    '.udh-f a{display:block;color:#cbc3b6;text-decoration:none;padding:3px 0}.udh-f a:hover{color:#fff}' +
     '.udh-f .bot{max-width:1280px;margin:0 auto;padding:18px 20px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;opacity:.7}' +
     '.udh-todo{display:inline-block;margin-left:6px;padding:1px 8px;border:1px dashed #b45309;border-radius:6px;background:#fef3c7;color:#92400e;font-size:11px;font-weight:700;font-style:normal;letter-spacing:0;text-transform:none;vertical-align:middle}' +
-    '.udh-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#00332b;color:#fff;padding:12px 20px;border-radius:12px;font:500 14px "Manrope",sans-serif;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,.2)}' +
+    '.udh-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1c3a57;color:#fff;padding:12px 20px;border-radius:12px;font:500 14px "Manrope",sans-serif;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,.2)}' +
     '.udh-ok{margin-top:12px;padding:12px 16px;border-radius:10px;background:#d1fae5;color:#065f46;font-weight:600}';
   document.head.appendChild(css);
 
