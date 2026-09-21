@@ -6,9 +6,8 @@
     ['pro-nas.html', 'Хто ми'],
     ['index.html#ministries', 'Напрямки'],
     ['istoriyi.html', 'Особисті історії'],
-    ['istoriyi.html', 'Новини'],
     ['podiyi.html', 'Події'],
-    ['doluchytys.html#volunteer', 'Волонтерство']
+    ['doluchytys.html', 'Співпраця']
   ];
 
   var MINISTRIES = [
@@ -63,9 +62,9 @@
   header.innerHTML =
     '<div class="in"><a href="index.html"><img src="' + LOGO + '" alt="Україна для Христа"></a>' +
     '<nav>' + links(NAV) + '</nav>' +
-    '<div class="act"><a class="udh-btn" href="doluchytys.html">Долучитись</a><a class="udh-btn fill" href="pidtrymaty.html">Підтримати</a>' +
+    '<div class="act"><a class="udh-btn fill" href="pidtrymaty.html">Підтримати</a>' +
     '<button class="udh-burger" aria-label="Меню">☰</button></div></div>' +
-    '<div class="udh-mob">' + links(NAV) + '<a href="doluchytys.html">Долучитись</a></div>';
+    '<div class="udh-mob">' + links(NAV) + '<a href="pidtrymaty.html">Підтримати</a></div>';
   document.body.prepend(header);
   header.querySelector('.udh-burger').onclick = function () {
     header.querySelector('.udh-mob').classList.toggle('open');
@@ -77,7 +76,7 @@
     '<div class="in"><div><img src="' + LOGO + '" alt="Україна для Христа" style="height:44px;filter:brightness(0) invert(1)">' +
     '<p style="margin-top:14px;max-width:320px">Євангеліє надії відновлює Україну. Міжконфесійна християнська місія, яка діє в Україні з 1991 року.</p></div>' +
     '<div><h4>Напрямки служіння</h4><div style="columns:2">' + links(MINISTRIES) + '</div></div>' +
-    '<div><h4>Навігація</h4>' + links(NAV.concat([['doluchytys.html', 'Долучитись'], ['pidtrymaty.html', 'Підтримати']])) + '</div>' +
+    '<div><h4>Навігація</h4>' + links(NAV.concat([['pidtrymaty.html', 'Підтримати']])) + '</div>' +
     '<div><h4>Контакти</h4><p>м. Київ, Україна</p><p>Email: <span class="udh-todo">уточнюється</span></p></div></div>' +
     '<div class="bot">© 2026 ГО «Україна для Христа». Усі права захищено.</div>';
   document.body.appendChild(footer);
