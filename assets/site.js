@@ -7,6 +7,7 @@
     ['index.html#ministries', 'Напрямки'],
     ['istoriyi.html', 'Особисті історії'],
     ['podiyi.html', 'Події'],
+    ['resursy.html', 'Ресурси'],
     ['doluchytys.html', 'Співпраця']
   ];
 
