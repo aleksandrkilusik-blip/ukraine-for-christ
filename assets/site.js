@@ -78,7 +78,7 @@
     '<p style="margin-top:14px;max-width:320px">Євангеліє надії відновлює Україну. Міжконфесійна християнська місія, яка діє в Україні з 1991 року.</p></div>' +
     '<div><h4>Напрямки служіння</h4><div style="columns:2">' + links(MINISTRIES) + '</div></div>' +
     '<div><h4>Навігація</h4>' + links(NAV.concat([['pidtrymaty.html', 'Підтримати']])) + '</div>' +
-    '<div><h4>Контакти</h4><p>м. Київ, Україна</p><p>Email: <span class="udh-todo">уточнюється</span></p></div></div>' +
+    '<div><h4>Контакти</h4><p>м. Київ, Україна</p><p>Email: <a href="mailto:ukraineforchrist@cru.org">ukraineforchrist@cru.org</a></p></div></div>' +
     '<div class="bot">© 2026 ГО «Україна для Христа». Усі права захищено.</div>';
   document.body.appendChild(footer);
 
