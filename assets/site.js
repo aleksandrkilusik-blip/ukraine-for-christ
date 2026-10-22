@@ -97,15 +97,88 @@
     toast(el.getAttribute('data-soon') || 'Цей розділ ще готується');
   });
 
-  document.querySelectorAll('form').forEach(function (form) {
+  // Анкети записуються в Google Таблицю через веб-застосунок Apps Script
+  // (код і інструкція — forms/apps-script.gs). Поки URL порожній, форми працюють у демо-режимі.
+  var FORMS_ENDPOINT = '';
+
+  // Назва аркуша в таблиці для кожної анкети: сторінка або сторінка#номер форми на ній.
+  var FORM_NAMES = {
+    'viyskove.html': 'Військове служіння',
+    'crescendo.html': 'Crescendo',
+    'gcr.html': 'ГЦР',
+    'leaderimpact.html': 'LeaderImpact',
+    'osvitiany.html': 'Рух освітян',
+    'sport.html': 'Sport Kids',
+    'za-kordonom.html': 'Українці за кордоном',
+    'doluchytys.html#0': 'Партнерство',
+    'doluchytys.html#1': 'Волонтерство',
+    'istoriyi.html': 'Підписка на історії'
+  };
+
+  function fieldLabel(el) {
+    var label = el.closest('label') || (el.id && document.querySelector('label[for="' + el.id + '"]'));
+    // Підпис зазвичай лежить у тому ж блоці, що й поле.
+    for (var box = el.parentElement, i = 0; !label && box && i < 3; box = box.parentElement, i++) {
+      if (box.querySelectorAll('input, select, textarea').length === 1) label = box.querySelector('label');
+    }
+    var text = el.name || el.placeholder || el.type;
+    if (label) {
+      // Якщо поле вкладене в підпис, текст варіантів списку до назви не потрапляє.
+      label = label.cloneNode(true);
+      label.querySelectorAll('input, select, textarea').forEach(function (c) { c.remove(); });
+      text = label.textContent;
+    }
+    return text.replace(/\*/g, '').replace(/\s+/g, ' ').trim();
+  }
+
+  function collect(form) {
+    var data = [];
+    form.querySelectorAll('input, select, textarea').forEach(function (el) {
+      if (el.type === 'submit' || el.type === 'button' || el.disabled) return;
+      if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) return;
+      var value = el.tagName === 'SELECT' && el.selectedIndex >= 0 ? el.options[el.selectedIndex].text : el.value;
+      data.push([fieldLabel(el), value.trim()]);
+    });
+    return data;
+  }
+
+  var page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('form').forEach(function (form, index) {
+    var key = FORM_NAMES[page + '#' + index] ? page + '#' + index : page;
+    var formName = FORM_NAMES[key] || key;
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (form.querySelector('.udh-ok')) return;
-      var ok = document.createElement('p');
-      ok.className = 'udh-ok';
-      ok.textContent = 'Дякуємо! Заявку прийнято. (Демо-режим: дані поки нікуди не надсилаються.)';
-      form.appendChild(ok);
-      form.reset();
+      var old = form.querySelector('.udh-ok');
+      if (old) old.remove();
+      var msg = document.createElement('p');
+      msg.className = 'udh-ok';
+
+      if (!FORMS_ENDPOINT) {
+        msg.textContent = 'Дякуємо! Заявку прийнято. (Демо-режим: дані поки нікуди не надсилаються.)';
+        form.appendChild(msg);
+        form.reset();
+        return;
+      }
+
+      var btn = form.querySelector('[type="submit"], button:not([type])');
+      if (btn) btn.disabled = true;
+      var body = new URLSearchParams({ form: formName, page: page, data: JSON.stringify(collect(form)) });
+      // no-cors: Apps Script не віддає CORS-заголовків, тож відповідь не читаємо — достатньо, що запит пішов.
+      fetch(FORMS_ENDPOINT, { method: 'POST', mode: 'no-cors', body: body })
+        .then(function () {
+          msg.textContent = 'Дякуємо! Ваші дані надіслано.';
+          form.reset();
+        })
+        .catch(function () {
+          msg.style.background = '#fee2e2';
+          msg.style.color = '#991b1b';
+          msg.textContent = 'Не вдалося надіслати заявку. Перевірте з\'єднання і спробуйте ще раз.';
+        })
+        .then(function () {
+          form.appendChild(msg);
+          if (btn) btn.disabled = false;
+        });
     });
   });
 })();
