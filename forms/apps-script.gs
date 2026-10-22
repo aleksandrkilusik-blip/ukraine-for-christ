@@ -1,23 +1,34 @@
 /**
- * Приймає анкети з сайту «Україна для Христа» і записує їх у цю Google Таблицю:
- * кожна анкета — на свій аркуш (Військове служіння, Crescendo, ГЦР …).
+ * Приймає анкети з сайту «Україна для Христа» і записує їх на аркуш «Заявки»
+ * цієї Google Таблиці (шаблон ukraine_for_christ_applications.xlsx).
  *
  * Встановлення:
- *  1. Створіть нову Google Таблицю → Розширення → Apps Script.
+ *  1. Відкрийте таблицю → Розширення → Apps Script.
  *  2. Замініть увесь код у редакторі цим файлом і збережіть.
  *  3. Розгорнути → Нове розгортання → тип «Веб-застосунок»:
  *     «Виконувати як» — Я, «Хто має доступ» — Усі. Надайте дозвіл.
  *  4. Скопіюйте URL веб-застосунку і вставте його в FORMS_ENDPOINT у assets/site.js.
  *
- * Після зміни цього коду потрібно: Розгорнути → Керувати розгортаннями →
- * редагувати → Версія «Нова» (тоді URL лишається той самий).
+ * Після зміни цього коду: Розгорнути → Керувати розгортаннями → редагувати →
+ * Версія «Нова» (тоді URL лишається той самий).
+ *
+ * Колонки шукаються за назвою в першому рядку, тож їх можна переставляти.
+ * Поля анкети, для яких немає окремої колонки, дописуються в «Повідомлення»
+ * у вигляді «Підпис: значення».
  */
 
+var SHEET_NAME = 'Заявки';
+var HEADERS = ['Дата й час', 'Служіння', 'Сторінка', 'Ім’я', 'Прізвище', 'Електронна пошта',
+  'Телефон', 'Місто', 'Тип звернення', 'Повідомлення', 'Статус', 'Примітки'];
+var STATUSES = ['Нова', 'У роботі', 'Завершена'];
 var MAX_LEN = 2000;
+
+// Підписи полів, значення яких іде в «Тип звернення» (окрім випадних списків — вони йдуть туди завжди).
+var TYPE_LABEL = /хто ви|напрям|вік дитини/i;
+var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function doPost(e) {
   var p = (e && e.parameter) || {};
-  var formName = String(p.form || 'Інше').slice(0, 90);
   var fields;
   try {
     fields = JSON.parse(p.data || '[]');
@@ -26,41 +37,86 @@ function doPost(e) {
   }
   if (!Array.isArray(fields) || !fields.length) return ContentService.createTextOutput('empty');
 
+  var rec = toRecord(fields);
+  rec['Дата й час'] = new Date();
+  rec['Служіння'] = p.form || '';
+  rec['Сторінка'] = p.page || '';
+  rec['Статус'] = 'Нова';
+
   var lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
-    var ss = SpreadsheetApp.getActiveSpreadsheet();
-    var sheet = ss.getSheetByName(formName) || ss.insertSheet(formName);
-
-    var headers = sheet.getLastColumn()
-      ? sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
-      : [];
-    if (!headers.length) {
-      headers = ['Дата', 'Сторінка'];
-      sheet.appendRow(headers);
-      sheet.setFrozenRows(1);
-      sheet.getRange(1, 1, 1, 2).setFontWeight('bold');
-    }
-
-    var row = [new Date(), clean(p.page)];
-    fields.forEach(function (pair) {
-      var label = clean(pair[0]) || 'Поле';
-      var col = headers.indexOf(label);
-      if (col === -1) {
-        // Нове поле в анкеті — додаємо колонку.
-        headers.push(label);
-        col = headers.length - 1;
-        sheet.getRange(1, col + 1).setValue(label).setFontWeight('bold');
-      }
-      row[col] = clean(pair[1]);
+    var sheet = getSheet();
+    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+    var row = headers.map(function (h) {
+      var v = rec[String(h).trim()];
+      return v instanceof Date ? v : clean(v);
     });
-    for (var i = 0; i < headers.length; i++) if (row[i] === undefined) row[i] = '';
-
     sheet.appendRow(row);
+
+    var statusCol = headers.indexOf('Статус') + 1;
+    if (statusCol) {
+      var rule = SpreadsheetApp.newDataValidation().requireValueInList(STATUSES, true).build();
+      sheet.getRange(sheet.getLastRow(), statusCol).setDataValidation(rule);
+    }
   } finally {
     lock.releaseLock();
   }
   return ContentService.createTextOutput('ok');
+}
+
+// Розкладає поля анкети [підпис, значення, тег] по колонках таблиці.
+function toRecord(fields) {
+  var rec = {};
+  var types = [];
+  var notes = [];
+  var messages = [];
+
+  fields.forEach(function (f) {
+    var label = String(f[0] || '').trim();
+    var value = String(f[1] == null ? '' : f[1]).trim();
+    var tag = String(f[2] || '').toUpperCase();
+    var l = label.toLowerCase();
+    if (!value) return;
+
+    if (/ім.я|прізвище/.test(l) && !rec['Ім’я']) {
+      // Порядок не перевертаємо: приклади в анкетах — «Ім’я Прізвище».
+      var parts = value.split(/\s+/);
+      rec['Ім’я'] = parts[0];
+      rec['Прізвище'] = parts.slice(1).join(' ');
+    } else if (/email|пошта/.test(l) && !/телефон|telegram/.test(l) && !rec['Електронна пошта']) {
+      rec['Електронна пошта'] = value;
+    } else if (/телефон|telegram|email|пошта/.test(l)) {
+      // «Телефон / Email» та подібні поля: розпізнаємо, що саме ввели.
+      if (EMAIL.test(value) && !rec['Електронна пошта']) rec['Електронна пошта'] = value;
+      else if (!EMAIL.test(value) && !rec['Телефон']) rec['Телефон'] = value;
+      else notes.push(label + ': ' + value);
+    } else if (/місто/.test(l) && !rec['Місто']) {
+      rec['Місто'] = value;
+    } else if (tag === 'SELECT' || TYPE_LABEL.test(l)) {
+      types.push(value);
+    } else if (tag === 'TEXTAREA') {
+      messages.push(value);
+    } else {
+      notes.push(label + ': ' + value);
+    }
+  });
+
+  rec['Тип звернення'] = types.join('; ');
+  rec['Повідомлення'] = notes.concat(messages).join('\n');
+  return rec;
+}
+
+function getSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(SHEET_NAME);
+  if (!sheet) {
+    sheet = ss.insertSheet(SHEET_NAME, 0);
+    sheet.appendRow(HEADERS);
+    sheet.setFrozenRows(1);
+    sheet.getRange(1, 1, 1, HEADERS.length).setFontWeight('bold');
+  }
+  return sheet;
 }
 
 // Обрізає довгі значення і не дає таблиці сприйняти текст як формулу (+380…, =…).

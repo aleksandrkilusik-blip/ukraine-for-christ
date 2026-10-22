@@ -137,7 +137,7 @@
       if (el.type === 'submit' || el.type === 'button' || el.disabled) return;
       if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) return;
       var value = el.tagName === 'SELECT' && el.selectedIndex >= 0 ? el.options[el.selectedIndex].text : el.value;
-      data.push([fieldLabel(el), value.trim()]);
+      data.push([fieldLabel(el), value.trim(), el.tagName]);
     });
     return data;
   }
