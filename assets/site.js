@@ -75,6 +75,7 @@
     '.udh-f .bot{max-width:1280px;margin:0 auto;padding:18px 20px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;opacity:.7}' +
     '.udh-todo{display:inline-block;margin-left:6px;padding:1px 8px;border:1px dashed #b45309;border-radius:6px;background:#fef3c7;color:#92400e;font-size:11px;font-weight:700;font-style:normal;letter-spacing:0;text-transform:none;vertical-align:middle}' +
     '.udh-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1c3a57;color:#fff;padding:12px 20px;border-radius:12px;font:500 14px "Manrope",sans-serif;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,.2)}' +
+    '.udh-beta{background:#fef3c7;color:#78350f;border-bottom:1px solid #f2b948;font:500 13px/1.4 "Manrope",sans-serif;text-align:center;padding:7px 16px}.udh-beta b{font-weight:700}' +
     '.udh-ok{margin-top:12px;padding:12px 16px;border-radius:10px;background:#d1fae5;color:#065f46;font-weight:600}';
   document.head.appendChild(css);
 
@@ -89,6 +90,13 @@
       return links([l]) + (l[1] === 'Напрямки' ? '<div class="udh-mob-sub">' + links(MINISTRIES) + '</div>' : '');
     }).join('') + '<a href="pidtrymaty.html">Підтримати</a></div>';
   document.body.prepend(header);
+
+  // Плашка тестової версії над шапкою (прокручується разом зі сторінкою, шапка лишається липкою).
+  var beta = document.createElement('div');
+  beta.className = 'udh-beta';
+  beta.setAttribute('role', 'note');
+  beta.innerHTML = '<b>Тестова версія сайту.</b> Наповнення ще триває: частина текстів, фото й розділів може змінитися.';
+  document.body.prepend(beta);
   header.querySelector('.udh-burger').onclick = function () {
     header.querySelector('.udh-mob').classList.toggle('open');
   };
