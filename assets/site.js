@@ -33,6 +33,16 @@
     }).join('');
   };
 
+  // Пункт «Напрямки» у шапці з випадаючим переліком служінь (наведення або фокус з клавіатури).
+  var navLinks = function () {
+    return NAV.map(function (l) {
+      if (l[1] !== 'Напрямки') return links([l]);
+      var active = MINISTRIES.some(function (m) { return m[0] === page; }) ? ' class="is-active"' : '';
+      return '<div class="udh-dd"><a href="' + l[0] + '"' + active + ' aria-haspopup="true">' + l[1] +
+        ' <span class="udh-caret" aria-hidden="true">▾</span></a><div class="udh-dd-menu">' + links(MINISTRIES) + '</div></div>';
+    }).join('');
+  };
+
   var css = document.createElement('style');
   css.textContent =
     '.udh-h{position:sticky;top:0;z-index:60;background:rgba(252,249,248,.96);backdrop-filter:blur(12px);border-bottom:1px solid #ddd5c9;font-family:"Manrope",sans-serif}' +
@@ -41,6 +51,14 @@
     '.udh-h nav{display:flex;gap:26px}.udh-h nav a{color:#4a5560;font-size:15px;font-weight:500;text-decoration:none}' +
     '.udh-h nav a:hover,.udh-h nav a.is-active{color:#1c3a57}.udh-h nav a.is-active{font-weight:700}' +
     '.udh-h .act{display:flex;gap:8px;align-items:center}' +
+    '.udh-dd{position:relative}.udh-dd>a{display:inline-flex;align-items:center;gap:4px}' +
+    '.udh-caret{font-size:11px;transition:transform .2s}.udh-dd:hover .udh-caret,.udh-dd:focus-within .udh-caret{transform:rotate(180deg)}' +
+    '.udh-dd-menu{position:absolute;left:50%;top:100%;transform:translate(-50%,6px);min-width:280px;padding:10px;background:#fff;border:1px solid #ddd5c9;border-radius:16px;box-shadow:0 16px 40px rgba(14,36,51,.14);display:grid;opacity:0;visibility:hidden;transition:opacity .18s,transform .18s,visibility .18s}' +
+    '.udh-dd-menu::before{content:"";position:absolute;left:0;right:0;top:-28px;height:28px}' +
+    '.udh-dd:hover .udh-dd-menu,.udh-dd:focus-within .udh-dd-menu{opacity:1;visibility:visible;transform:translate(-50%,14px)}' +
+    '.udh-h nav .udh-dd-menu a{display:block;padding:9px 14px;border-radius:10px;font-size:15px;font-weight:500;color:#0e2433;white-space:nowrap}' +
+    '.udh-h nav .udh-dd-menu a:hover,.udh-h nav .udh-dd-menu a.is-active{background:#f6f3f2;color:#1c3a57}' +
+    '.udh-mob .udh-mob-sub{padding-left:16px;border-left:2px solid #ddd5c9;margin:0 0 6px}.udh-mob .udh-mob-sub a{padding:7px 0;font-size:15px;color:#4a5560}' +
     '.udh-btn{display:inline-flex;align-items:center;padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid #1c3a57;color:#1c3a57}' +
     '.udh-btn.fill{background:#1c3a57;color:#fff}' +
     '.udh-burger{display:none;background:none;border:0;font-size:28px;color:#1c3a57;cursor:pointer}' +
@@ -62,10 +80,12 @@
   header.className = 'udh-h';
   header.innerHTML =
     '<div class="in"><a href="index.html"><img src="' + LOGO + '" alt="Україна для Христа"></a>' +
-    '<nav>' + links(NAV) + '</nav>' +
+    '<nav>' + navLinks() + '</nav>' +
     '<div class="act"><a class="udh-btn fill" href="pidtrymaty.html">Підтримати</a>' +
     '<button class="udh-burger" aria-label="Меню">☰</button></div></div>' +
-    '<div class="udh-mob">' + links(NAV) + '<a href="pidtrymaty.html">Підтримати</a></div>';
+    '<div class="udh-mob">' + NAV.map(function (l) {
+      return links([l]) + (l[1] === 'Напрямки' ? '<div class="udh-mob-sub">' + links(MINISTRIES) + '</div>' : '');
+    }).join('') + '<a href="pidtrymaty.html">Підтримати</a></div>';
   document.body.prepend(header);
   header.querySelector('.udh-burger').onclick = function () {
     header.querySelector('.udh-mob').classList.toggle('open');
