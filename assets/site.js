@@ -49,7 +49,8 @@
   css.textContent =
     '.udh-h{position:sticky;top:0;z-index:60;background:rgba(252,249,248,.96);backdrop-filter:blur(12px);border-bottom:1px solid #ddd5c9;font-family:"Manrope",sans-serif}' +
     '.udh-h .in{max-width:1280px;margin:0 auto;padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}' +
-    '.udh-h img{height:44px;width:auto;display:block}' +
+    // Лого має власне світле тло: darken лишає чорний знак, а тло зливається з кольором шапки.
+    '.udh-h img{height:44px;width:auto;display:block;mix-blend-mode:darken}' +
     '.udh-h nav{display:flex;gap:26px}.udh-h nav a{color:#4a5560;font-size:15px;font-weight:500;text-decoration:none}' +
     '.udh-h nav a:hover,.udh-h nav a.is-active{color:#1c3a57}.udh-h nav a.is-active{font-weight:700}' +
     '.udh-h .act{display:flex;gap:8px;align-items:center}' +
