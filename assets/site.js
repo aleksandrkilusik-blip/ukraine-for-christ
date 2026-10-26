@@ -26,6 +26,8 @@
   ];
 
   var page = location.pathname.split('/').pop() || 'index.html';
+  // Окремі сторінки ресурсів підсвічують у меню «Ресурси».
+  if (['tserkvokultura.html', 'pryvit-isuse.html'].indexOf(page) >= 0) page = 'resursy.html';
   var links = function (list) {
     return list.map(function (l) {
       var active = l[0].indexOf('#') < 0 && l[0] === page ? ' class="is-active"' : '';
