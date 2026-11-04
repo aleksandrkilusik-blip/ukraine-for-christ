@@ -14,14 +14,13 @@
   <script>
     tailwind.config = { theme: { extend: { fontFamily: { sans: ['Manrope', 'sans-serif'] } } } }
   </script>
-  <style>body{font-family:'Manrope',sans-serif;background:#fcf9f8;color:#1c1b1b}</style>
+  <style>body{font-family:'Manrope',sans-serif;background:#fcf9f8;color:#1c1b1b}.hum-hero{position:absolute;left:0;right:0;top:0;width:100%;height:60%;object-fit:cover;object-position:88% center;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}@media (min-aspect-ratio:5/4){.hum-hero{left:auto;top:auto;bottom:0;height:auto;width:70%;-webkit-mask-image:linear-gradient(to right,transparent,#000 22%);mask-image:linear-gradient(to right,transparent,#000 22%)}}@media (min-aspect-ratio:5/4) and (min-width:1700px){.hum-hero{width:76%}}</style>
 </head>
 <body class="antialiased">
   <main>
     <!-- HERO: лише назва служіння -->
-    <section class="relative overflow-hidden bg-[#001c17] text-white min-h-[calc(100svh-72px)] flex items-end pb-16 md:pb-24 pt-36 md:pt-28">
-      <img src="assets/img/humanitarne/hero-box.webp" alt="" aria-hidden="true" class="absolute right-0 top-[24%] w-full md:top-auto md:bottom-0 md:w-[68%]">
-      <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-[#001c17] from-30% via-[#001c17]/75 to-transparent to-80%"></div>
+    <section class="relative overflow-hidden bg-[#0b3141] text-white min-h-[calc(100svh-72px)] flex items-end pb-16 md:pb-24 pt-36 md:pt-28">
+      <img src="assets/img/humanitarne/hero.jpg" alt="" aria-hidden="true" class="hum-hero">
       <div class="relative w-full max-w-7xl mx-auto px-6">
         <h1 class="rv text-6xl sm:text-7xl lg:text-[8.5rem] font-extrabold tracking-tight leading-[0.95]" style="--d:150ms">Гуманітарне<br>служіння</h1>
         <a href="#about" class="rv mt-14 inline-flex items-center gap-3 text-sm font-semibold text-white/70 hover:text-white transition-colors" style="--d:300ms">
