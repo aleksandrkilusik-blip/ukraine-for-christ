@@ -14,7 +14,7 @@
   <script>
     tailwind.config = { theme: { extend: { fontFamily: { sans: ['Manrope', 'sans-serif'] } } } }
   </script>
-  <style>body{font-family:'Manrope',sans-serif;background:#fcf9f8;color:#1c1b1b}.hum-hero{position:absolute;left:0;right:0;top:0;width:100%;height:62%;object-fit:cover;object-position:76% bottom;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent);mask-image:linear-gradient(to bottom,#000 72%,transparent)}@media (min-aspect-ratio:5/4) and (max-aspect-ratio:8/5){.hum-hero{top:4%;height:52%;object-fit:contain;object-position:right top;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 15%,#000 80%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 15%,#000 80%,transparent)}}@media (min-aspect-ratio:8/5){.hum-hero{inset:auto 0 0 auto;height:76%;width:auto;max-width:100%;object-fit:contain;object-position:right bottom;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 18%);mask-image:linear-gradient(to bottom,transparent,#000 18%)}}.hum-shade{display:none}</style>
+  <style>body{font-family:'Manrope',sans-serif;background:#fcf9f8;color:#1c1b1b}.hum-hero{position:absolute;left:0;right:0;top:0;width:100%;height:62%;object-fit:cover;object-position:76% bottom;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent);mask-image:linear-gradient(to bottom,#000 72%,transparent)}@media (min-aspect-ratio:5/4) and (max-aspect-ratio:8/5){.hum-hero{top:4%;height:52%;object-fit:contain;object-position:right top;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 15%,#000 80%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 15%,#000 80%,transparent)}}@media (min-aspect-ratio:8/5){.hum-hero{inset:auto 0 0 auto;height:min(90%,calc(36vw + 30px));width:auto;max-width:100%;object-fit:contain;object-position:right bottom;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 18%);mask-image:linear-gradient(to bottom,transparent,#000 18%)}}.hum-shade{display:none}</style>
 </head>
 <body class="antialiased">
   <main>
@@ -23,7 +23,7 @@
       <img src="assets/img/humanitarne/hero.jpg" alt="" aria-hidden="true" class="hum-hero">
       <div class="hum-shade absolute inset-0"></div>
       <div class="relative w-full max-w-7xl mx-auto px-6">
-        <h1 class="rv text-6xl sm:text-7xl lg:text-[7rem] font-extrabold tracking-tight leading-[0.95]" style="--d:150ms">Гуманітарне<br>служіння</h1>
+        <h1 class="rv text-6xl sm:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight leading-[0.95]" style="--d:150ms">Гуманітарне<br>служіння</h1>
         <a href="#about" class="rv mt-14 inline-flex items-center gap-3 text-sm font-semibold text-white/70 hover:text-white transition-colors" style="--d:300ms">
           <span class="w-11 h-11 rounded-full border border-white/30 flex items-center justify-center animate-bounce"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></span>Гортайте, щоб дізнатися більше
         </a>
@@ -39,8 +39,8 @@
             <h2 class="mt-5 text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.15] text-[#001c17]">Гуманітарне служіння місії «Україна для Христа» несе <span class="text-[#735c00]">надію</span> людям, які втратили дім, близьких або постраждали від війни.</h2>
           </div>
           <div class="rv lg:col-span-5 lg:pt-12" style="--d:150ms">
-            <p class="text-lg text-[#404846] leading-relaxed">Наша допомога починається з простого: коробка з продуктами, відремонтований дах, тепла розмова. Але за кожним пакунком стоїть головне — діюче Євангеліє і жива турбота церкви. Ми служимо разом із місцевими громадами серед переселенців, родин загиблих і військових, і тих, хто потребує підтримки.</p>
-            <p class="mt-5 text-lg text-[#404846] leading-relaxed">Ми віримо, що через служіння милосердя українські громади стануть місцем відновлення — де зцілюються не тільки будинки, а й серця, і де надія Євангелія передається з рук у руки.</p>
+            <p class="text-lg text-[#404846] leading-relaxed">Наша допомога починається з простого, але необхідного: коробка з продуктами, відбудований дім, тепла розмова. Але за усім цим стоїть головне — діюче Євангеліє і жива турбота. Ми служимо разом із місцевими церквами серед переселенців, родин загиблих і військових, та тих, хто потребує підтримки.</p>
+            <p class="mt-5 text-lg text-[#404846] leading-relaxed">Ми віримо, що через служіння милосердя можна принести в українські громади зцілення — де відновлюються не тільки будинки, а й серця.</p>
             <div class="flex flex-wrap items-center gap-3 mt-8">
               <a href="https://www.facebook.com/ufc.humanitarian.ministry" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#001c17] text-white font-semibold hover:bg-[#00332b] transition-colors group">Доєднатись<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span></a>
               <a href="#what-we-do" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-[#001c17]/25 text-[#001c17] font-medium hover:bg-[#001c17] hover:text-white transition-colors">Наші проєкти</a>
@@ -104,7 +104,7 @@
             </div>
             <div class="p-8 flex flex-col gap-4 flex-grow">
               <h3 class="text-2xl font-bold text-[#001c17]">Проєкт «Відбудова»</h3>
-              <p class="text-[#404846] leading-relaxed flex-grow">Відбудова житла для тих, хто втратив свій дім через війну.</p>
+              <p class="text-[#404846] leading-relaxed flex-grow">Будуємо нове житло для тих, хто втратив свій дім через війну.</p>
             </div>
           </article>
           <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col lg:col-span-3" style="--d:120ms">
@@ -139,11 +139,8 @@
         <div class="rv rounded-3xl bg-[#001c17] text-white p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div class="lg:col-span-7">
             <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Маєте запитання або хочете долучитися до гуманітарного служіння?</h2>
-            <p class="mt-4 text-white/70 leading-relaxed">Ми відкриті до волонтерів, церков-партнерів і всіх, хто хоче допомогти молитвою чи пожертвою.</p>
             <div class="mt-8 space-y-4">
-              <div class="flex items-center gap-4"><span class="w-10 h-10 rounded-full bg-white/10 text-[#e9c349] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">language</span></span><div><div class="text-xs uppercase tracking-wider text-white/50">Сайт</div><a href="https://dmytrotyshchenkocru.wordpress.com" target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-[#e9c349] break-all">dmytrotyshchenkocru.wordpress.com</a></div></div>
               <div class="flex items-center gap-4"><span class="w-10 h-10 rounded-full bg-white/10 text-[#e9c349] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">thumb_up</span></span><div><div class="text-xs uppercase tracking-wider text-white/50">Facebook</div><a href="https://www.facebook.com/ufc.humanitarian.ministry" target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-[#e9c349] break-all">ufc.humanitarian.ministry</a></div></div>
-              <div class="flex items-center gap-4"><span class="w-10 h-10 rounded-full bg-white/10 text-[#e9c349] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">volunteer_activism</span></span><div><div class="text-xs uppercase tracking-wider text-white/50">Підтримати фінансово</div><a href="https://give.cru.org/2777325" target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-[#e9c349] break-all">give.cru.org/2777325</a></div></div>
             </div>
           </div>
           <div class="lg:col-span-5">
