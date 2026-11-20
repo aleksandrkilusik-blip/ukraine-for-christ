@@ -15,6 +15,7 @@
     tailwind.config = { theme: { extend: { fontFamily: { sans: ['Manrope', 'sans-serif'] } } } }
   </script>
   <style>body{font-family:'Manrope',sans-serif;background:#fcf9f8;color:#1c1b1b}</style>
+<style>details.more>summary{list-style:none;cursor:pointer;width:fit-content}details.more>summary::-webkit-details-marker{display:none}</style>
 </head>
 <body class="antialiased">
   <main>
@@ -38,68 +39,174 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div class="rv lg:col-span-7">
             <span class="inline-block text-sm font-bold tracking-widest uppercase text-[#735c00]">— Хто ми</span>
-            <h2 class="mt-5 text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.15] text-[#001c17]">Спільнота музикантів, де <span class="text-[#735c00]">репетиція, розмова про віру й дружба</span> стаються в одному місці.</h2>
+            <h2 class="mt-5 text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.15] text-[#001c17]">Спільнота професійних музикантів, що зростає <span class="text-[#735c00]">професійно, соціально й духовно</span>.</h2>
           </div>
           <div class="rv lg:col-span-5 lg:pt-12" style="--d:150ms">
-            <p class="text-lg text-[#404846] leading-relaxed">Ми — це спільнота професійних музикантів, яка допомагає розвиватись професійно, соціально та духовно. Команда має репетиційні зали в серці Києва, де студенти можуть практикуватись безкоштовно. Також тут відбуваються групові зустрічі: семінари, спілкування, музичне навчання й наставництво. Ми віримо, що музика проникає туди, куди не завжди доходять слова, і Бог використовує її, аби відновлювати надію та зцілювати біль.</p>
+            <p class="text-lg text-[#404846] leading-relaxed">Crescendo Ukraine є частиною міжнародного руху Crescendo International, який з 1985 року об'єднує музикантів, студентів, викладачів, диригентів і композиторів. В Україні спільноту заснувала Анастасія Опришко 6 квітня 2021 року. Ми працюємо насамперед із музикантами академічної сфери: студентами музичних академій, солістами, оркестрантами, диригентами, композиторами, музикознавцями й викладачами.</p>
+            <div class="mt-6 text-lg">
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Більше про нас</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>За кожним концертом, репетицією чи конкурсом стоїть людина зі своїми запитаннями, переживаннями й мріями. Музична професія вимагає виняткової дисципліни, років підготовки й психологічної витривалості. А професійне середовище часто буває конкурентним і не лишає місця для вразливості, відпочинку чи розмов поза музикою.</p><p>Тому ми будуємо спільноту, де майстерність поєднується з людяністю, співпрацею й турботою.</p><p>Наша діяльність базується на християнському світогляді. Водночас ми відкриті до музикантів із різними переконаннями: для участі в більшості подій не потрібно бути християнином. Crescendo є місцем, де можна ставити складні запитання, чесно говорити, не боятися відмінностей і бути почутим.</p><p class="font-bold text-[#001c17]">Наша місія</p><p>Допомагати професійним музикантам зростати як митцям і особистостям, відкривати глибший сенс свого покликання й формувати живу спільноту.</p></div>
+              </details></div>
             <div class="flex flex-wrap items-center gap-3 mt-8">
               <a href="https://www.instagram.com/crescendo_ukraine/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#001c17] text-white font-semibold hover:bg-[#00332b] transition-colors group">Доєднатись<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span></a>
-              <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-[#001c17]/25 text-[#001c17] font-medium hover:bg-[#001c17] hover:text-white transition-colors">Поточні проєкти</a>
+              <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-[#001c17]/25 text-[#001c17] font-medium hover:bg-[#001c17] hover:text-white transition-colors">Що ми робимо</a>
             </div>
           </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+          <div class="rv rounded-3xl p-8 bg-white border border-[#e5e2e1] flex flex-col gap-3" style="--d:0ms">
+            <span class="w-12 h-12 rounded-full bg-[#001c17] text-[#e9c349] flex items-center justify-center"><span class="material-symbols-outlined" aria-hidden="true">music_note</span></span>
+            <h3 class="text-xl font-bold text-[#001c17]">Професійно</h3>
+            <p class="text-[#404846] leading-relaxed">Майстеркласи, лекції, воркшопи, концерти, дискусії й міжнародне навчання. Допомагаємо розширювати горизонти, знаходити контакти й сміливіше втілювати творчі ідеї.</p>
+          </div>
+          <div class="rv rounded-3xl p-8 bg-white border border-[#e5e2e1] flex flex-col gap-3" style="--d:120ms">
+            <span class="w-12 h-12 rounded-full bg-[#001c17] text-[#e9c349] flex items-center justify-center"><span class="material-symbols-outlined" aria-hidden="true">groups</span></span>
+            <h3 class="text-xl font-bold text-[#001c17]">Соціально</h3>
+            <p class="text-[#404846] leading-relaxed">Спільнота, де знаходять друзів, однодумців і партнерів для проєктів. Підтримка замість ізоляції, співпраця замість суперництва, повага до людини, а не лише до її досягнень.</p>
+          </div>
+          <div class="rv rounded-3xl p-8 bg-white border border-[#e5e2e1] flex flex-col gap-3" style="--d:240ms">
+            <span class="w-12 h-12 rounded-full bg-[#001c17] text-[#e9c349] flex items-center justify-center"><span class="material-symbols-outlined" aria-hidden="true">auto_stories</span></span>
+            <h3 class="text-xl font-bold text-[#001c17]">Духовно</h3>
+            <p class="text-[#404846] leading-relaxed">Досліджуємо питання сенсу, віри, ідентичності й покликання через біблійні тексти, християнську думку й духовну спадщину мистецтва. У діалозі й з повагою до свободи кожного.</p>
+          </div>
+        </div>
+        <div class="rv mt-8 max-w-3xl">
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Наші цінності</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>Ці виміри пов'язані: професійне зростання потребує здорового середовища, спільнота відкриває простір для змін, а духовні запитання допомагають глибше осмислити мистецтво й власне життя.</p><p class="font-bold text-[#001c17]">Творчість і креативність</p><p>Творчість є серцем нашої діяльності. Як музиканти, ми творимо й мислимо творчо в усьому, відображаючи Творця й приносячи у світ красу. Креативність для нас означає сміливість пробувати нове й не боятися живого процесу.</p><p class="font-bold text-[#001c17]">Людяна взаємодія</p><p>Ми будуємо спільноту поваги й підтримки. Обираємо людяність, гідність і відкритість, щоб у цьому просторі хотілося бути.</p><p class="font-bold text-[#001c17]">Цілісний розвиток</p><p>Зростаємо як музиканти й як особистості: у майстерності, в усвідомленому світогляді й у стосунках.</p><p class="font-bold text-[#001c17]">Служіння</p><p>Служимо музикантам і залучаємо спільноту до дії. Разом відповідаємо на потреби суспільства, використовуючи музику як інструмент підтримки й впливу.</p></div>
+              </details>
         </div>
       </div>
     </section>
 
-    <!-- ПРОЄКТИ -->
+    <!-- ЩО МИ РОБИМО -->
     <section id="projects" class="py-20 bg-[#f6f3f2] scroll-mt-20">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="rv flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
-          <div><h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Поточні проєкти та ініціативи</h2></div>
+        <div class="rv max-w-3xl mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-[#001c17]">Що ми робимо</h2>
+          <p class="mt-3 text-lg text-[#404846]">Від місця для щоденних занять до міжнародних програм, від чаювання до концертів. Кожен формат допомагає музикантам розвиватися, знаходити підтримку й нові можливості.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col " style="--d:0ms">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:0ms">
             <div class="relative aspect-[16/9] overflow-hidden bg-[#00332b]">
-              <img src="assets/img/crescendo/p1-hub.jpg" alt="Хаб — репетиційний простір" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <img src="assets/img/crescendo/p1-hub.jpg" alt="Crescendo HUB: репетиційний простір" loading="lazy" class="w-full h-full object-cover object-[center] transition-transform duration-700 group-hover:scale-105">
               <div class="absolute inset-0 bg-gradient-to-t from-[#001c17]/85 via-transparent to-transparent"></div>
               <span class="absolute left-7 bottom-5 text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">01</span>
             </div>
             <div class="p-8 flex flex-col gap-4 flex-grow">
-              <h3 class="text-2xl font-bold text-[#001c17]">Хаб</h3>
-              <p class="text-[#404846] leading-relaxed flex-grow">Репетиційні зали, відкриті для студентів-музикантів у центрі Києва. Затишний простір із фортепіано та місцем для індивідуальних і камерних репетицій.</p>
+              <h3 class="text-2xl font-bold text-[#001c17]">Crescendo HUB</h3>
+              <p class="text-[#404846] leading-relaxed">Творчий простір у центрі Києва, де професійні музиканти й студенти безкоштовно займаються, репетирують і зустрічаються з колегами. Працює з жовтня 2023 року.</p>
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Детальніше</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>Тут знайомляться, обмінюються досвідом, шукають партнерів для ансамблів, слухають музику й дискутують. А ще в HUB проходять творчі зустрічі, лекції, майстеркласи, менторські програми й чаювання.</p><p class="font-bold text-[#001c17]">Що можна робити в HUB</p><ul class="list-disc pl-5 space-y-1.5"><li>Індивідуально займатися й готуватися до концертів, іспитів і конкурсів.</li><li>Репетирувати з камерним ансамблем чи колективом.</li><li>Працювати над музичними й міждисциплінарними проєктами.</li><li>Брати участь в освітніх, мистецьких і спільнотних подіях.</li><li>Знайомитися з іншими музикантами й шукати творчих партнерів.</li></ul><p>Простір призначений для професійної музичної діяльності, комерційних уроків тут немає. Заняття за попереднім погодженням із командою. Адреса: Київ, вул. Саксаганського, 22Б.</p><a href="https://hub-crescendo.my.canva.site/crescendo-hub" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-semibold text-[#735c00] hover:text-[#001c17] transition-colors">Сайт HUB<span class="material-symbols-outlined text-xl" aria-hidden="true">open_in_new</span></a></div>
+              </details>
             </div>
           </article>
-          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col " style="--d:120ms">
+          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:120ms">
             <div class="relative aspect-[16/9] overflow-hidden bg-[#00332b]">
-              <img src="assets/img/crescendo/p2-vivtorok.jpg" alt="«Вівторок з Crescendo»" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <img src="assets/img/crescendo/p2-chai.jpg" alt="Чай у хабі: зустріч спільноти" loading="lazy" class="w-full h-full object-cover object-[center] transition-transform duration-700 group-hover:scale-105">
               <div class="absolute inset-0 bg-gradient-to-t from-[#001c17]/85 via-transparent to-transparent"></div>
               <span class="absolute left-7 bottom-5 text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">02</span>
             </div>
             <div class="p-8 flex flex-col gap-4 flex-grow">
-              <h3 class="text-2xl font-bold text-[#001c17]">«Вівторок з Crescendo»</h3>
-              <p class="text-[#404846] leading-relaxed flex-grow">Щотижневі вечірні зустрічі: вільне спілкування, музика, чаювання, щирі розмови та пошук глибинних сенсів життя та покликання.</p>
+              <h3 class="text-2xl font-bold text-[#001c17]">Чай</h3>
+              <p class="text-[#404846] leading-relaxed">Неформальні зустрічі за чаєм, щоб на певний час вийти з ритму репетицій, навчання, дедлайнів і концертів.</p>
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Детальніше</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>Кожна зустріч має тему для розмови. Наприклад: «Нудний і нудьгуючий: для чого творчості нудьга», «На захист потворного» (за Г. К. Честертоном), «Як стати Бахом?».</p><p>Для нас це не другорядна частина роботи, а важливий спосіб будувати довіру й справжні стосунки. Музика об'єднує нас професійно, а спільнота допомагає залишатися людьми.</p><p>Буває й інше: настільні ігри, спільні обіди, міждисциплінарні майстерні про зв'язок музики й візуального мистецтва, кольору й звуку. Такі зустрічі повертають до творчості як до джерела радості, цікавості й натхнення.</p></div>
+              </details>
             </div>
           </article>
-          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col " style="--d:240ms">
+          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:0ms">
             <div class="relative aspect-[16/9] overflow-hidden bg-[#00332b]">
-              <img src="assets/img/crescendo/p3-instytut.jpg" alt="Літній інститут" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <img src="assets/img/crescendo/g10.jpg" alt="Зустріч спільноти за столом" loading="lazy" class="w-full h-full object-cover object-[center_40%] transition-transform duration-700 group-hover:scale-105">
               <div class="absolute inset-0 bg-gradient-to-t from-[#001c17]/85 via-transparent to-transparent"></div>
               <span class="absolute left-7 bottom-5 text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">03</span>
             </div>
             <div class="p-8 flex flex-col gap-4 flex-grow">
-              <h3 class="text-2xl font-bold text-[#001c17]">Літній інститут</h3>
-              <p class="text-[#404846] leading-relaxed flex-grow">Літня школа, яка включає лекції, майстер-класи та індивідуальні заняття для професійних музикантів та студентів, а також можливість знайомств та нетворкінгу з колегами з усієї Європи.</p>
+              <h3 class="text-2xl font-bold text-[#001c17]">«СЮЖЕТ»: Біблія, мистецтво й відкриті запитання</h3>
+              <p class="text-[#404846] leading-relaxed">Дискусійний формат, у якому ми досліджуємо біблійні історії через музику, живопис, історію та сучасний людський досвід.</p>
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Детальніше</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>Біблійні тексти століттями надихали композиторів, художників і письменників: на них написано опери, ораторії, симфонії, картини. Чому ці сюжети досі хвилюють митців і що вони кажуть людині сьогодні?</p><p>Ми розглядаємо історію з різних боків: історичного, мистецького, філософського й богословського. Слухаємо музику, аналізуємо живопис і відкрито дискутуємо. Наприклад, історія Каїна й Авеля говорить про заздрість, порівняння, відповідальність і свободу вибору, а притча про блудного сина про любов, справедливість, прощення й повернення.</p><p class="font-bold text-[#001c17]">Для кого</p><p>Для музикантів із різними світоглядами. Знати Біблію чи мати певні переконання не потрібно. Запрошуємо до чесної розмови, де є місце для різних тлумачень, запитань і сумнівів. Окремо говоримо про те, що близьке музикантам: ідентичність, покликання, амбіції, конкуренцію, стосунки й сенс праці.</p></div>
+              </details>
             </div>
           </article>
-          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col " style="--d:360ms">
+          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:120ms">
             <div class="relative aspect-[16/9] overflow-hidden bg-[#00332b]">
-              <img src="assets/img/crescendo/p4-nastavnytstvo.jpg" alt="Менторські проєкти" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <img src="assets/img/crescendo/g09.jpg" alt="Слухачі під час концерту" loading="lazy" class="w-full h-full object-cover object-[center] transition-transform duration-700 group-hover:scale-105">
               <div class="absolute inset-0 bg-gradient-to-t from-[#001c17]/85 via-transparent to-transparent"></div>
               <span class="absolute left-7 bottom-5 text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">04</span>
             </div>
             <div class="p-8 flex flex-col gap-4 flex-grow">
-              <h3 class="text-2xl font-bold text-[#001c17]">Менторські проєкти</h3>
-              <p class="text-[#404846] leading-relaxed flex-grow">Проєкти «Бути собою» та ЯХТО для студентів-музикантів та спеціалістів, яким цікаво роздумувати глибше про переконання, цінності, культуру, формування характеру та власний світогляд.</p>
+              <h3 class="text-2xl font-bold text-[#001c17]">Концерти та співпраці</h3>
+              <p class="text-[#404846] leading-relaxed">Концерти, у яких висока якість виконання поєднується з продуманою ідеєю та увагою до слухача.</p>
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Детальніше</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>Для нас концерт не лише показ результату, а й спосіб говорити з людьми мовою мистецтва. Музика може ставати мовою пам'яті, скорботи, надії, вдячності й пошуку сенсу. Тому ми любимо програми, які розкривають історичний, культурний, філософський чи духовний контекст творів, щоб слухач не був лише глядачем, а глибше осмислював почуте.</p><p class="font-bold text-[#001c17]">З ким ми співпрацюємо</p><ul class="list-disc pl-5 space-y-1.5"><li>Президентський оркестр України</li><li>Національний духовий оркестр України</li><li>Baroque Plus</li><li>Київська муніципальна академія музики імені Р. М. Глієра (відділ клавесину)</li><li>Міжнародні партнери в Угорщині, зокрема в Будапешті</li><li>Незалежні камерні ансамблі, солісти й диригенти</li></ul><p>Ми відкриті до спільних концертів, тематичних програм, освітніх проєктів і нових форматів. Наша мета: мережа професійних стосунків, яка відкриває нові можливості для українських музикантів.</p></div>
+              </details>
+            </div>
+          </article>
+          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:0ms">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#00332b]">
+              <img src="assets/img/crescendo/g02.jpg" alt="Мистецька інсталяція на події спільноти" loading="lazy" class="w-full h-full object-cover object-[center_30%] transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#001c17]/85 via-transparent to-transparent"></div>
+              <span class="absolute left-7 bottom-5 text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">05</span>
+            </div>
+            <div class="p-8 flex flex-col gap-4 flex-grow">
+              <h3 class="text-2xl font-bold text-[#001c17]">Creative Church</h3>
+              <p class="text-[#404846] leading-relaxed">Міжнародний мистецько-духовний формат Crescendo, у якому митці осмислюють християнську віру засобами мистецтва. Існує з 1995 року.</p>
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Детальніше</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>У церкві мистецтво часто лише допомагає: музика супроводжує спів, картина ілюструє біблійний сюжет. У Creative Church мистецтво стає повноцінною мовою, через яку досліджують духовні питання, переживають біблійні історії й відкривають нові виміри віри.</p><p>Кожна подія будується навколо однієї теми. Її розкривають музика, живопис, література, театр чи танець, а також біблійні роздуми й особиста рефлексія. Події проходили в десятках міст разом із церквами різних конфесій.</p><p>Формат має християнську основу, але відкритий і для тих, хто не належить до церкви. Для когось це нагода по-новому пережити знайомі історії, для когось перше знайомство з християнською традицією, для інших простір подумати про надію, справедливість, страждання й людську гідність. Однакових переконань від учасників ми не чекаємо.</p><p>Creative Church також поєднує професійних митців і церковні спільноти й показує, що мистецтво й віра не конкурують, а поглиблюють одне одного.</p></div>
+              </details>
+            </div>
+          </article>
+          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:120ms">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#00332b]">
+              <img src="assets/img/crescendo/g03.jpg" alt="Лекція для музикантів" loading="lazy" class="w-full h-full object-cover object-[center] transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#001c17]/85 via-transparent to-transparent"></div>
+              <span class="absolute left-7 bottom-5 text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">06</span>
+            </div>
+            <div class="p-8 flex flex-col gap-4 flex-grow">
+              <h3 class="text-2xl font-bold text-[#001c17]">Лекції, воркшопи, панельні дискусії</h3>
+              <p class="text-[#404846] leading-relaxed">Освітні формати, які доповнюють музичну освіту: від лекцій до практичних воркшопів і відкритих розмов із професіоналами.</p>
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Детальніше</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>Сучасному митцю важливо розуміти культурні процеси, вміти комунікувати, керувати проєктами, шукати фінансування й співпрацювати.</p><p class="font-bold text-[#001c17]">Лекції та TED-style talks</p><p>Музиканти, дослідники, культурні менеджери, богослови й інші фахівці говорять про мистецтво, культуру, творчість, етику, філософію, психологію й духовність. Так, щоб спонукати думати й ставити запитання.</p><p class="font-bold text-[#001c17]">Майстеркласи й воркшопи</p><p>Грантовий менеджмент, планування мистецьких проєктів, творча комунікація, міждисциплінарна співпраця. Наприклад, як перетворити ідею на реальний проєкт, знайти фінансування й написати заявку.</p><p class="font-bold text-[#001c17]">Панельні дискусії</p><p>Розмови з диригентами, виконавцями й керівниками колективів про кар'єру, роботу в оркестрі, лідерство, стосунки в колективі й виклики професії. Особливо цінуємо прямий діалог молодих музикантів із досвідченими.</p><p class="font-bold text-[#001c17]">Міждисциплінарні зустрічі</p><p>Музика в діалозі з іншими мистецтвами, філософією, історією та суспільством. Щоб виходити за межі своєї спеціалізації й розширювати кругозір.</p></div>
+              </details>
+            </div>
+          </article>
+          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:0ms">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#00332b]">
+              <img src="assets/img/crescendo/p4-nastavnytstvo.jpg" alt="Менторські проєкти" loading="lazy" class="w-full h-full object-cover object-[center] transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#001c17]/85 via-transparent to-transparent"></div>
+              <span class="absolute left-7 bottom-5 text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">07</span>
+            </div>
+            <div class="p-8 flex flex-col gap-4 flex-grow">
+              <h3 class="text-2xl font-bold text-[#001c17]">Менторство</h3>
+              <p class="text-[#404846] leading-relaxed">Безкоштовні менторські програми для музикантів, студентів і викладачів. Хто я поза професією? Що визначає мою цінність? На чому я будую життя?</p>
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Детальніше</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>Музична освіта багато дає для техніки й майстерності, але не завжди допомагає зрозуміти себе, свої пріоритети, стосунки й покликання. Менторство дає змогу зупинитися й разом із наставником подивитися на своє життя ширше.</p><p class="font-bold text-[#001c17]">ЯХТО: пізнати себе</p><p>Програма самопізнання: що мене формує, що для мене справді важливо, які мої сильні сторони, як я ухвалюю рішення і якою людиною хочу бути. Для музикантів це особливо важливо, адже їхня ідентичність часто складається з дитинства навколо інструмента.</p><p class="font-bold text-[#001c17]">Бути собою</p><p>Проєкт про ідентичність, цінності й світогляд. У мистецькому середовищі людину постійно оцінюють і порівнюють, тож тут ми досліджуємо, на чому тримається самосприйняття і з чого складаються власні цінності. Робота з ментором іде в діалозі, зокрема й про духовний вимір життя.</p></div>
+              </details>
+            </div>
+          </article>
+          <article class="rv lift group rounded-3xl overflow-hidden bg-white border border-[#e5e2e1] flex flex-col" style="--d:120ms">
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#00332b]">
+              <img src="assets/img/crescendo/p3-instytut.jpg" alt="Crescendo Summer Institute" loading="lazy" class="w-full h-full object-cover object-[center] transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#001c17]/85 via-transparent to-transparent"></div>
+              <span class="absolute left-7 bottom-5 text-5xl font-extrabold text-[#e9c349] tabular-nums leading-none">08</span>
+            </div>
+            <div class="p-8 flex flex-col gap-4 flex-grow">
+              <h3 class="text-2xl font-bold text-[#001c17]">Crescendo Summer Institute</h3>
+              <p class="text-[#404846] leading-relaxed">Два тижні музики, навчання й міжнародних знайомств в Угорщині. Щороку близько 20 українських студентів і молодих музикантів їдуть на інститут.</p>
+              <details class="more group/m">
+                <summary class="inline-flex items-center gap-1.5 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors"><span class="group-open/m:hidden">Детальніше</span><span class="hidden group-open/m:inline">Згорнути</span><span class="material-symbols-outlined text-xl transition-transform group-open/m:rotate-180" aria-hidden="true">expand_more</span></summary>
+                <div class="mt-4 space-y-3 text-[#404846] leading-relaxed"><p>Щорічна освітня програма Crescendo International, заснована 2004 року. Учасники працюють із професорами музичних академій, солістами й музикантами провідних оркестрів: індивідуальні заняття, майстеркласи, камерна й оркестрова музика, вокал, опера, барокова музика, концерти. У 2025 році тут було близько 300 учасників із приблизно 30 країн.</p><p>Поряд із музикою є лекції, зустрічі в малих групах і розмови про професійну ідентичність, цінності, психологічне благополуччя й духовне життя, а також ранкові зустрічі Tune In. Інститут має християнську основу, але відкритий для всіх професійно підготовлених музикантів. Участь у духовних активностях добровільна.</p><p>Для нас важливо, щоб українські музиканти навіть під час війни не втрачали міжнародного навчання, представляли українську культуру й поверталися додому з новим досвідом: через концерти, викладання й нові проєкти.</p><a href="https://www.crescendoinstitute.org/en" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-semibold text-[#735c00] hover:text-[#001c17] transition-colors">Сайт інституту<span class="material-symbols-outlined text-xl" aria-hidden="true">open_in_new</span></a></div>
+              </details>
             </div>
           </article>
         </div>
@@ -112,7 +219,7 @@
       <div class="relative max-w-7xl mx-auto px-6">
         <span class="inline-block text-sm font-bold tracking-widest uppercase text-[#e9c349]">— Історія зі служіння</span>
         <h2 class="rv mt-3 text-3xl md:text-4xl font-extrabold tracking-tight">Історія Олі: як музика відкрила шлях до віри</h2>
-        <blockquote class="rv mt-8 max-w-4xl text-xl md:text-2xl text-white/85 leading-relaxed" style="--d:120ms">«Олю запросили друзі попрактикуватися в Crescendo Hub. Після репетицій вона залишилася на вечірню зустріч “Вівторок з Crescendo” — і саме там уперше познайомилася з християнами через спільну любов до музики. Згодом вона поїхала на Літній інститут Crescendo, де окрім музичного навчання були вечори поклоніння та ранкові духовні роздуми, — і це стало для неї важливим. Повернувшись до Києва, Оля почала відвідувати богослужіння й додала до свого репертуару пісні поклоніння.»</blockquote>
+        <blockquote class="rv mt-8 max-w-4xl text-xl md:text-2xl text-white/85 leading-relaxed" style="--d:120ms">«Олю запросили друзі попрактикуватися в Crescendo Hub. Після репетицій вона залишилася на вечірню зустріч спільноти, і саме там уперше познайомилася з християнами через спільну любов до музики. Згодом вона поїхала на Літній інститут Crescendo, де окрім музичного навчання були вечори поклоніння та ранкові духовні роздуми, — і це стало для неї важливим. Повернувшись до Києва, Оля почала відвідувати богослужіння й додала до свого репертуару пісні поклоніння.»</blockquote>
         <div class="rv mt-10 flex items-center gap-4" style="--d:240ms">
           <span class="w-14 h-14 rounded-full bg-[#e9c349] text-[#001c17] flex items-center justify-center text-xl font-extrabold">О</span>
           <div><div class="font-bold text-lg">Оля</div><p class="text-white/60 text-sm">Скрипалька, студентка консерваторії</p></div>
@@ -146,9 +253,9 @@
           </div>
           <div class="rv lift rounded-3xl p-8 bg-white border border-[#e5e2e1] flex flex-col gap-4" style="--d:120ms">
             <span class="text-4xl font-extrabold text-[#e9c349] tabular-nums leading-none">02</span>
-            <h3 class="text-2xl font-bold text-[#001c17]">Долучайтеся до вівторкових зустрічей</h3>
-            <p class="text-[#404846] leading-relaxed flex-grow">На вас чекає жива музика, спілкування, підтримка та розмови про сенси у дружній атмосфері за чаєм.</p>
-            <a href="https://www.instagram.com/crescendo_ukraine/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors group">Прийти у вівторок<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span></a>
+            <h3 class="text-2xl font-bold text-[#001c17]">Приходьте на наші зустрічі</h3>
+            <p class="text-[#404846] leading-relaxed flex-grow">Чай, «СЮЖЕТ», лекції, концерти й Creative Church. Анонси найближчих подій публікуємо в Instagram.</p>
+            <a href="https://www.instagram.com/crescendo_ukraine/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-semibold text-[#001c17] hover:text-[#735c00] transition-colors group">Дивитися анонси<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span></a>
           </div>
           <div class="rv lift rounded-3xl p-8 bg-white border border-[#e5e2e1] flex flex-col gap-4" style="--d:240ms">
             <span class="text-4xl font-extrabold text-[#e9c349] tabular-nums leading-none">03</span>
