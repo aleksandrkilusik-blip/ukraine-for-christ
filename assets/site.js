@@ -19,7 +19,7 @@
     ['sport.html', 'Спортивне служіння'],
     ['gcr.html', 'Глобальний церковний рух'],
     ['osvitiany.html', 'Рух освітян'],
-    ['crescendo.html', 'Класичні музиканти'],
+    ['crescendo.html', 'Crescendo Ukraine'],
     ['leaderimpact.html', 'LeaderImpact'],
     ['za-kordonom.html', 'Українці за кордоном'],
     ['mission-hub.html', 'Mission Hub']
